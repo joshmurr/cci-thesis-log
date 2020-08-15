@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Running Docker Containers with Tensorflow on Ubuntu"
-date:   2020-08-13 13:26:36 +0100
+title:  "Using Jupyter Notebook with Docker Containers"
+date:   2020-08-15 12:45:36 +0100
 categories: docker jupyter tensorflow
 ---
 
@@ -32,7 +32,7 @@ We chose a container specifically with Jupter when we chose `tensorflow/tensorfl
 http://0.0.0.0:3000/?token=e30336427dbc72050b11704ab2e95a77d8b54f73ae1a7a9a
 ```
 
-The container come pre-installed with most useful Python packaged, but if you come across one you need to install you do that like so:
+The container comes pre-installed with most useful Python packaged, but if you come across one you need to install you do that like so:
 
 ```bash
 sudo docker exec 9e44b7456795 pip install <package name>
@@ -40,3 +40,8 @@ sudo docker exec 9e44b7456795 pip install <package name>
 
 I have had to install `tensorflow-datasets` this way. These will _not persist_ so if you end the notbook and reopen you will need to reinstall. The workaround for this is to create your own Dockerfile or use Docker-Compose but I'm sure I'll get more into that later on.
 
+If you do want to see the Jupyter logs, which can be handy to make sure the file is saving correctly and things like this (I created a whole notebook which was 'Untrusted' and so I couldn't save any of it).. You can run:
+
+```bash
+sudo docker logs 9e44b7456795
+```
