@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running Docker Containers with Nvidia GPU Access on Ubuntu"
+title:  "Running Docker Containers with Tensorflow on Ubuntu"
 date:   2020-08-13 13:26:36 +0100
 categories: docker nvidia
 ---
@@ -18,10 +18,10 @@ $ sudo apt install docker.io
 $ sudo systemctl restart docker
 ```
 
-Docker should now be set up. However to run `nvidia/cuda` containers, you need to specify the runtime. This command just prints the details of the graphics card, but from _inside_ the container, so if this works you should be all good:
+Docker should now be set up. However to run `nvidia/cuda` containers (as is one of the preliminary test containers on the Tensorflow Docker guide), you need to specify the runtime. This command just prints the details of the graphics card, but from _inside_ the container, so if this works you should be all good:
 
 ```
-$ sudo docker run --gpus all --rm nvidia/cud:9.0-runtime nvidia/smi
+$ sudo docker run --gpus all --rm nvidia/cuda:9.0-runtime nvidia/smi
 ```
 
 You can now run some more involved ML models, such as the [GAN-Explorer](https://github.com/previtus/GAN_explorer) which has a Docker command like so:
