@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.29)  10 SEP 2020 23:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.11.29)  10 SEP 2020 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,22 +336,27 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
+(Font)              <7> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 50.
+(Font)              <5> on input line 52.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
-draft_01.aux)
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (20.12164pt too wide) in paragraph at lines 53--53
+[]\OT1/cmr/m/n/10 Jun-Yan Zhu et al. \OT1/cmr/m/it/10 Un-paired Image-to-Image 
+Trans-la-tion us-ing Cycle-Consistent
+ []
+
+[2] (./draft_01.aux)
 Package logreq Info: Writing requests to 'draft_01.run.xml'.
 \openout1 = `draft_01.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 7376 strings out of 492649
- 133939 string characters out of 6129621
- 546893 words of memory out of 5000000
- 11234 multiletter control sequences out of 15000+600000
+ 7388 strings out of 492649
+ 134447 string characters out of 6129621
+ 547082 words of memory out of 5000000
+ 11246 multiletter control sequences out of 15000+600000
  9047 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,6n,45p,1463b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -365,7 +370,7 @@ ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local
 /texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on draft_01.pdf (2 pages, 119045 bytes).
+Output written on draft_01.pdf (2 pages, 128722 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
