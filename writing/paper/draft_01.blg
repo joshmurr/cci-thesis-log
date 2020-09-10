@@ -1,0 +1,18 @@
+[0] Config.pm:302> INFO - This is Biber 2.11
+[0] Config.pm:305> INFO - Logfile is 'draft_01.blg'
+[60] biber-darwin:313> INFO - === Thu Sep 10, 2020, 23:00:02
+[92] Biber.pm:371> INFO - Reading 'draft_01.bcf'
+[250] Biber.pm:857> INFO - Found 2 citekeys in bib section 0
+[274] Biber.pm:3976> INFO - Processing section 0
+[293] Biber.pm:4136> INFO - Looking for bibtex format file 'bibliography.bib' for section 0
+[294] bibtex.pm:1454> INFO - Reading ascii input as UTF-8
+[295] bibtex.pm:1500> INFO - LaTeX decoding ...
+[311] bibtex.pm:1316> INFO - Found BibTeX data source 'bibliography.bib'
+[313] Utils.pm:193> WARN - Duplicate entry key: '1611.07004' in file 'bibliography.bib', skipping ...
+[413] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[413] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[414] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[414] Biber.pm:3810> INFO - No sort tailoring available for locale 'en-US'
+[420] bbl.pm:617> INFO - Writing 'draft_01.bbl' with encoding 'UTF-8'
+[424] bbl.pm:720> INFO - Output to draft_01.bbl
+[424] Biber.pm:110> INFO - WARNINGS: 1
