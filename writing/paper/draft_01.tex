@@ -28,7 +28,12 @@ bibencoding=ascii]{biblatex}
 \section{Introduction}
 % 500 Words
 
-\nocite{*}
+\section{Notes}
+Compression techniques using the \textit{TensorflowJS Converter} makes the models smaller in size but make no noticeable difference to performance.
+
+TensorflowJS has a function called \texttt{tf.browser.toPixels(inputCanvas, outputCanvas)} which seems to work ``the old fashioned way'' whereby it iterates over the dimensions of the output image pixel by pixel and generates RGB values via the model prediction. The model binaries are compiled into WebGL shader programs which perform the calculations in an optimised fashion, but this last step seems to be a bottle neck. Perhaps it was not designed with video output in mind? Could this last step also be a shader program which takes a texture as an input from the previous?
+
+\nocite{*} % Include all citations
 
 \section{Background Context}
 % 500-1000 Words
