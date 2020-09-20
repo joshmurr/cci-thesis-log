@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.9 $
+% $ biblatex bbl format version 3.1 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -44,12 +44,13 @@
       \strng{authornamehash}{f29c44afb2ee0f5728faf52cde39e7aa}
       \strng{authorfullhash}{f29c44afb2ee0f5728faf52cde39e7aa}
       \field{sortinit}{A}
-      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{ACM SIGGRAPH 2019 Art Gallery July 2019 Article No 13 Pages 1 to 6}
       \field{title}{Learning to See: You Are What You See}
       \field{year}{2020}
+      \true{nocite}
       \verb{doi}
       \verb 10.1145/3306211.3320143
       \endverb
@@ -59,7 +60,7 @@
     \endentry
     \entry{2005.14165}{misc}{}
       \name{author}{31}{}{%
-        {{hash=ac9cc0ae9a63670f594d2cd309910a03}{%
+        {{hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
            family={Brown},
            familyi={B\bibinitperiod},
            given={Tom\bibnamedelima B.},
@@ -139,7 +140,7 @@
            familyi={R\bibinitperiod},
            given={Aditya},
            giveni={A\bibinitperiod}}}%
-        {{hash=2485a242426bddfbbc5292ab8116714a}{%
+        {{hash=18becbb5ea500211a8219e94dd0a975c}{%
            family={Ziegler},
            familyi={Z\bibinitperiod},
            given={Daniel\bibnamedelima M.},
@@ -215,18 +216,19 @@
            given={Dario},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{5880adf3c40c325423d0fd71a5b76f43}
-      \strng{fullhash}{7b3e7108470dccbe53b1e8d405466eff}
-      \strng{bibnamehash}{5880adf3c40c325423d0fd71a5b76f43}
-      \strng{authorbibnamehash}{5880adf3c40c325423d0fd71a5b76f43}
-      \strng{authornamehash}{5880adf3c40c325423d0fd71a5b76f43}
-      \strng{authorfullhash}{7b3e7108470dccbe53b1e8d405466eff}
+      \strng{namehash}{0884233a667161739ddd01569813457f}
+      \strng{fullhash}{b108601e4cbc36ef53b96ac01974e069}
+      \strng{bibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorbibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authornamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorfullhash}{b108601e4cbc36ef53b96ac01974e069}
       \field{sortinit}{B}
-      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Language Models are Few-Shot Learners}
       \field{year}{2020}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:2005.14165
       \endverb
@@ -246,18 +248,19 @@
       \strng{authornamehash}{5d2585c11210cf1d4512e6e0a03ec315}
       \strng{authorfullhash}{5d2585c11210cf1d4512e6e0a03ec315}
       \field{sortinit}{G}
-      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{NIPS 2016 Tutorial: Generative Adversarial Networks}
       \field{year}{2016}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:1701.00160
       \endverb
     \endentry
     \entry{1406.2661}{misc}{}
       \name{author}{8}{}{%
-        {{hash=b8309a3e80e90bd0b1aa74558c5e9741}{%
+        {{hash=d4f74ef4c79f3bb1e51e378184d8850e}{%
            family={Goodfellow},
            familyi={G\bibinitperiod},
            given={Ian\bibnamedelima J.},
@@ -298,18 +301,19 @@
            given={Yoshua},
            giveni={Y\bibinitperiod}}}%
       }
-      \strng{namehash}{28c80b82fce5cf9430bd3acb1557943f}
-      \strng{fullhash}{013d741ee9b7741be2bb987dd83f1374}
-      \strng{bibnamehash}{28c80b82fce5cf9430bd3acb1557943f}
-      \strng{authorbibnamehash}{28c80b82fce5cf9430bd3acb1557943f}
-      \strng{authornamehash}{28c80b82fce5cf9430bd3acb1557943f}
-      \strng{authorfullhash}{013d741ee9b7741be2bb987dd83f1374}
+      \strng{namehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{fullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \strng{bibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
       \field{sortinit}{G}
-      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Generative Adversarial Networks}
       \field{year}{2014}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:1406.2661
       \endverb
@@ -331,20 +335,20 @@
            familyi={Z\bibinitperiod},
            given={Tinghui},
            giveni={T\bibinitperiod}}}%
-        {{hash=6a42d448523b8d7c72613345041880c5}{%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
            family={Efros},
            familyi={E\bibinitperiod},
            given={Alexei\bibnamedelima A.},
            giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{dd9b478c7b76d20d978868251cf3ad35}
-      \strng{fullhash}{6e2e3209cb26e11fbc35df057fa4a825}
+      \strng{fullhash}{18664a8c078ce7dff4c499de4e40bf2f}
       \strng{bibnamehash}{dd9b478c7b76d20d978868251cf3ad35}
       \strng{authorbibnamehash}{dd9b478c7b76d20d978868251cf3ad35}
       \strng{authornamehash}{dd9b478c7b76d20d978868251cf3ad35}
-      \strng{authorfullhash}{6e2e3209cb26e11fbc35df057fa4a825}
+      \strng{authorfullhash}{18664a8c078ce7dff4c499de4e40bf2f}
       \field{sortinit}{I}
-      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Image-to-Image Translation with Conditional Adversarial Networks}
@@ -393,11 +397,12 @@
       \strng{authornamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
       \strng{authorfullhash}{994d8706108e0e90710616d967a10e12}
       \field{sortinit}{L}
-      \field{sortinithash}{2c7981aaabc885868aba60f0c09ee20f}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{GAN Compression: Efficient Architectures for Interactive Conditional GANs}
       \field{year}{2020}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:2003.08936
       \endverb
@@ -432,12 +437,13 @@
       \strng{authornamehash}{9c13077243208eadfd876137367c2645}
       \strng{authorfullhash}{f5d07733d4316e2e64ed71c8eba02c5e}
       \field{sortinit}{P}
-      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{CVPR 2019}
       \field{title}{Semantic Image Synthesis with Spatially-Adaptive Normalization}
       \field{year}{2019}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:1903.07291
       \endverb
@@ -459,24 +465,25 @@
            familyi={I\bibinitperiod},
            given={Phillip},
            giveni={P\bibinitperiod}}}%
-        {{hash=6a42d448523b8d7c72613345041880c5}{%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
            family={Efros},
            familyi={E\bibinitperiod},
            given={Alexei\bibnamedelima A.},
            giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
       \strng{namehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
-      \strng{fullhash}{9478757b079503241076526a20f6603c}
+      \strng{fullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
       \strng{bibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
       \strng{authorbibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
       \strng{authornamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
-      \strng{authorfullhash}{9478757b079503241076526a20f6603c}
+      \strng{authorfullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
       \field{sortinit}{Z}
-      \field{sortinithash}{156173bd08b075d7295bc3e0f4735a04}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
       \field{year}{2017}
+      \true{nocite}
       \verb{eprint}
       \verb arXiv:1703.10593
       \endverb

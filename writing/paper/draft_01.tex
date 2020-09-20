@@ -1,13 +1,15 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[
-backend=biber,
-style=numeric,
-bibencoding=ascii]{biblatex}
+	backend=biber,
+	style=numeric
+]{biblatex}
 \addbibresource{bibliography.bib}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{csquotes}
 
 
-\title{ Working Title }
+\title{Working Title}
 \date{\today}
 \author{Josh Murr}
 
@@ -21,8 +23,8 @@ bibencoding=ascii]{biblatex}
 % \newpage
 
 \begin{abstract}
-% 250 Words
-  Research in recent years has continually shown new and unexpected applications for Deep Neural Networks which seem to show no limit to their ability. This is in part down to the ubiquity and capability of modern Graphics or Tensor Processing Units which allow for huge amounts of computation at lightning speed. GPT-3 has shown us that simply making a model larger is one possible way to improve results\cite{2005.14165} which could easily set (or continue) the trend that more data and more compute power are the keys to better models. This may in part be true, but this trend widens the gulf of accessibility and also understanding with cutting edge machine learning research. \textit{Learning to See} by Memo Akten et al\cite{2003.00902} provides a glimpse inside a Conditional Generative Adverserial Network (\textit{cGAN}) in an immediate and impactful way showing it's ability and also it's limitations; in todays climate of uncertainty and disbelief this is an important thing. Getting work like this on more modest devices presents the challenge of shrinking such Deep Learning models and improving their efficiency so that they do not require vast compute power to be effective. In this paper I (we?) explore different methods of model compression and efficient architectures and analyse their respective efficiency gains with a view to making such systems more accessible and interactive.
+	% 250 Words
+	Research in recent years has continually shown new and unexpected applications for Deep Neural Networks which seem to show no limit to their ability. This is in part down to the ubiquity and capability of modern Graphics or Tensor Processing Units which allow for huge amounts of computation at lightning speed. GPT-3 has shown us that simply making a model larger is one possible way to improve results which could easily set (or continue) the trend that more data and more compute power are the keys to better models. This may in part be true, but this trend widens the gulf of accessibility and also understanding with cutting edge machine learning research. \textit{Learning to See} by Memo Akten et al provides a glimpse inside a Conditional Generative Adverserial Network (\textit{cGAN}) in an immediate and impactful way showing it's ability and also it's limitations; in todays climate of uncertainty and disbelief this is an important thing. Getting work like this on more modest devices presents the challenge of shrinking such Deep Learning models and improving their efficiency so that they do not require vast compute power to be effective. In this paper I (we?) explore different methods of model compression and efficient architectures and analyse their respective efficiency gains with a view to making such systems more accessible and interactive.
 \end{abstract}
 
 \section{Introduction}
@@ -31,7 +33,17 @@ bibencoding=ascii]{biblatex}
 \section{Notes}
 Compression techniques using the \textit{TensorflowJS Converter} makes the models smaller in size but make no noticeable difference to performance.
 
-TensorflowJS has a function called \texttt{tf.browser.toPixels(inputCanvas, outputCanvas)} which seems to work ``the old fashioned way'' whereby it iterates over the dimensions of the output image pixel by pixel and generates RGB values via the model prediction. The model binaries are compiled into WebGL shader programs which perform the calculations in an optimised fashion, but this last step seems to be a bottle neck. Perhaps it was not designed with video output in mind? Could this last step also be a shader program which takes a texture as an input from the previous?
+\textcolor{Gray}{TensorflowJS has a function called \texttt{tf.browser.toPixels(inputCanvas, outputCanvas)} which seems to work ``the old fashioned way'' whereby it iterates over the dimensions of the output image pixel by pixel and generates RGB values via the model prediction. The model binaries are compiled into WebGL shader programs which perform the calculations in an optimised fashion, but this last step seems to be a bottle neck. Perhaps it was not designed with video output in mind? Could this last step also be a shader program which takes a texture as an input from the previous?}
+
+I've since tried this and it made little no no difference.
+
+Useful quote from the pix2pix paper~\cite{1611.07004} regarding the training process:
+
+\begin{displayquote}
+	GANs are generative models that learn a mapping from random noise vector $z$ to output image $y$, $G:z\rightarrow y$. In contrast, conditional GANs learn a mapping from observedimagexand random noise vector $z$, to $y,G:\{x,z\} \rightarrow y$.The generator $G$ is trained to produce outputs that cannot be distinguished from “real” images by an adversarially trained discriminator, $D$, which is trained to do as well as possibleat detecting the generator’s “fakes”.
+\end{displayquote}
+
+
 
 \nocite{*} % Include all citations
 
