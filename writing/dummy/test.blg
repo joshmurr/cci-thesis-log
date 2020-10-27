@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'test.blg'
+[55] biber:322> INFO - === Sun Sep 20, 2020, 14:54:44
+[65] Biber.pm:415> INFO - Reading 'test.bcf'
+[115] Biber.pm:943> INFO - Found 1 citekeys in bib section 0
+[125] Biber.pm:4256> INFO - Processing section 0
+[126] Utils.pm:75> INFO - Globbing data source 'test.bib'
+[126] Utils.pm:91> INFO - Globbed data source 'test.bib' to test.bib
+[133] Biber.pm:4455> INFO - Looking for bibtex format file 'test.bib' for section 0
+[134] bibtex.pm:1653> INFO - LaTeX decoding ...
+[135] bibtex.pm:1471> INFO - Found BibTeX data source 'test.bib'
+[155] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[155] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[155] Biber.pm:4084> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[155] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[156] bbl.pm:652> INFO - Writing 'test.bbl' with encoding 'UTF-8'
+[157] bbl.pm:755> INFO - Output to test.bbl

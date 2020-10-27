@@ -1,82 +1,144 @@
 ---
 layout: post
-title:  "Going Online"
-date:   2020-09-04 21:35:36 +0100
-ccipcID: 7dbhmYT06kw
-mylaptopID: nFSdtaGIj2U
+title:  "TensorflowJS Model Analyser and Benchmarking Follow Up"
+different_outputs_ID: 4KrUKkZMqvg
+date:   2020-10-27 09:50:36 +0000
 categories: tensorflow pix2pix javascript
 ---
 
-Getting the models online actually wasn't as difficult as I was expecting. I based most of my code on the [Mobilenet example](https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet) which takes an image as an input and gives a classification as output. Once a model is loaded via `loadGraphModel()` just calling `model.predict(< input tensor >)` will tell it to do it's thing and it will give a tensor back; whatever tensor it was trained to spit out. So to rework the example into one which can generate images I just had to parse the image tensor the model gives me.
+The [TensorflowJS Model Analyser and Benchmarking][netlify-app] is now online, hosted on Neltify. Since the last write up I made some improvements:
+
+- Support for different model types (if it has image input/output, it should work).
+- Better model information output, read from the `model.json` file.
+- The ability to toggle image manipulations with OpenCV on the fly.
+- Slightly better FPS output - but still an unreliable measure I think.
+- WebGL based output to screen.
+
+Most of these are usability improvements. The final point was me grasping the low-hanging fruit hoping it will speed things up, but __TL;DR:__ it didn't really do much.
+
+## WebGL Output to Screen
+
+The TensorflowJS way to convert a tensor to an image to render to the screen is the run the tensor through their `toPixels()` function. Rooting aroudn [in the source code](https://github.com/tensorflow/tfjs/) reveals that it works in the old school, serial way of iterating through each data point in the tensor and converting it to an RGB value, appending to an array and then using the HTML Canvas `putImageData()` to get the data into a canvas element. The function is below - I've redacted bits that are unimportant right now, mostly error checking, and all the comments are mine - you can see the [full source code here](https://github.com/tensorflow/tfjs/blob/master/tfjs-core/src/ops/browser.ts).
 
 ```javascript
-async function postProcessTF(logits){
-	return tf.tidy(() => {
-		const scale = tf.scalar(0.5);
-		const squeezed = logits.squeeze().mul(scale).add(scale);
-		const resized = tf.image.resizeBilinear(squeezed, [IMAGE_SIZE, IMAGE_SIZE]);
-		return resized;
-	})
+export async function toPixels(
+    img: Tensor2D|Tensor3D|TensorLike,
+    canvas?: HTMLCanvasElement): Promise<Uint8ClampedArray> {
+  let $img = convertToTensor(img, 'img', 'toPixels');
+
+  /* ... */
+
+  // Get the data from the tensor. This is the most useful part and 
+  // will come in handy later...
+  const data = await $img.data();
+  const multiplier = $img.dtype === 'float32' ? 255 : 1;
+  const bytes = new Uint8ClampedArray(width * height * 4);
+
+  // Iterate through the data...
+  for (let i = 0; i < height * width; ++i) {
+    const rgba = [0, 0, 0, 255];
+
+    for (let d = 0; d < depth; d++) {
+      const value = data[i * depth + d];
+
+      /* ... */
+
+      if (depth === 1) {
+        rgba[0] = value * multiplier;
+        rgba[1] = value * multiplier;
+        rgba[2] = value * multiplier;
+      } else {
+        rgba[d] = value * multiplier;
+      }
+    }
+
+    // Put the RGBA data into a Uint8ClampedArray
+    const j = i * 4;
+    bytes[j + 0] = Math.round(rgba[0]);
+    bytes[j + 1] = Math.round(rgba[1]);
+    bytes[j + 2] = Math.round(rgba[2]);
+    bytes[j + 3] = Math.round(rgba[3]);
+  }
+
+  if (canvas != null) {
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    const imageData = new ImageData(bytes, width, height);
+    // Hand the image data over to the canvas to display
+    ctx.putImageData(imageData, 0, 0);
+  }
+  if ($img !== img) {
+    // NB: explicitly delete the tensor to free memory.
+    // This is something to take note of if you want to
+    // work more with TensorflowJS.
+    $img.dispose();
+  }
+  return bytes;
 }
 ```
 
-This is exactly what happens in a Python based Tensorflow project, just in Javascript sytax. I was pleasantly surprised how simple it is to translate from Python to Javascript with Tensorflow. I get the feeling the 2.X.X versions of the Tensorflow API are a significant improvement on the 1.X.X versions.
+None of the [TFJS examples](https://github.com/tensorflow/tfjs-examples) output to video like I'm trying to do, so if all you want to do is generate static images from your model, the method above works fine. But I _do_ want to output to video so generating each frame pixel-by-pixel is a bit slow. So I then wrote a small shader program with WebGL which takes the data from `$img.data()` and passes it to a fragment shader as a texture. [The code can be seen here](https://github.com/joshmurr/js-model-analysis/blob/master/src/outputGL.js).
 
-TF has a few handy functions to convert to and from tensors, so getting image data into a tensor format is done by loading the image into a `<img />` element or loading it into a HTML canvas and grabbing the data with something like:
+As you can see in the video below, you can switch between the normal TFJS `toPixels()` method, or to my WebGL based method. You can also see the switch to WebGL improves the FPS by _maybe_ 1. I haven't done much rigourous testing but this marginal gain is not really worhth writing home about. The demo below is running on an Nvidia RTX 2070 graphics card.
+
+{% include youtubePlayer.html id=page.different_outputs_ID %}
+
+![JS Model Analysis Output WebGL]({{ site.baseurl }}/assets/images/web-model-loader/js-ma_outputgl.png)
+
+My theory as to why the gains are so marginal is down to the fact that you still have to get the data in to the shader program: the data needs to be copied from the tensor, into a buffer and then sent into the shader every frame. Something that comes up often when it comes to writing optimal WebGL code is the avoid WebGL API calls whereever possible. This amounts to grouping commands and computations into more concise blocks at a higher level ([see here](https://emscripten.org/docs/optimizing/Optimizing-WebGL.html#avoid-redundant-calls)).
+
+Using a profiler such as the [Firefox Profiler](https://profiler.firefox.com/) reveals a bit more about what is happening, and which parts of the pipeline are using resources.
+
+I've spent a fair amount of time scrubbing through the stack trace ([and you can too if you want!](https://share.firefox.dev/2HEHqgL)) and I'm not going to claim to fully understand what's going on. I don't know enough about the Javascript engine to know exactly how it handles callback, async/await functions and `requestAnimationFrame` calls etc. I think these kinds of things are why it appears to run the model twice before calling for a re-paint. I've annoted the images below withg roughly what I think is going on, the time in the top left shows approximately how long that range represents as well (approx because the it's not a perfect slice of a single draw loop).
+
+Below is the stack trace for the __`toPixels()` method__ of rendering which takes about __259ms__:
+
+[![toPixels()]({{ site.baseurl }}/assets/images/web-model-loader/topixels_method_writing.png)]({{ site.baseurl }}/assets/images/web-model-loader/topixels_method_writing.png)
+
+Where is says _Read data from somewhere..._ the function call comes from a [`MathBackendWebGL`](https://github.com/tensorflow/tfjs/blob/12c4bbf642186bae417234b3b7d8ccf40abe3d10/tfjs-backend-webgl/src/backend_webgl.ts#L200) object which `read()`'s data from a data texture, hence the WebGL API call to `getBufferSubData()`. I am not sure if this long stretch of time is the JS engine catching up on a bunch of callback, as the `read()` function itself is an `async` function. The image below filters for that `read()` function, and you can see it appears a few times when the model is running:
+
+[![Calls to read()]({{ site.baseurl }}/assets/images/web-model-loader/read_calls.png)]({{ site.baseurl }}/assets/images/web-model-loader/read_calls.png)
+
+Either way I _do_ know that that is a costly WebGL API call and so it's not surprising it is a time-hog. For those curious, here is the function which actually does the data fetch, called asyncronously from `MathBackendWebGL.read()`:
 
 ```javascript
-const img = tf.browser.fromPixels(imgElement).toFloat();
+function downloadFloat32MatrixFromBuffer(gl, buffer, size) {
+    const gl2 = gl;
+    const downloadTarget = new Float32Array(size);
+    gl2.bindBuffer(gl2.PIXEL_PACK_BUFFER, buffer);
+    gl2.getBufferSubData(gl2.PIXEL_PACK_BUFFER, 0, downloadTarget);
+    gl2.bindBuffer(gl2.PIXEL_PACK_BUFFER, null);
+    return downloadTarget;
+}
 ```
 
-So it wasn't too long before I was generating images from a model which had been converted and was inferencing in the browser:
+Below is the stack trace for the __WebGL output method__ which takes about __194ms__:
 
-![Batter 2 Flower]({{ site.baseurl }}/assets/images/web-model-loader/battery2flower2.png)
-![Hand 2 Flower]({{ site.baseurl }}/assets/images/web-model-loader/hand2flower.png)
+[![WebGL rendering]({{ site.baseurl }}/assets/images/web-model-loader/webgl_method_writing.png)]({{ site.baseurl }}/assets/images/web-model-loader/webgl_method_writing.png)
 
-The images were coming out all washed out which took me a few days to figure out way. It was because I was doing the ol `< tensor > * 0.5 + 0.5` trick twice when converting it back to an image. For a long time I thought it was just because the model had lost a lot of something in the conversion process... So a lot of the images in this post will show washed out images.
+You can see the stack trace is generally quite different; far fewer Javascript function calls, and a lot more work coming from the graphics engine (green bars). Generally this should be a good thing, but it's also quite clear that it is still a fair amount of time consumed by the graphics engine. Perhaps this is because of the time it takes to get the data into the shader program, run it and then connect to the canvas as output.. I'm not too sure.
 
-The main purpose of this particular online experiment was to make something which I could upload a model to; upload images and video and measure how long things were taking and to check the quality.
+The timings vary as it runs, so the timings listed above are not really indicitave of the overall performance difference.
 
-The first issue really was figuring out _from_ which format, and _to_ which format a model should be saved and loaded to and from and then to and into and such. Because there are many machine learning frameworks out there, and Tensorflow has gone through some changes in quite a short space of time, there are many formats you _could_ save a model into once it has been trained. It turns out, the one for _my_ needs is the `.h5` format which saves a single `.h5` file and is done in Python like so:
+## Model Size
 
-```python
-model.save('directory/to/save/model.h5')
-```
+Using [Auto-Pix2Pix](https://github.com/joshmurr/cci-auto-pix2pix) (a tool a developed to help rapid prototype Pix2Pix style models for this project) I developed a few different models of varying sizes to see what difference that made to performance... __TL;DR:__ it didn't do much.
 
-Pretty straightforward. _Then_ we need to convert it into something which _Tensorflow JS_ can use. This is done with the [Tensorflow Converter](https://github.com/tensorflow/tfjs/tree/master/tfjs-converter) which is part of [Tensorflow JS](https://github.com/tensorflow/tfjs). There is a lot of writing on the Github page, but the most important bit is about running it inside a virtual environment. That is so you can have `pyenv` installed and then install the right version of Python :roll_eyes: After that just running `tensorflowjs_wizard` in the command line is pretty good, it will walk you through step by step the conversion process and it's pretty quick.
+But this isn't at all surprising when you actually inspect the model. Here is the summary for a model with input size of 128x128 (half the size of what is used in the demos above):
 
-This will give you a bunch of binaries which store the weights, and a `model.json` file which is all the info Tensorflow needs to put all the pieces back together again. Then it was a bit of a headache which I don't really want to go into of how to actaully let the user upload all this to the site, but it works now.
+[![128x128 Model Summary]({{ site.baseurl }}/assets/images/web-model-loader/128x128_model_summary.png)]({{ site.baseurl }}/assets/images/web-model-loader/128x128_model_summary.png)
 
-Tensorflow JS does not have as many number crunching and image manipulation tools as the Python API so I enlisted the help of [OpenCV-JS](https://docs.opencv.org/3.4/d5/d10/tutorial_js_root.html) to do just that. I've quite enjoyed using OpenCV in Javascript I must say; I always enjoy it, it's a _good library_.
+If you look at the __Param #__ column, you'll see that the majority of the trainable parameters are in the inner layers. This was a bit of a _'ooooh I think I get how CNNs actually work now'_ kinda moment for me. The graphic which accompanies the article about Pix2Pix on [AffineLayer](https://affinelayer.com/pix2pix/) helps explain furthur:
 
-I wont go into it too much, but the pipeline is:
+![Affine Layer Pix2Pix Structure Diagram]({{ site.baseurl }}/assets/images/web-model-loader/affinelayer_pix2pix.png)
 
-```
-Load Image > Read Image with OpenCV > Manipulate > Put Image in HTML Canvas > Read from Canvas with TF > Inference > Display in new Cavas
-```
+As the data is reshaped as it moves through the encoder/decoder (which is the generator), the depth of each tensor corresponds to the number of filters of the previous layer. And each filter must have the same depth of the incoming tensor. So the number of trainable parameters (the weights in the convolutional kernals) compounds as the tensors are reshaped from layer to layer.
 
-Along the way I am attempting to time certain functions, find averages and collect some amount of useful data. I've kind of rushed this bit but that is still the plan. Here is the current version of it:
+This is seen again for a model of input/output dimensions of 64x64:
 
-![Current View]({{ site.baseurl }}/assets/images/web-model-loader/output.png)
+[![64x64 Model Summary]({{ site.baseurl }}/assets/images/web-model-loader/64x64_model_summary.png)]({{ site.baseurl }}/assets/images/web-model-loader/64x64_model_summary.png)
 
-The good news is that it can play a video and inference in real-time very nicely (on the spec'd out computer I've borrowed from CCI). On my laptop.. not so much.
+So running one of these "smaller" models in the browser doesn't really change _that much_. A better change in the architecture would be to reduce the number of filters used each layer. This is still something to try... BRB.
 
-__CCI GFX PC:__
-
-Incidentally this is a little spoiler of a later model, but you were gonna see it any way..
-
-{% include youtubePlayer.html id=page.ccipcID %}
-
-__My 8 year old Macbook Pro:__
-
-{% include youtubePlayer.html id=page.mylaptopID %}
-
-Painful. At least now I have a testbed, and a benchmark.. If I can get this working even just a little bit on my old laptop I'd see that as a success. I have already tried compressing the models as much as the TF-Converter will go, and the model shrinks quite a lot, but it makes absolutely no difference on my laptop. So there's work to be done there.
-
-### Other Things
-
-Some other little gotchas which are worth mentioning:
-
-- Tensorflow and OpenCV are JS frameworks which sit on top of compiled C++ frameworks which have been compiled to ASM to work online. So both are susceptible to memory leaks. With OpenCV, if you create any `Mat()`s then you need to `delete` them. And with TF any time you are creating tensors you need to also think about deleting them. You can be explicit and do it yourself, or wrap any tensor-manipulation routines inside a `return tf.tidy(() => {})` which will delete (or `dispose`) any unused tensors for you. I came across this error and it did grind the website to a halt after a while. Calling `tf.memory()` will get all the currently used memory and gives you a really good overview of whats using what memory. I like it so much I've started outputing the info is `tf.memory()` to the main page. Here you can see the `numTensors` growing each time I load a model (I wasn't `dispose`-ing the old model).
-
-![Memory Leak]({{site.baseurl}}/assets/images/web-model-loader/memory_leak.png)
+[netlify-app]: https://cci-js-model-analysis.netlify.app/
