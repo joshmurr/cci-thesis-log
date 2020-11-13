@@ -318,6 +318,36 @@
       \verb arXiv:1406.2661
       \endverb
     \endentry
+    \entry{1502.03167}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           familyi={I\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{fullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{bibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorbibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authornamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorfullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{eprint}
+      \verb arXiv:1502.03167
+      \endverb
+    \endentry
     \entry{1611.07004}{article}{}
       \name{author}{4}{}{%
         {{hash=cae9f806bc99a5f19fadea538fc2db04}{%
@@ -446,6 +476,41 @@
       \true{nocite}
       \verb{eprint}
       \verb arXiv:1903.07291
+      \endverb
+    \endentry
+    \entry{1511.06434}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a5dc3b488533e7e2dff1b6b8568678d}{%
+           family={Metz},
+           familyi={M\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           familyi={C\bibinitperiod},
+           given={Soumith},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{fullhash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{bibnamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authorbibnamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authornamehash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \strng{authorfullhash}{80f91da3a2dc6ab908d1fe31a56ad88c}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks}
+      \field{year}{2015}
+      \true{nocite}
+      \verb{eprint}
+      \verb arXiv:1511.06434
       \endverb
     \endentry
     \entry{1703.10593}{misc}{}

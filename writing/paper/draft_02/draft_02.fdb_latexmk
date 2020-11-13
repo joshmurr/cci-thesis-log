@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber draft_02"] 1605123822 "draft_02.bcf" "draft_02.bbl" "draft_02" 1605124707
+["biber draft_02"] 1605123822 "draft_02.bcf" "draft_02.bbl" "draft_02" 1605225226
   "../bibliography.bib" 1605123789 9061 d164f76bb5b2a5b07b0fcd44e01dc6b5 ""
-  "draft_02.bcf" 1605124707 103241 f678d98ed6afc0c69b3d38cadab4e095 "pdflatex"
+  "draft_02.bcf" 1605225226 103241 f678d98ed6afc0c69b3d38cadab4e095 "pdflatex"
   (generated)
-  "draft_02.blg"
   "draft_02.bbl"
-["pdflatex"] 1605124706 "draft_02.tex" "draft_02.pdf" "draft_02" 1605124707
+  "draft_02.blg"
+["pdflatex"] 1605225225 "draft_02.tex" "draft_02.pdf" "draft_02" 1605225226
   "/etc/texmf/web2c/texmf.cnf" 1603987366 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -100,18 +100,18 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1596975543 38841 5237427e4d3283e7b009b6a8b45dfdcd ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1603987510 4873311 71a69169e8f25b40365ee00977a83dfd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1603987529 2442048 46d24ca160850b5812048906507e775e ""
-  "draft_02.aux" 1605124707 6109 7f42c16800fb2c9754a4fd168a344157 "pdflatex"
+  "draft_02.aux" 1605225226 6109 7f42c16800fb2c9754a4fd168a344157 "pdflatex"
   "draft_02.bbl" 1605123823 35800 d6c86b0c5486a2aae789a2d99b385648 "biber draft_02"
-  "draft_02.out" 1605124707 325 2e7f7ccbe1d694ebfc4c1ae87e7ff982 "pdflatex"
-  "draft_02.run.xml" 1605124707 2338 d0cae6bac9d10651a05cf59726e11dae "pdflatex"
-  "draft_02.tex" 1605124705 20055 2638cbe292f8f9db8dddb1696793aaa1 ""
+  "draft_02.out" 1605225226 325 2e7f7ccbe1d694ebfc4c1ae87e7ff982 "pdflatex"
+  "draft_02.run.xml" 1605225226 2338 d0cae6bac9d10651a05cf59726e11dae "pdflatex"
+  "draft_02.tex" 1605224744 20055 7bee4c17e9bf2662c0a768ecbd7a0ef7 ""
   "images/250_epochs.png" 1600601832 363150 6819ecff92f1f69abcedc16c828f7633 ""
   "images/artefacts.png" 1605123713 329552 14a5e4a8e0da74fdb64c2793f493134b ""
   "images/ltlts_online.png" 1605120529 401683 0d820dd98ede89f20e20625c5ad04139 ""
   (generated)
-  "draft_02.out"
-  "draft_02.pdf"
-  "draft_02.run.xml"
-  "draft_02.aux"
-  "draft_02.log"
   "draft_02.bcf"
+  "draft_02.aux"
+  "draft_02.out"
+  "draft_02.run.xml"
+  "draft_02.log"
+  "draft_02.pdf"
