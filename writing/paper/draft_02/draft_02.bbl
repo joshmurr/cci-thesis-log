@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{lts_memo}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8f96c74f5c4fdf75292f8baf7ccdbe96}{%
+           family={Akten},
+           familyi={A\bibinitperiod},
+           given={Memo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{fullhash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{bibnamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authorbibnamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authornamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authorfullhash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning to See}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://www.memo.tv/works/learning-to-see/
+      \endverb
+      \verb{url}
+      \verb http://www.memo.tv/works/learning-to-see/
+      \endverb
+    \endentry
     \entry{2003.00902}{article}{}
       \name{author}{3}{}{%
         {{hash=8f96c74f5c4fdf75292f8baf7ccdbe96}{%
@@ -70,6 +97,34 @@
       \verb http://brain.js.org/
       \endverb
     \endentry
+    \entry{terry_broad}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ccabce0ef1aa0404cb9d924b81c5609a}{%
+           family={Broad},
+           familyi={B\bibinitperiod},
+           given={Terence},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{fullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{bibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorbibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authornamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorfullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Terence Broad}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://terencebroad.com/
+      \endverb
+      \verb{url}
+      \verb https://terencebroad.com/
+      \endverb
+    \endentry
     \entry{broad_cnn_vis_2016}{manual}{}
       \name{author}{1}{}{%
         {{hash=ccabce0ef1aa0404cb9d924b81c5609a}{%
@@ -84,6 +139,7 @@
       \strng{authorbibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
       \strng{authornamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
       \strng{authorfullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \field{extraname}{2}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
       \field{labelnamesource}{author}
@@ -95,6 +151,180 @@
       \endverb
       \verb{url}
       \verb https://blog.terencebroad.com/archive/convnetvis/vis.html
+      \endverb
+    \endentry
+    \entry{2005.14165}{misc}{}
+      \name{author}{31}{}{%
+        {{hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d4543c3bcd6aaf414da4296b349603e5}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9ac58bd43db2434e8e1ffd6182c3fcda}{%
+           family={Ryder},
+           familyi={R\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9ed243177743da3e650f1cff6376bb3c}{%
+           family={Subbiah},
+           familyi={S\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9e85370e215d552f72c95a2b63a37802}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jared},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ca421ceeb5b516dd8fc64bea5a23f2a}{%
+           family={Neelakantan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ab5d7d7b9cfeaad635c4a60e8950d7dd}{%
+           family={Shyam},
+           familyi={S\bibinitperiod},
+           given={Pranav},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3c1d9a663596faaf544c1a65aac581be}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={Girish},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1e84eff933be9f4887bf369cf181bf12}{%
+           family={Askell},
+           familyi={A\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod}}}%
+        {{hash=abe4801e322e893b23785fd6d0800b5c}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Sandhini},
+           giveni={S\bibinitperiod}}}%
+        {{hash=787b9715a98ea66a8d5e6bae042ae0b9}{%
+           family={Herbert-Voss},
+           familyi={H\bibinithyphendelim V\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c3a5cc5e520e0d1a9f8bbf377c74cd27}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eb1d3044b466619459c76843f0e98bb9}{%
+           family={Henighan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5c2f5c2e6d4a9ec8681377f8a8e5e6af}{%
+           family={Child},
+           familyi={C\bibinitperiod},
+           given={Rewon},
+           giveni={R\bibinitperiod}}}%
+        {{hash=82063a12702e7b2c026ae0ff03b8f102}{%
+           family={Ramesh},
+           familyi={R\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=18becbb5ea500211a8219e94dd0a975c}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=495187f3a2c93ddb8083bd18a5702527}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fdaff50f84c08440dcb5fad75b559780}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod}}}%
+        {{hash=68a04c5006dbbf98f7719709540c6b56}{%
+           family={Hesse},
+           familyi={H\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fb15a691583ec94aafe0be6e7da4878f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a5f009f12a0567430729b5ace41435d}{%
+           family={Sigler},
+           familyi={S\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e5aa3a709cbe706efba113bec9789364}{%
+           family={Litwin},
+           familyi={L\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7006ca8c1ce969019b89de50fece60dd}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=01f70651539bbd7dccc01e86ed9c78c3}{%
+           family={Chess},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1480c861b1a73e1d1de1b227e985b179}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ca86811e7a0582a9e7cb8d33e7ab445d}{%
+           family={Berner},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b51e7c5fe92844f39ce52b8a5fa5675f}{%
+           family={McCandlish},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1e6adbf36ab730cd5fdadb838b4d2667}{%
+           family={Amodei},
+           familyi={A\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0884233a667161739ddd01569813457f}
+      \strng{fullhash}{b108601e4cbc36ef53b96ac01974e069}
+      \strng{bibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorbibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authornamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorfullhash}{b108601e4cbc36ef53b96ac01974e069}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Language Models are Few-Shot Learners}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2005.14165
       \endverb
     \endentry
     \entry{synaptic}{manual}{}
@@ -509,6 +739,33 @@
       \verb https://cs.stanford.edu/people/karpathy/convnetjs/
       \endverb
     \endentry
+    \entry{mario_klingemann}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=dba80ca97a3f5e6ca20696e102e6848e}{%
+           family={Klingemann},
+           familyi={K\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{fullhash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{bibnamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authorbibnamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authornamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authorfullhash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mario Klingemann}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://quasimondo.com/
+      \endverb
+      \verb{url}
+      \verb http://quasimondo.com/
+      \endverb
+    \endentry
     \entry{mind}{manual}{}
       \name{author}{1}{}{%
         {{hash=ec9380f40652005b58c5be53c31720e7}{%
@@ -559,6 +816,33 @@
       \endverb
       \verb{url}
       \verb https://pytorch.org/
+      \endverb
+    \endentry
+    \entry{anna_ridler}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=6d22bd390960e3e74aa17746a7d807e0}{%
+           family={Ridler},
+           familyi={R\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{fullhash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{bibnamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authorbibnamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authornamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authorfullhash}{6d22bd390960e3e74aa17746a7d807e0}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Anna Ridler}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://annaridler.com/
+      \endverb
+      \verb{url}
+      \verb http://annaridler.com/
       \endverb
     \endentry
     \entry{romano_2016}{misc}{}
@@ -898,6 +1182,32 @@
       \verb{url}
       \verb https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
       \endverb
+    \endentry
+    \entry{toffler_1972}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7a8e89df41bf9812ed30ad71f9b22e2c}{%
+           family={Toffler},
+           familyi={T\bibinitperiod},
+           given={Alvin},
+           giveni={A\bibinitperiod},
+           prefix={comp.},
+           prefixi={c\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Random House}%
+      }
+      \strng{namehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{fullhash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{bibnamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authorbibnamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authornamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authorfullhash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The futurists. Edited with an introd. by Alvin Toffler}
+      \field{year}{1972}
     \endentry
     \entry{flowers_dataset}{manual}{}
       \name{author}{1}{}{%
