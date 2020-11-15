@@ -84,6 +84,33 @@
       \verb arXiv:2003.00902
       \endverb
     \endentry
+    \entry{ml5}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=b26c09c27646adbbeefd03a5f1158052}{%
+           family={Arts},
+           familyi={A\bibinitperiod},
+           given={NYU\bibnamedelimb Interactive\bibnamedelimb Telecommunications/Interactive\bibnamedelima Media},
+           giveni={N\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{fullhash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{bibnamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authorbibnamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authornamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authorfullhash}{b26c09c27646adbbeefd03a5f1158052}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ML5}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://ml5js.org/
+      \endverb
+      \verb{url}
+      \verb https://ml5js.org/
+      \endverb
+    \endentry
     \entry{brainjs}{manual}{}
       \field{sortinit}{B}
       \field{sortinithash}{8de16967003c7207dae369d874f1456e}
@@ -443,6 +470,33 @@
       \verb https://emscripten.org/docs/optimizing/Optimizing-WebGL.html#avoid-redundant-calls
       \endverb
     \endentry
+    \entry{wekinator}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=bcbc028add0ae7608dd4bb2fb8f5147d}{%
+           family={Fiebrink},
+           familyi={F\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{fullhash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{bibnamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authorbibnamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authornamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authorfullhash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wekinator}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.wekinator.org/
+      \endverb
+      \verb{url}
+      \verb http://www.wekinator.org/
+      \endverb
+    \endentry
     \entry{1701.00160}{misc}{}
       \name{author}{1}{}{%
         {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
@@ -603,6 +657,33 @@
       \endverb
       \verb{url}
       \verb https://mimicproject.com/
+      \endverb
+    \endentry
+    \entry{hard_to_train_gans}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6cfb5d2608616bce21708f853f01106e}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{fullhash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{bibnamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authorbibnamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authornamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authorfullhash}{6cfb5d2608616bce21708f853f01106e}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GAN} — Why it is so hard to train Generative Adversarial Networks!}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
+      \endverb
+      \verb{url}
+      \verb https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
       \endverb
     \endentry
     \entry{1502.03167}{misc}{}
@@ -766,6 +847,55 @@
       \verb http://quasimondo.com/
       \endverb
     \endentry
+    \entry{2003.08936}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=384021c9310f488c02816bb11a8522dd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Muyang},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f7dc0ae05140014a83b76c5ea171577c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ji},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8deaaf1a973f005a1536f00449308597}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Yaoyao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d3b6120be0f5f02f4f4951d71bc09eca}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zhijian},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=873e4e07ff73d563d2651d20ffaf99e0}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{fullhash}{994d8706108e0e90710616d967a10e12}
+      \strng{bibnamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authorbibnamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authornamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authorfullhash}{994d8706108e0e90710616d967a10e12}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GAN} Compression: Efficient Architectures for Interactive Conditional {GAN}s}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2003.08936
+      \endverb
+    \endentry
     \entry{mind}{manual}{}
       \name{author}{1}{}{%
         {{hash=ec9380f40652005b58c5be53c31720e7}{%
@@ -791,6 +921,70 @@
       \endverb
       \verb{url}
       \verb http://caza.la/synaptic/
+      \endverb
+    \endentry
+    \entry{2006.03669}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=852ec700c9c73e35cab742f747f93fd4}{%
+           family={Neill},
+           familyi={N\bibinitperiod},
+           given={James\bibnamedelima O'},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{fullhash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{bibnamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authorbibnamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authornamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authorfullhash}{852ec700c9c73e35cab742f747f93fd4}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Overview of Neural Network Compression}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2006.03669
+      \endverb
+    \endentry
+    \entry{1903.07291}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b036e0ed5c21929ab46890b9a1033163}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taesung},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0c3c4604957af5f2ce5f1537fdbaa510}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ming-Yu},
+           giveni={M\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=214421d9f392d2112d38ea78fbe1bc0b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ting-Chun},
+           giveni={T\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c13077243208eadfd876137367c2645}
+      \strng{fullhash}{f5d07733d4316e2e64ed71c8eba02c5e}
+      \strng{bibnamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authorbibnamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authornamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authorfullhash}{f5d07733d4316e2e64ed71c8eba02c5e}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{CVPR 2019}
+      \field{title}{Semantic Image Synthesis with Spatially-Adaptive Normalization}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb arXiv:1903.07291
       \endverb
     \endentry
     \entry{pytorch}{manual}{}
@@ -1234,6 +1428,72 @@
       \endverb
       \verb{url}
       \verb https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html
+      \endverb
+    \endentry
+    \entry{runway}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=28c8bc7e58d3904e53f026a0fc9f67b3}{%
+           family={Valenzuela},
+           familyi={V\bibinitperiod},
+           given={Cristóbal},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{fullhash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{bibnamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authorbibnamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authornamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authorfullhash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Runway{ML}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://runwayml.com/
+      \endverb
+      \verb{url}
+      \verb https://runwayml.com/
+      \endverb
+    \endentry
+    \entry{1703.10593}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=b036e0ed5c21929ab46890b9a1033163}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taesung},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cae9f806bc99a5f19fadea538fc2db04}{%
+           family={Isola},
+           familyi={I\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{fullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
+      \strng{bibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authorbibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authornamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authorfullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb arXiv:1703.10593
       \endverb
     \endentry
   \enddatalist
