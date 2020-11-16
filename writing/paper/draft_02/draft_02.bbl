@@ -659,6 +659,38 @@
       \verb https://mimicproject.com/
       \endverb
     \endentry
+    \entry{google_background}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=e87504e52a90e259211d236115dbdfe9}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Tingbo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dd0f0e74f20b656b39eeeb77680df0f7}{%
+           family={Mullen},
+           familyi={M\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{fullhash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{bibnamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authorbibnamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authornamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authorfullhash}{288434459b9ca1116d867c4b5c80bea6}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Background Features in Google Meet, Powered by Web {ML}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://ai.googleblog.com/2020/10/background-features-in-google-meet.html
+      \endverb
+      \verb{url}
+      \verb https://ai.googleblog.com/2020/10/background-features-in-google-meet.html
+      \endverb
+    \endentry
     \entry{hard_to_train_gans}{article}{}
       \name{author}{1}{}{%
         {{hash=6cfb5d2608616bce21708f853f01106e}{%
@@ -923,6 +955,33 @@
       \verb http://caza.la/synaptic/
       \endverb
     \endentry
+    \entry{deep_dream_guy}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=227f3a2edcf8a761ddd01d28ab6f2302}{%
+           family={Mordvintsev},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{fullhash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{bibnamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authorbibnamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authornamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authorfullhash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Alexander Mordvintsev}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://znah.net/
+      \endverb
+      \verb{url}
+      \verb https://znah.net/
+      \endverb
+    \endentry
     \entry{2006.03669}{misc}{}
       \name{author}{1}{}{%
         {{hash=852ec700c9c73e35cab742f747f93fd4}{%
@@ -1148,6 +1207,33 @@
       \field{year}{2016}
       \verb{eprint}
       \verb arXiv:1606.03498
+      \endverb
+    \endentry
+    \entry{SIMD}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=69c442ebfaa4593fa18af4d52c54802a}{%
+           family={SIMD},
+           familyi={S\bibinitperiod},
+           given={WebAssembly},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{fullhash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{bibnamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authorbibnamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authornamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authorfullhash}{69c442ebfaa4593fa18af4d52c54802a}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WebAssembly {SIMD}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://v8.dev/features/simd
+      \endverb
+      \verb{url}
+      \verb https://v8.dev/features/simd
       \endverb
     \endentry
     \entry{tensorflow_playground}{manual}{}
@@ -1455,6 +1541,91 @@
       \endverb
       \verb{url}
       \verb https://runwayml.com/
+      \endverb
+    \endentry
+    \entry{webgpu}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=423b4d2bb624efeccdf9d81f359b548f}{%
+           family={Web\bibnamedelimb Community\bibnamedelima Group},
+           familyi={W\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={GPU},
+           giveni={G\bibinitperiod},
+           prefix={for\bibnamedelima the},
+           prefixi={f\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{fullhash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{bibnamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authorbibnamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authornamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authorfullhash}{423b4d2bb624efeccdf9d81f359b548f}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web{GPU}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://gpuweb.github.io/gpuweb/
+      \endverb
+      \verb{url}
+      \verb https://gpuweb.github.io/gpuweb/
+      \endverb
+    \endentry
+    \entry{webnn}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=16138db6058be48b703e46cd744fdf5b}{%
+           family={Web\bibnamedelimb Community\bibnamedelima Group},
+           familyi={W\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Machine\bibnamedelima Learning},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={for\bibnamedelima the},
+           prefixi={f\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{fullhash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{bibnamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authorbibnamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authornamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authorfullhash}{16138db6058be48b703e46cd744fdf5b}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web Neural Network {API}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://webmachinelearning.github.io/webnn/
+      \endverb
+      \verb{url}
+      \verb https://webmachinelearning.github.io/webnn/
+      \endverb
+    \endentry
+    \entry{XNNPACK}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=c04ebed52a50c18f049f433784d5c5f9}{%
+           family={XNNPACK},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{fullhash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{bibnamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authorbibnamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authornamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authorfullhash}{c04ebed52a50c18f049f433784d5c5f9}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{XNNPACK}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://github.com/google/XNNPACK
+      \endverb
+      \verb{url}
+      \verb https://github.com/google/XNNPACK
       \endverb
     \endentry
     \entry{1703.10593}{misc}{}
