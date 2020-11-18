@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CCI MSc Creative Computing Thesis Project Log
+shorttile: Josh Murr | MSc
 email: joshuadavidmurr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A more general project log documenting the progress of my thesis project.
@@ -23,9 +24,21 @@ twitter_username: joshmurr
 github_username:  joshmurr
 instagram_username: joshmurr
 
+defaults:
+  -
+    scope:
+      path: "assets/images/thumbnails"
+    values:
+      thumbnail: true
+  -
+    scope:
+      path: "assets/images/placeholders"
+    values:
+      image: true
+
 # Build settings
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 

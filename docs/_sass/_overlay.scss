@@ -1,0 +1,94 @@
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    font-family: $inconsolata, monospace;
+    font-size: 1.2em;
+    font-weight: 450;
+
+    .grid-container {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: grid;
+        grid-gap: 20px;
+        justify-items: center;
+        align-items: center;
+        @if $dev{
+            border: 2px solid red;
+        }
+
+
+        .items-container {
+            width: 100%;
+            // height: 100%;
+            padding: 10px;
+            @if $dev{
+                border: 2px solid blue;
+            }
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            // box-shadow: 0 0 10px 20px rgba(0,0,0, 0.3);
+
+            * {
+                margin: 10px;
+            }
+
+            #close, #demoTitle, #warning {
+                z-index: 4;
+                background-color: #CFC;
+                padding-left: 0.3em;
+                padding-right: 0.3em;
+                border-radius: 8px;
+            }
+
+            #close {
+                background-color: #FCC;
+                justify-self: left;
+                cursor: pointer;
+            }
+
+            #warning {
+                background-color: #E00;
+                h3 {
+                    font-size: smaller;
+                }
+                p{
+                    font-size: small;
+                }
+            }
+
+            canvas{
+                z-index: 10;
+            }
+        }
+
+        @media only screen and (min-width: $bigscreen) {
+            width: 600px;
+
+            .items-container {
+                width: 600px;
+                // height: 100%;
+                #warning {
+                    h3 {
+                        font-size: initial;
+                    }
+                    p{
+                        font-size: initial;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hide {
+    display: none;
+}

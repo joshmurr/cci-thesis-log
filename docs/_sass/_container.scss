@@ -1,0 +1,110 @@
+.container {
+    width: 100%;
+    @if $dev{
+        background: lightyellow;
+    }
+    font-family: $roboto, sans-serif;
+
+    p > code {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        background: #efefef;
+        border-radius: 8px;
+    }
+
+    pre {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        background: #efefef;
+        border-radius: 8px;
+        padding: 1em;
+
+        // code {
+            // No class
+            // color: white;
+        // }
+    }
+
+
+    .post-list li{
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-weight: 460;
+        }
+
+        a:hover{
+            background: #ccffcc;
+            border-radius: 8px;
+        }
+
+        // a:active{
+            // a link the moment it is clicked
+        // }
+
+        .meta{
+            display: none;
+        }
+        /* HIDE TAGS AND DATE */
+        @media only screen and (min-width: $bigscreen) {
+            .meta{
+                display: block;
+                width: 30%;
+                display: flex;
+                justify-content: space-between;
+                .tags{
+                    .post-tag{
+                        @if $dev{
+                            background: lightgreen;
+                        }
+                        margin-right:5px;
+                    }
+                }
+
+                .post-date{
+                    @if $dev{
+                        background: lightblue;
+                    }
+                }
+            }
+        }
+    }
+
+    .title-bar{
+        width: inherit;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .post {
+        display: grid;
+        grid-gap: 20px;
+        max-width: 700px;
+
+        ul {
+            list-style: '—';
+            list-style-position: outside !important;
+            margin-left: 3rem;
+        }
+
+        a{
+            background: #ffeeee;
+        }
+
+        a:hover{
+            background: #ffcccc;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+        iframe{
+            justify-self: center;
+        }
+    }
+}

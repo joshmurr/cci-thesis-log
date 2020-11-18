@@ -1,0 +1,41 @@
+---
+layout: default
+title: Project Log
+---
+{{ content }}
+
+{% assign posts = site.posts %}
+
+{%- if posts.size > 0 -%}
+{%- if page.list_title -%}
+<h2 class="post-list-heading">{{ page.list_title }}</h2>
+{%- endif -%}
+<ul class="post-list">
+    {%- assign date_format = "%d %b %Y" -%}
+    {%- for post in posts -%}
+    <li>
+        <!-- TITLE -->
+        <h3>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+            </a>
+        </h3>
+        
+        <div class="meta">
+            <div class="tags">
+                <!-- TAGS -->
+                {%- if post.categories -%}
+                    {%- for category in post.categories -%}
+                        <span class="post-tag">{{ category }}</span>
+                    {%- endfor -%}
+                {%- endif -%}
+            </div>
+
+            <!-- DATE -->
+            <span class="post-date">{{ post.date | date: date_format }}</span>
+        </div>
+    </li>
+    {%- endfor -%}
+</ul>
+
+{%- endif -%}

@@ -2,5 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 assets/images/unused
+assets/images/placeholders
 *.swp
 assets/gimp_ignore/

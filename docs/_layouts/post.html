@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+<div class="title-bar">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">{{ page.date | date: date_format }}</p>
+</div>
+
+<div class="post">
+    {{ content }}
+</div>

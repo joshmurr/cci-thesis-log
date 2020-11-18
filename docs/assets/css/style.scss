@@ -1,0 +1,87 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+{% if jekyll.environment == "development" %}
+    $dev: true;
+{% else %}
+    $dev: false;
+{% endif %}
+
+// Inconsolate VARIABLE
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+// Roboto Light 300 Italic, Regular 400, Bold 700
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+@font-face {
+    font-family: APL333;
+    src: url("{{ site.baseurl }}/assets/fonts/APL333.ttf");
+}
+
+$inconsolata: 'Inconsolata';
+$roboto: 'Roboto';
+$apl: 'APL333';
+// $aplmono: 'APL385';
+$smallscreen: 600px;
+$bigscreen: 800px;
+
+@import "nav";
+@import "container";
+@import "gallery";
+@import "overlay";
+// @import "monokai.css";
+@import "borland.css";
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+
+@media only screen and (min-width: $smallscreen) {
+    body {
+        flex-direction: row;
+    }
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $apl, $inconsolata, monospace;
+    font-weight: initial;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    border-radius: 8px;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+code {
+    font-family: $inconsolata, monospace;
+    font-weight: 350;
+    font-size: 0.9em;
+}
+

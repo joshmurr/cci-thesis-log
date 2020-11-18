@@ -1,0 +1,29 @@
+---
+layout: default
+title: Josh Murr
+---
+
+{% include overlay.html %}
+<div class="gallery">
+   {% if jekyll.environment == "development" %}
+       {% assign image_files = site.static_files | where: "placeholder", true %}
+   {% else %}
+       {% assign image_files = site.static_files | where: "thumbnail", true %}
+   {% endif %}
+
+   {% for img in image_files %}
+   <div class="entry">
+      <div class="thumbnail"
+        style="background-image: url({{ site.baseurl }}{{ img.path | escape }})"
+        name="{{ img.basename }}"
+        >
+      </div>
+     <div class="info">
+        <p>Some information</p>
+      </div>
+   </div>
+   {% endfor %}
+</div>
+
+<!-- <script charset="utf-8" src="{{ site.baseurl }}/assets/js/pointSphere/main.js"> </script> -->
+<!--<script charset="utf-8" src="{{ site.baseurl }}/dist/main.bundle.js"> </script>-->
