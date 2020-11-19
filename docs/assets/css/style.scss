@@ -44,13 +44,15 @@ html {
     margin: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
+.wrapper{
     margin: 20px;
-    width: calc(100% - 40px);
+    display: grid;
+    grid-template-columns: 0.6fr 4fr;
+    grid-auto-rows: 0.6fr;
+    gap: 10px 10px;
+    grid-template-areas:
+    "nav content"
 }
-
 
 @media only screen and (min-width: $smallscreen) {
     body {

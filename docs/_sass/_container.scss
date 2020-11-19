@@ -1,5 +1,6 @@
 .container {
     width: 100%;
+    grid-area: content;
     @if $dev{
         background: lightyellow;
     }

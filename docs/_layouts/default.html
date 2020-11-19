@@ -9,9 +9,11 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" type="text/css" media="all">
     </head>
     <body>
-        {% include nav.html %}
-        <div class="container">
-            {{ content }} 
+        <div class="wrapper">
+            {% include nav.html %}
+            <div class="container">
+                {{ content }} 
+            </div>
         </div>
     </body>
 </html>
