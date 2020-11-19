@@ -5,9 +5,12 @@ class TensorBox extends HTMLElement {
     const height = this.getAttribute('height');
     const depth = this.getAttribute('depth');
     const z = this.getAttribute('z');
+    const img_url = this.getAttribute('img');
 
     const rot = -30;
     const offset = (this.parentElement.getAttribute('height') - height) / 2;
+    const animate = this.parentElement.getAttribute('animate') === 'true';
+    const translation = `translate3d(0px, ${offset}px, -${(256-depth)/2}px)`;
 
     const template = document.createElement('template');
     template.innerHTML = `
@@ -20,24 +23,33 @@ class TensorBox extends HTMLElement {
           transform-style: preserve-3d;
           z-index: ${z};
           margin: 0 0.2px;
-          animation: oscillate 10s linear infinite;
+          transform: ${translation} rotate3d(1, 0, 0, ${rot}deg);
+          ${(animate ? 'animation: oscillate 10s linear infinite' : '')};
         }
         @keyframes oscillate {
-          0%   { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0, 0, ${rot}deg); }
-          25%  { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0.1, 0, ${rot+5}deg); }
-          75%  { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, -0.1, 0, ${rot-5}deg); }
-          100% { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0, 0, ${rot}deg); }
+          0%   { ${translation} rotate3d(1, 0, 0, ${rot}deg); }
+          25%  { transform: translate3d(0px, ${offset}px, -${(256-depth)/2}px) rotate3d(1, 0.1, 0, ${rot+5}deg); }
+          75%  { transform: translate3d(0px, ${offset}px, -${(256-depth)/2}px) rotate3d(1, -0.1, 0, ${rot-5}deg); }
+          100% { transform: translate3d(0px, ${offset}px, -${(256-depth)/2}px) rotate3d(1, 0, 0, ${rot}deg); }
         }
         .box-face{
           text-align: center;
-          line-height: 200px;
           font-family: sans-serif;
-          color: white;
           position: absolute;
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
           outline: 1px solid transparent; /* anti-aliasing workaround */
         }
+				.box-face > p{
+					margin: 0;
+					padding: 0;
+					font-size: ${8}px;
+          color: black;
+          line-height: ${width}px;
+					margin-top: ${height}px;
+          padding: 3px;
+          writing-mode: vertical-rl; 
+			  }
         .front, .back {
           width: ${width}px;
           height: ${height}px;
@@ -70,17 +82,36 @@ class TensorBox extends HTMLElement {
         .top    { transform: rotateX( 90deg) translateZ(${height/2}px); }
         .bottom { transform: rotateX(-90deg) translateZ(${height/2}px); }
 
+        .top {
+          background-image: url(${img_url});
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+
         .box:unresolved {
           opacity: 0;
         }
       </style>
       <div class="box">
-        <div class="box-face front"><slot name="front-text"></slot></div>
-        <div class="box-face back"><slot name="back-text"></slot></div>
-        <div class="box-face right"><slot name="right-text"></slot></div>
-        <div class="box-face left"><slot name="left-text"></slot></div>
-        <div class="box-face top"><slot name="top-text"></slot></div>
-        <div class="box-face bottom"><slot name="bottom-text"></slot></div>
+        <div class="box-face front">
+          <p><slot name="front-text">${depth}x${width}x${height}</slot></p>
+        </div>
+        <div class="box-face back">
+          <p></p><slot name="back-text"></slot></p>
+        </div>
+        <div class="box-face right">
+          <slot name="right-text"></slot>
+        </div>
+        <div class="box-face left">
+          <slot name="left-text"></slot>
+        </div>
+        <div class="box-face top">
+          <p><slot name="top-text"></slot></p>
+        </div>
+        <div class="box-face bottom">
+          <slot name="bottom-text"></slot>
+        </div>
       </div>
     `;
 
@@ -92,12 +123,12 @@ class TensorBox extends HTMLElement {
   }
 }
 
-class CompGraph extends HTMLElement {
+class TensorGraph extends HTMLElement {
   constructor() {
     super();
-    //const width = this.getAttribute('width');
     const height = this.getAttribute('height');
     const perspective = this.getAttribute('perspective');
+    const animate = this.getAttribute('animate');
 
     const template = document.createElement('template');
     template.innerHTML = `
@@ -106,12 +137,11 @@ class CompGraph extends HTMLElement {
           display: block;
           position: relative;
           text-align: center;
-          width: 100%;
           height: ${height}px;
           perspective: ${perspective}px;
 				}
       </style>
-			<slot>DEAFULT</slot>
+			<slot>DEFAULT</slot>
     `;
     const shadow = this.attachShadow({mode: 'open'})
     this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -119,4 +149,4 @@ class CompGraph extends HTMLElement {
 }
 
 customElements.define('tensor-box', TensorBox);
-customElements.define('comp-graph', CompGraph);
+customElements.define('tensor-graph', TensorGraph);

@@ -16,6 +16,7 @@ Following up on the previous post, I tried out what probably should have been my
 The initial `conv2D` layer in the original _pix2pix_ model starts with 64 filters in the first layer of the generator (the encoder half), and then proceeds to double the number of filters maxing out at 512. At the middle layer the model then begins to _decode_ and halves the number of filters down to 64 again, mirroring the encoder half. This results in __<u>52,476,931</u> total parameters__. We can scales those numbers down by a reasonable order of magnitude resulting in the following structure:
 
 ![New Pix2Pix Comp Graph]({{ site.baseurl }}/assets/images/smaller_model/pix2pix_smaller_comp_graph.png)
+{: .full-width}
 
 Excuse my bad mouse-handwriting and the fact I just mirrored the top half for the bottom... But you can see visually that the number of parameters is greatly reduced compared to the original. This model starts with jutst 8 filters at the first layer and then follows the same pattern as before: double each layer up to 512 filters and then halving back to 8. This results in __<u>16,786,211</u> total parameters__ thus __shrinking the model by approximately a third__. This speeds the performance of the model up in the browser significantly and also shows off the benefit of the WebGL based output. The average (rough) FPS output using the TensorflowJS `toPixels()` method is around __20fps__, while the average (rough) FPS when output via WebGL is around __28fps__, sometimes reaching __35fps__.
 

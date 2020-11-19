@@ -22,9 +22,9 @@
 $inconsolata: 'Inconsolata';
 $roboto: 'Roboto';
 $apl: 'APL333';
-// $aplmono: 'APL385';
+$aplmono: 'APL385';
 $smallscreen: 600px;
-$bigscreen: 800px;
+$bigscreen: 1100px;
 
 @import "nav";
 @import "container";
@@ -36,6 +36,7 @@ $bigscreen: 800px;
 
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 *, *:before, *:after{
@@ -52,13 +53,7 @@ html {
     grid-auto-rows: 0.6fr;
     gap: 10px 10px;
     grid-template-areas:
-    "nav content"
-}
-
-@media only screen and (min-width: $smallscreen) {
-    body {
-        flex-direction: row;
-    }
+     "nav content"
 }
 
 h1, h2, h3, h4, h5, h6{

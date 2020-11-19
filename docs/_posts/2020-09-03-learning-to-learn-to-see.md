@@ -13,6 +13,7 @@ _Learning to See_ by Memo Akten has always been one of my favourite pieces of ar
 _Learning to See_ is based the the [pix2pix][p2p] model which is an image-to-image translation model which trains on pairs of images, learning to translate one input image into a desired output. It has proven itself to be very flexible and has been used in many applications:
 
 ![pix2pix Applications](https://phillipi.github.io/pix2pix/images/teaser_v3.jpg)
+{: .full-width}
 
 The architecture of the _pix2pix_ model is very well described by [Christopher Hesse](https://twitter.com/christophrhesse) [here](https://affinelayer.com/pix2pix/) and he also produced this block diagram of the model (here depicting an image-colourisation application of the model):
 
@@ -21,6 +22,7 @@ The architecture of the _pix2pix_ model is very well described by [Christopher H
 Given the broad uses of the model it is very well documented online and the official [Tensorflow write-up](https://www.tensorflow.org/tutorials/generative/pix2pix) is very good. So that's where I started. This is the 'hello world' output of the model - translating coloured blocks into building facades:
 
 ![Facades]({{site.baseurl}}/assets/images/lts/pix2pix_building.png)
+{: .full-width}
 
 The [paper][lts-paper] which accompanies the artworks reveals the details of how their particular model was trained:
 
@@ -54,11 +56,14 @@ The last image is the fully trained model, and I thought the output was rather h
 After this is was actually fairly simple to process video in the same way and run the frames of the video through the model. The batch of images are without preprocessing and the latter are with preprocessing:
 
 ![Webcam no Preprocessing]({{site.baseurl}}/assets/images/lts/v1_webcam.png)
+{: .full-width}
 ![Webcam with Preprocessing]({{site.baseurl}}/assets/images/lts/v1_webcam_preprocess.png)
+{: .full-width}
 
 The outcome was a little disappointing. The output from the actual _Learning to See_ model seems to be able to react to forms a lot more deliberately to produce forms which are recognisable as waves, or nebulae, or flowers; whereas mine makes flower-y colours/shapes/textures but struggles to make __a flower__.
 
 ![LTS Paper Example]({{site.baseurl}}/assets/images/lts/paper_flowers.png)
+{: .full-width}
 
 This could be down to a lot of things:
 

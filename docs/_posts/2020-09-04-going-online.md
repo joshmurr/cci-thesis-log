@@ -95,10 +95,12 @@ I've spent a fair amount of time scrubbing through the stack trace ([and you can
 Below is the stack trace for the __`toPixels()` method__ of rendering which takes about __259ms__:
 
 [![toPixels()]({{ site.baseurl }}/assets/images/web-model-loader/topixels_method_writing.png)]({{ site.baseurl }}/assets/images/web-model-loader/topixels_method_writing.png)
+{: .full-width}
 
 Where is says _Read data from somewhere..._ the function call comes from a [`MathBackendWebGL`](https://github.com/tensorflow/tfjs/blob/12c4bbf642186bae417234b3b7d8ccf40abe3d10/tfjs-backend-webgl/src/backend_webgl.ts#L200) object which `read()`'s data from a data texture, hence the WebGL API call to `getBufferSubData()`. I am not sure if this long stretch of time is the JS engine catching up on a bunch of callback, as the `read()` function itself is an `async` function. The image below filters for that `read()` function, and you can see it appears a few times when the model is running:
 
 [![Calls to read()]({{ site.baseurl }}/assets/images/web-model-loader/read_calls.png)]({{ site.baseurl }}/assets/images/web-model-loader/read_calls.png)
+{: .full-width}
 
 Either way I _do_ know that that is a costly WebGL API call and so it's not surprising it is a time-hog. For those curious, here is the function which actually does the data fetch, called asyncronously from `MathBackendWebGL.read()`:
 
@@ -116,6 +118,7 @@ function downloadFloat32MatrixFromBuffer(gl, buffer, size) {
 Below is the stack trace for the __WebGL output method__ which takes about __194ms__:
 
 [![WebGL rendering]({{ site.baseurl }}/assets/images/web-model-loader/webgl_method_writing.png)]({{ site.baseurl }}/assets/images/web-model-loader/webgl_method_writing.png)
+{: .full-width}
 
 You can see the stack trace is generally quite different; far fewer Javascript function calls, and a lot more work coming from the graphics engine (green bars). Generally this should be a good thing, but it's also quite clear that it is still a fair amount of time consumed by the graphics engine. Perhaps this is because of the time it takes to get the data into the shader program, run it and then connect to the canvas as output.. I'm not too sure.
 
@@ -132,6 +135,7 @@ But this isn't at all surprising when you actually inspect the model. Here is th
 If you look at the __Param #__ column, you'll see that the majority of the trainable parameters are in the inner layers. This was a bit of a _'ooooh I think I get how CNNs actually work now'_ kinda moment for me. The graphic which accompanies the article about Pix2Pix on [AffineLayer](https://affinelayer.com/pix2pix/) helps explain furthur:
 
 ![Affine Layer Pix2Pix Structure Diagram]({{ site.baseurl }}/assets/images/web-model-loader/affinelayer_pix2pix.png)
+{: .full-width}
 
 As the data is reshaped as it moves through the encoder/decoder (which is the generator), the depth of each tensor corresponds to the number of filters of the previous layer. And each filter must have the same depth of the incoming tensor. So the number of trainable parameters (the weights in the convolutional kernals) compounds as the tensors are reshaped from layer to layer.
 
