@@ -6,7 +6,7 @@ class TensorBox extends HTMLElement {
     const depth = this.getAttribute('depth');
     const z = this.getAttribute('z');
 
-    const yRotation = 30;
+    const rot = -30;
     const offset = (this.parentElement.getAttribute('height') - height) / 2;
 
     const template = document.createElement('template');
@@ -19,14 +19,14 @@ class TensorBox extends HTMLElement {
           float: left;
           transform-style: preserve-3d;
           z-index: ${z};
-          margin: 0.5px;
-          transform: translate3d(${-150}px, ${offset}px, -${500+(256-depth)/2}px) rotateX(${yRotation}deg);
+          margin: 0 0.2px;
+          animation: oscillate 10s linear infinite;
         }
-        @keyframes spinning {
-          0%   { transform: translateZ(-${depth/2}px) rotateX(  0deg); }
-          20%  { transform: translateZ(-${depth/2}px) rotateX( 10deg); }
-          80%  { transform: translateZ(-${depth/2}px) rotateX(-10deg); }
-          100% { transform: translateZ(-${depth/2}px) rotateX(  0deg); }
+        @keyframes oscillate {
+          0%   { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0, 0, ${rot}deg); }
+          25%  { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0.1, 0, ${rot+5}deg); }
+          75%  { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, -0.1, 0, ${rot-5}deg); }
+          100% { transform: translate3d(0px, ${offset}px, -${256-depth/2}px) rotate3d(1, 0, 0, ${rot}deg); }
         }
         .box-face{
           text-align: center;
@@ -35,6 +35,8 @@ class TensorBox extends HTMLElement {
           color: white;
           position: absolute;
           backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          outline: 1px solid transparent; /* anti-aliasing workaround */
         }
         .front, .back {
           width: ${width}px;
@@ -93,7 +95,7 @@ class TensorBox extends HTMLElement {
 class CompGraph extends HTMLElement {
   constructor() {
     super();
-    const width = this.getAttribute('width');
+    //const width = this.getAttribute('width');
     const height = this.getAttribute('height');
     const perspective = this.getAttribute('perspective');
 
@@ -104,10 +106,9 @@ class CompGraph extends HTMLElement {
           display: block;
           position: relative;
           text-align: center;
-          border: 1px solid black;
+          width: 100%;
           height: ${height}px;
           perspective: ${perspective}px;
-
 				}
       </style>
 			<slot>DEAFULT</slot>

@@ -1,6 +1,7 @@
 .container {
     width: 100%;
     grid-area: content;
+
     @if $dev{
         background: lightyellow;
     }
@@ -26,10 +27,14 @@
         // }
     }
 
-
     .post-list li{
         display: flex;
         justify-content: space-between;
+        width: 100%;
+
+        h3 {
+            width: 60%;
+        }
 
         a {
             font-weight: 460;
@@ -40,21 +45,17 @@
             border-radius: 8px;
         }
 
-        // a:active{
-            // a link the moment it is clicked
-        // }
-
         .meta{
             display: none;
         }
         /* HIDE TAGS AND DATE */
         @media only screen and (min-width: $bigscreen) {
             .meta{
-                display: block;
-                width: 30%;
+                width: 40%;
                 display: flex;
                 justify-content: space-between;
                 .tags{
+                    color: gray;
                     .post-tag{
                         @if $dev{
                             background: lightgreen;
@@ -72,17 +73,15 @@
         }
     }
 
-    .title-bar{
-        width: inherit;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
     .post {
         display: grid;
-        grid-gap: 20px;
-        max-width: 700px;
+        grid-template-columns: 1fr 4fr 1fr;
+        width: 100%;
+        gap: 1.8rem 0;
+
+        * {
+            grid-column: 2;
+        }
 
         ul {
             list-style: '—';
@@ -107,5 +106,10 @@
         iframe{
             justify-self: center;
         }
+        comp-graph {
+            grid-column: 1 / -1;
+        }
+
+
     }
 }

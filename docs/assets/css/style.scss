@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: APL333;
-    src: url("{{ site.baseurl }}/assets/fonts/APL333.ttf");
+    width: 100%;
 }
 
 $inconsolata: 'Inconsolata';
@@ -47,7 +47,8 @@ html {
 .wrapper{
     margin: 20px;
     display: grid;
-    grid-template-columns: 0.6fr 4fr;
+    max-width: 1200px;
+    grid-template-columns: 1fr 9fr;
     grid-auto-rows: 0.6fr;
     gap: 10px 10px;
     grid-template-areas:
