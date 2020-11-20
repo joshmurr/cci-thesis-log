@@ -11,18 +11,19 @@ title: Josh Murr
        {% assign image_files = site.static_files | where: "thumbnail", true %}
    {% endif %}
 
-   {% for img in image_files %}
-   <div class="entry">
-      <div class="thumbnail"
-        style="background-image: url({{ site.baseurl }}{{ img.path | escape }})"
-        name="{{ img.basename }}"
-        >
-      </div>
-     <div class="info">
-        <p>Some information</p>
-      </div>
-   </div>
+   {% for item in site.gallery %}
+	 <div class="entry">
+			<div class="thumbnail"
+				style="background-image: url({{ site.baseurl }}/assets/images/thumbnails/{{ item.img }});"
+				></div>
+			<div class="info">
+				 <h2>{{ item.title }}</h2>
+				 <p>{{ item.content }}</p>
+				 <a href="{{ item.link }}"> </a>
+			</div>
+	 </div>
    {% endfor %}
+
 </div>
 
 <!-- <script charset="utf-8" src="{{ site.baseurl }}/assets/js/pointSphere/main.js"> </script> -->

@@ -30,24 +30,37 @@
 }
 
 .entry {
+    position: relative;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: minmax(10rem, 12rem) 4fr;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 30px 0 rgba(0, 0, 0, 0.19);
 
     .thumbnail{
-        grid-column: 1 / 1;
-        border-radius: 10px 0 0 10px;
-        background-color: lightgrey;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 30px 0 rgba(0, 0, 0, 0.19);
+      grid-column: 1 / 1;
+      background-color: lightgrey;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
 
     .info {
-        grid-column: 2 / 2;
+      grid-column: 2 / 2;
+      margin: 20px;
+      h2 {
+        margin-bottom: 10px;
+      }
     }
 
-
+    a {
+      position: absolute;
+      display: block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-indent: -9999px;
+      z-index: 1000;
+    }
 }

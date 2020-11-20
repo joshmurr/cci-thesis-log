@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: APL333;
-    width: 100%;
+    src: url("{{ site.baseurl }}/assets/fonts/APL333.ttf");
 }
 
 $inconsolata: 'Inconsolata';
