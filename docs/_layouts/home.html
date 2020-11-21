@@ -19,7 +19,14 @@ title: Josh Murr
 			<div class="info">
 				 <h2>{{ item.title }}</h2>
 				 <p>{{ item.content }}</p>
-				 <a href="{{ item.link }}"> </a>
+				 <div class="buttons">
+					 {% if item.link %}
+					 <a href="{{ item.link }}"><button class="project">Project</button></a>
+					 {% endif %}
+					 {% if item.code %}
+					 <a href="{{ item.code }}"><button class="code">Code</button></a>
+					 {% endif %}
+				 </div>
 			</div>
 	 </div>
    {% endfor %}

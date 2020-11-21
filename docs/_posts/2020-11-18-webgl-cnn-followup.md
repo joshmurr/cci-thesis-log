@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "WebGL CNN Followup"
-date:   2020-11-18 23:48:36 +0000
+date:   2020-11-21 21:48:36 +0000
 categories: webgl cnn
 ---
 
 The previous post on this topic was about _how_ it works and _how_ I implemented it in GLSL. I should probably talk a bit more about _why_ I did it and _why_ it might be useful in the future. But first, a little more _how_...
 
-> TL;DR: It turns out not to be as ground-breakingly fast as I hoped it would be.
+> TL;DR: It turns out not to be as ground-breakingly fast as I hoped it would be, _but_ I think there is a future for all this work.
 
 ## Overview
 
@@ -146,7 +146,7 @@ They're the same! Give or take a few milliseconds I'm sure.. So! I don't think t
 
 The model described right at the top is a pretty simple little autoencoder model. Similar models are often used in Autoencoder tutorials. So I implemented the equivalent model in PyTorch and trained it for a few epochs on the [Fashion-MNIST](https://github.com/zalandoresearch/fashion-mnist) dataset.
 
-PyTorch makes the model layer and layer weights quite accessible. The trickt part is reshaping the data in a compatible format with the WebGL CNN (which of course has all data in 2D textures). I wasted a fair amount of time on silly methods, but turns out PyTorch has a very nifty function called `make_grid` which lays data out exactly as I want it.
+PyTorch makes the model layer and layer weights quite accessible. The tricky part is reshaping the data in a compatible format with the WebGL CNN (which of course has all data in 2D textures). I wasted a fair amount of time on silly methods, but turns out PyTorch has a very nifty function called `make_grid` which lays data out exactly as I want it.
 
 The image below shows the helper functions I made to get the filters out the model in the right format:
 
