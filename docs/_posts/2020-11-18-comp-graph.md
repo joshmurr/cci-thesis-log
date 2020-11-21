@@ -107,7 +107,7 @@ I won't go into it in any detail, but you get the idea. I've omitted a lot of st
 
 {% include img_graph.html %}
 
-I don't think they're particularly performant, if you put too many on a page it slows down.. Even this page is feeling it a bit, but a fun experiment in CSS non-the-less!
+They're not particularly performant, if you put too many on a page it struggles.. This page is certainly feeling it, but a fun experiment in CSS non-the-less!
 
 
 <script src="{{ site.baseurl }}/assets/js/comp_graph.js"></script>

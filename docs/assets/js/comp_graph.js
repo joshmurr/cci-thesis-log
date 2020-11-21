@@ -7,6 +7,8 @@ class TensorBox extends HTMLElement {
     const z = this.getAttribute('z');
     const img_url = this.getAttribute('img');
 
+    console.log(img_url);
+
     const rot = -30;
     const offset = (this.parentElement.getAttribute('height') - height) / 2;
     const animate = this.parentElement.getAttribute('animate') === 'true';
@@ -50,7 +52,7 @@ class TensorBox extends HTMLElement {
           padding: 3px;
           writing-mode: vertical-rl; 
 			  }
-        .front, .back {
+        .front {
           width: ${width}px;
           height: ${height}px;
         }
@@ -61,26 +63,20 @@ class TensorBox extends HTMLElement {
           left: ${(width-depth) / 2}px;
         }
 
-        .top, .bottom {
+        .top {
           width: ${width}px;
           height: ${depth}px;
           top: ${(height - depth) / 2}px;
         }
         .front  { background: hsla(  0, 100%, 50%, 0.7); }
-        .back   { background: hsla( 60, 100%, 50%, 0.7); }
         .right  { background: hsla(120, 100%, 50%, 0.7); }
         .left   { background: hsla(180, 100%, 50%, 0.7); }
         .top    { background: hsla(240, 100%, 50%, 0.7); }
-        .bottom { background: hsla(300, 100%, 50%, 0.7); }
 
         .front  { transform: rotateY(  0deg) translateZ(${depth/2}px); }
-        .back   { transform: rotateY(180deg) translateZ(${depth/2}px); }
-
         .right  { transform: rotateY( 90deg) translateZ(${width/2}px); }
         .left   { transform: rotateY(-90deg) translateZ(${width/2}px); }
-
         .top    { transform: rotateX( 90deg) translateZ(${height/2}px); }
-        .bottom { transform: rotateX(-90deg) translateZ(${height/2}px); }
 
         .top {
           background-image: url(${img_url});
@@ -97,21 +93,9 @@ class TensorBox extends HTMLElement {
         <div class="box-face front">
           <p><slot name="front-text">${depth}x${width}x${height}</slot></p>
         </div>
-        <div class="box-face back">
-          <p></p><slot name="back-text"></slot></p>
-        </div>
-        <div class="box-face right">
-          <slot name="right-text"></slot>
-        </div>
-        <div class="box-face left">
-          <slot name="left-text"></slot>
-        </div>
-        <div class="box-face top">
-          <p><slot name="top-text"></slot></p>
-        </div>
-        <div class="box-face bottom">
-          <slot name="bottom-text"></slot>
-        </div>
+        <div class="box-face right"> </div>
+        <div class="box-face left"> </div>
+        <div class="box-face top"> </div>
       </div>
     `;
 
