@@ -111,6 +111,13 @@ max-width: 100%;
 								overflow-x: auto;
 								max-width: $smallscreen;
 						}
+						blockquote {
+								font-size: small;
+								margin: auto;
+								padding: 1em;
+								background: #eee;
+								border-radius: 8px;
+						}
             tensor-graph {
               grid-column: 1 / -1;
 							margin: 2rem auto;

@@ -105,7 +105,7 @@ I won't go into it in any detail, but you get the idea. I've omitted a lot of st
 
  This is how the images are passed into the element and then used as backgrounds for the top face `<div>`s. The `<slot>` in where the `TensorBox`'s go when placed inside the parent `TensorGraph`. As it's all CSS you can apply CSS animations which is how they're endlessly oscillating.
 
-{% include big_graph.html %}
+{% include img_graph.html %}
 
 I don't think they're particularly performant, if you put too many on a page it slows down.. Even this page is feeling it a bit, but a fun experiment in CSS non-the-less!
 
