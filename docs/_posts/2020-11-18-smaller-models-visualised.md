@@ -5,7 +5,7 @@ date:   2020-11-18 20:08:36 +0000
 categories: css tensors
 ---
 
-The [smaller model structure]({% link _posts/2020-10-27-smaller-models.md %}) became breakthrough of getting _Learning to See_ [online][lts] and functional. While developing the [WebGL CNN][webglcnn] I was constantly drawing representations of models and I really found the value in the diagrams you commonly see in ML papers:
+The smaller model structure became breakthrough of getting _Learning to See_ [online][lts] and functional. While developing the [WebGL CNN][webglcnn] I was constantly drawing representations of models and I really found the value in the diagrams you commonly see in ML papers:
 
 ![Google Visualisation](https://1.bp.blogspot.com/-sZkqU-oe8Tg/X5s7bLt_7fI/AAAAAAAAGwA/J4gINsbIQO4_ElyD5fMB25awZnFC5yeowCLcBGAsYHQ/s16000/image10%2B%25281%2529.jpg)
 
