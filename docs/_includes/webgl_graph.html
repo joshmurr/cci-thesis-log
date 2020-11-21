@@ -1,0 +1,27 @@
+<tensor-graph height=650 perspective=1000 scale=3 animate=true>
+	<tensor-box height=3   depth=32 width=32 z=1
+	  img="{{ site.baseurl }}/assets/images/webgl_followup/input.jpg"
+	 >
+		<p slot="front-text">32x32x3</p> 
+	</tensor-box>
+	<tensor-box height=64   depth=16 width=16 z=2 
+	  img="{{ site.baseurl }}/assets/images/webgl_followup/l1.jpg"
+	>
+		<p slot="front-text">16x16x8</p> 
+	</tensor-box>
+	<tensor-box height=256  depth=8  width=8  z=3  
+	  img="{{ site.baseurl }}/assets/images/webgl_followup/l2.jpg"
+	>
+		<p slot="front-text">8x8x16</p> 
+	</tensor-box>
+	<tensor-box height=64   depth=16 width=16 z=2  
+	  img="{{ site.baseurl }}/assets/images/webgl_followup/l3.jpg"
+	>
+		<p slot="front-text">16x16x8</p> 
+	</tensor-box>
+	<tensor-box height=3   depth=32 width=32 z=1  
+	  img="{{ site.baseurl }}/assets/images/webgl_followup/output.jpg"
+	>
+		<p slot="front-text">32x32x3</p> 
+	</tensor-box>
+</tensor-graph>

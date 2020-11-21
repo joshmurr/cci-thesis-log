@@ -1,18 +1,20 @@
 class TensorBox extends HTMLElement {
   constructor() {
     super();
-    const width = this.getAttribute('width');
-    const height = this.getAttribute('height');
-    const depth = this.getAttribute('depth');
+    const scale = this.parentElement.getAttribute('scale') || 1;
+
+    const width = this.getAttribute('width') * scale;
+    const height = this.getAttribute('height') * scale;
+    const depth = this.getAttribute('depth') * scale;
     const z = this.getAttribute('z');
     const img_url = this.getAttribute('img');
-
-    console.log(img_url);
 
     const rot = -30;
     const offset = (this.parentElement.getAttribute('height') - height) / 2;
     const animate = this.parentElement.getAttribute('animate') === 'true';
     const translation = `translate3d(0px, ${offset}px, -${(256-depth)/2}px)`;
+
+    const colour = Math.floor(1/width + 1/height + 1/depth * 360 * scale);
 
     const template = document.createElement('template');
     template.innerHTML = `
@@ -68,10 +70,10 @@ class TensorBox extends HTMLElement {
           height: ${depth}px;
           top: ${(height - depth) / 2}px;
         }
-        .front  { background: hsla(  0, 100%, 50%, 0.7); }
-        .right  { background: hsla(120, 100%, 50%, 0.7); }
-        .left   { background: hsla(180, 100%, 50%, 0.7); }
-        .top    { background: hsla(240, 100%, 50%, 0.7); }
+        .front  { background: hsla(${colour}, 100%, 50%, 0.7); }
+        .right  { background: hsla(${colour}, 100%, 50%, 0.7); }
+        .left   { background: hsla(${colour}, 100%, 50%, 0.7); }
+        .top    { background: hsla(${colour}, 100%, 50%, 0.7); }
 
         .front  { transform: rotateY(  0deg) translateZ(${depth/2}px); }
         .right  { transform: rotateY( 90deg) translateZ(${width/2}px); }
@@ -95,7 +97,9 @@ class TensorBox extends HTMLElement {
         </div>
         <div class="box-face right"> </div>
         <div class="box-face left"> </div>
-        <div class="box-face top"> </div>
+        <div class="box-face top">
+          <p><slot name="top-text"></slot></p>
+        </div>
       </div>
     `;
 

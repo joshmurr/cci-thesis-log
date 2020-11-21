@@ -1,0 +1,7 @@
+<tensor-graph height=400 perspective=1000 animate=false>
+	<tensor-box height=3   depth=256 width=256 z=1 > </tensor-box>
+	<tensor-box height=8   depth=128 width=128 z=2 ></tensor-box>
+	<tensor-box height=16  depth=64  width=64  z=3 ></tensor-box>
+	<tensor-box height=8   depth=128 width=128 z=2 ></tensor-box>
+	<tensor-box height=3   depth=256 width=256 z=1 ></tensor-box>
+</tensor-graph>

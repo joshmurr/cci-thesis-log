@@ -53,7 +53,8 @@ html {
     grid-auto-rows: 0.6fr;
     gap: 10px 10px;
     grid-template-areas:
-     "nav content"
+     "nav content";
+    padding-bottom: 300px;
 }
 
 h1, h2, h3, h4, h5, h6{
