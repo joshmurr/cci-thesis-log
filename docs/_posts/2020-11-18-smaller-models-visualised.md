@@ -9,6 +9,8 @@ The [smaller model structure]({% link _posts/2020-10-27-smaller-models.md %}) be
 
 ![Google Visualisation](https://1.bp.blogspot.com/-sZkqU-oe8Tg/X5s7bLt_7fI/AAAAAAAAGwA/J4gINsbIQO4_ElyD5fMB25awZnFC5yeowCLcBGAsYHQ/s16000/image10%2B%25281%2529.jpg)
 
+![Sketchbook]({{ site.baseurl }}/assets/images/css_graphs/sketch.jpg)
+
 > _Source:_ [Background Features in Google Meet, Powered by Web ML](https://ai.googleblog.com/2020/10/background-features-in-google-meet.html)
 
 Thus I felt visualising the size of the model itself is a valuable thing to do to help gain an intuition of how hefty the model it is, and what this will ultimately mean for performance (in all senses of the word: ability to generalise, liklihood of overfitting, size in memory, inference running time, etc.).
