@@ -1,0 +1,18 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-3}{}{\numberline {1}{\ignorespaces The online platform running the largest model trained on the \textit  {102 Category Flower Dataset}\cite {flowers_dataset} for 250 epochs.\relax }}}{}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-10001}{QQ2-1-1}{Introduction}}{7}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-1002}{}{\numberline {2}{\ignorespaces A frame from Learning to See using a model trained on ocean waves. --- \copyright  Memo Akten,2017\relax }}}{}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-20002}{QQ2-1-2}{Background Context}}{10}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-30003}{QQ2-1-3}{Method}}{11}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-3002}{}{\numberline {3}{\ignorespaces The output of a `large' model trained on the \textit  {102 Category Flower Dataset}\cite {flowers_dataset} for 250 epochs.\relax }}}{}\relax 
+\doTocEntry\toclot{}{\csname a:TocLink\endcsname{1}{x1-3004}{}{\numberline {1}{\ignorespaces Number of filters per layer in the generator. TODO: Replace table with graphic of model architecture, showing difference between model sizes.\relax }}}{}\relax 
+\doTocEntry\tocsection{4}{\csname a:TocLink\endcsname{1}{x1-40004}{QQ2-1-4}{Results}}{18}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-4008}{}{\numberline {4}{\ignorespaces The large model in use running on an NVIDIA RTX 2070.\relax }}}{}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-4010}{}{\numberline {5}{\ignorespaces A medium model trained for 200 epochs on the \textit  {102 Category Flower Dataset}\cite {flowers_dataset} showing artefacts of the inner filters, perhaps evidence of overfitting given the smaller model size.\relax }}}{}\relax 
+\doTocEntry\toclof{}{\csname a:TocLink\endcsname{1}{x1-4016}{}{\numberline {6}{\ignorespaces Small model trained on images of Aurora Boreals (left), medium model trained on images of clouds (right).\relax }}}{}\relax 
+\doTocEntry\tocsection{5}{\csname a:TocLink\endcsname{1}{x1-50005}{QQ2-1-5}{Discussion}}{28}\relax 
+\doTocEntry\tocsection{6}{\csname a:TocLink\endcsname{1}{x1-60006}{QQ2-1-6}{Conclusion}}{28}\relax 
+\doTocEntry\tocsection{}{\csname a:TocLink\endcsname{1}{x1-70006}{QQ2-1-7}{References}}{29}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-80006}{QQ2-1-8}{Appendices}}{33}\relax 
+\doTocEntry\tocsection{A}{\csname a:TocLink\endcsname{1}{x1-9000A}{QQ2-1-9}{Training Process}}{33}\relax 
+\doTocEntry\tocsection{B}{\csname a:TocLink\endcsname{1}{x1-10000B}{QQ2-1-10}{WebGL CNN}}{33}\relax 

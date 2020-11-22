@@ -1,0 +1,1693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Rethinking Model Architecture and Means of Delivery to get Video Interaction withGenerative Neural Networks Online</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="draft_02.tex"> 
+<link rel="stylesheet" type="text/css" href="draft_02.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+
+<h2 class="titleHead">Rethinking Model Architecture and Means of Deliveryto get Video Interaction with Generative Neural
+Networks Online</h2>
+ <div class="author" ><span 
+class="cmr-12">Josh Murr</span></div><br />
+<div class="date" ><span 
+class="cmr-12">November 16, 2020</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 42--><p class="noindent" >
+<!--l. 42--><p class="noindent" ><span 
+class="cmbx-9">Abstract</span></div>
+     <!--l. 44--><p class="indent" >    <span 
+class="cmr-9">The lines between scientific researcher and artist are continually being blurred</span>
+     <span 
+class="cmr-9">as artists adopt machine learning methods[</span><a id="page."></a><a 
+href="draft_02.html#X0-anna_ridler" ><span 
+class="cmr-9">30</span></a><span 
+class="cmr-9">], or researchers apply their tools</span>
+     <span 
+class="cmr-9">in  novel  and  interesting  ways[</span><a 
+href="draft_02.html#X0-deep_dream_guy" ><span 
+class="cmr-9">26</span></a><span 
+class="cmr-9">]  rethinking  how  cutting-edge  research  can  be</span>
+     <span 
+class="cmr-9">applied  to  create  image  generation  tools  or  interrogate  the  tools  themselves.</span>
+     <span 
+class="cmti-9">Learning  to  See  </span><span 
+class="cmr-9">by  Memo  Akten[</span><a 
+href="draft_02.html#X0-lts_memo" ><span 
+class="cmr-9">1</span></a><span 
+class="cmr-9">]  is  one  such  seminal  artwork  which  does</span>
+     <span 
+class="cmr-9">both.  Reframing  the  tools  which  we  are  in  fact  living  with  day-to-day  in  the</span>
+     <span 
+class="cmr-9">context  of  the  gallery  provides  an  opportunity  to  think  deeper  about  how  a</span>
+     <span 
+class="cmr-9">neural network interprets the data it is given and to witness the capabilities and</span>
+     <span 
+class="cmr-9">limitations of such a system. </span><span 
+class="cmti-9">Learning to See </span><span 
+class="cmr-9">in particular has a uniquely simple</span>
+     <span 
+class="cmr-9">interaction allowing the visitor to play with the network in real time. This work</span>
+     <span 
+class="cmr-9">shows that simply shrinking the Pix2Pix[</span><a 
+href="draft_02.html#X0-1611.07004" ><span 
+class="cmr-9">20</span></a><span 
+class="cmr-9">] model which powers </span><span 
+class="cmti-9">Learning to See</span><span 
+class="cmr-9">,</span>
+     <span 
+class="cmr-9">and a custom made WebGL wrapper for TensorflowJS to make a pipeline more</span>
+     <span 
+class="cmr-9">suited to video achieves useable results when served online, even on commonplace</span>
+     <span 
+class="cmr-9">integrated graphics processing units. This brings the unique interaction developed</span>
+     <span 
+class="cmr-9">by Akten </span><span 
+class="cmti-9">et al</span><span 
+class="cmr-9">[</span><a 
+href="draft_02.html#X0-2003.00902" ><span 
+class="cmr-9">2</span></a><span 
+class="cmr-9">] into the homes of many people and offers exciting possibilites</span>
+     <span 
+class="cmr-9">to future video based interaction with machine learing on the internet. The work</span>
+     <span 
+class="cmr-9">is currently online here: </span><a 
+href="https://learning-to-learn-to-see.netlify.app/" class="url" ><span 
+class="cmtt-9">https://learning-to-learn-to-see.netlify.app/</span></a><span 
+class="cmr-9">, and</span>
+     <span 
+class="cmr-9">code available here: </span><a 
+href="https://github.com/joshmurr/cci-pix2pix-demo/" class="url" ><span 
+class="cmtt-9">https://github.com/joshmurr/cci-pix2pix-demo/</span></a><span 
+class="cmr-9">.</span>
+</div>
+<!--l. 47--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 49--><p class="noindent" ><img 
+src="./images/ltlts_online2.png" alt="PIC"  
+width="227" height="227" > <a 
+ id="x1-2r1"></a>
+<a 
+ id="x1-3"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;1: : </span></span><span  
+class="content"><span 
+class="cmr-8">The online platform running the largest model trained on the </span><span 
+class="cmti-8">102</span>
+            <span 
+class="cmti-8">Category Flower Dataset</span><span 
+class="cmr-8">[</span><a 
+href="draft_02.html#X0-flowers_dataset" ><span 
+class="cmr-8">43</span></a><span 
+class="cmr-8">] for 250 epochs.</span>                                                 &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-2r -->
+                                                                         
+
+                                                                         
+<!--l. 51--><p class="indent" >   </div><hr class="endfigure">
+                                                                         
+
+                                                                         
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-10001"></a>Introduction</h3>
+<!--l. 66--><p class="noindent" >Machine Learning (ML) is a part of our everyday lives. For the technical among us it is
+currently easy enough to see the patterns in the outputs of these black-box systems; as
+the end of our sentence is predicted as we type, or an item we did not know we
+wanted is offered to us as we shop. There are however many non-technical users of
+ML systems who can only see the black-box, or perhaps nothing at all; as Arthur
+C. Clarke famously said <span 
+class="cmti-10">&#8220;Any sufficiently advanced technology is indistinguishable</span>
+<span 
+class="cmti-10">from magic.&#8221;</span>[<a 
+href="draft_02.html#X0-toffler_1972" >42</a>] It is often the case that exciting new technologies are adopted by
+artists as readily as industry because the gallery provides a unique environment to
+present back the to the user one of these black-boxes in a drastically different context.
+Artists such as Mario Klingemann[<a 
+href="draft_02.html#X0-mario_klingemann" >23</a>], Terence Broad[<a 
+href="draft_02.html#X0-terry_broad" >5</a>] or Anna Ridler[<a 
+href="draft_02.html#X0-anna_ridler" >30</a>] are all
+excellent examples of artists who have done just this; delivering the <span 
+class="cmti-10">medium as the</span>
+<span 
+class="cmti-10">message</span>.
+<!--l. 68--><p class="indent" >   <span 
+class="cmti-10">Learning to See </span>by Memo Akten[<a 
+href="draft_02.html#X0-lts_memo" >1</a>] is another example, but unique in its own way in that
+it gives the user an interactive experience of the artwork; an immediate image translation of
+arbitrary objects on a tabletop to a rich image of waves crashing, the night sky
+or ever changing flowers. The user is able to manipulate the input data as they
+move the objects on the table and witness how the model interprets this data to
+produce an output image projected in front of them. Although the model still exists as
+a black box, being able to see how input-affects-output in real time is extremely
+powerful.
+<!--l. 70--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 72--><p class="noindent" ><img 
+src="./images/lts_still.png" alt="PIC"  
+width="21" height="21" > <a 
+ id="x1-1001r2"></a>
+<a 
+ id="x1-1002"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;2: : </span></span><span  
+class="content"><span 
+class="cmr-8">A frame from Learning to See using a model trained on ocean waves.</span>
+             <span 
+class="cmr-8">&#8212; </span><span 
+class="tcrm-0800">©</span><span 
+class="cmr-8">Memo Akten,2017</span>                                                                            &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-1001r1 -->
+                                                                         
+
+                                                                         
+<!--l. 74--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 76--><p class="indent" >   Witnessing the relationship between input and output is in many ways more vital to
+understanding the function of a Neural Network (NN) than understanding what a
+neuron is and how backpropagation works. The role of the artist is important here as
+these artworks have done a huge amount to shed light on dataset bias[<a 
+href="draft_02.html#X0-crawford_paglen_2019" >10</a>], stimulate
+conversation about ownership and copyright[<a 
+href="draft_02.html#X0-romano_2016" >31</a>] and show both the capabilities of
+ML systems <span 
+class="cmti-10">and </span>the limitations. It is therefore of great importance to make these
+stimulating artworks accessible to many more people, which is not as simple as it might
+seem.
+<!--l. 78--><p class="indent" >   Unfortunately the gallery in itself is a black box to many, entry restricted by a fee or
+simply by the location of the gallery. Moving such interactive experiences online is a clear
+next step as once something is online it is immediately available to anyone with an
+internet connection &#8212; this then poses numerous more challenges. Even a modestly
+sized NN can contain many millions of parameters. Modern computers are able to
+perform millions of floating point operations per second (FLOPS) but advances
+in ML research have shown that <span 
+class="cmti-10">deeper </span>models and more data produces better
+results[<a 
+href="draft_02.html#X0-2005.14165" >7</a>]; as such, without expensive hardware acceleration from discrete graphics
+processing units (GPU) or even more modern tensor processing units (TPU), an
+average modern computer cannot crunch the numbers needed to run a large, deep NN.
+Even if one <span 
+class="cmti-10">could </span>perform the necessary FLOPS, storing this number of parameters
+can take up gigabytes of memory and so downloading the weights and biases of a
+pre-trained model can be a time consuming process detracting from the real-time
+focus.
+<!--l. 80--><p class="indent" >   This paper aims to explore each of these challenges and to look at each through the
+perspective of the artworks previously described with the aim of getting a piece like <span 
+class="cmti-10">Learning</span>
+<span 
+class="cmti-10">to See </span>online and useable by most with access to the internet.
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-20002"></a>Background Context</h3>
+<!--l. 87--><p class="noindent" >Getting NNs working online and on the clients machine is not a new thing and with
+modern CPUs it has certainly been shown possible to train and run a simple enough
+model in the browser[<a 
+href="draft_02.html#X0-karparthy_conjs_2016" >22</a>, <a 
+href="draft_02.html#X0-brainjs" >4</a>, <a 
+href="draft_02.html#X0-synaptic" >8</a>, <a 
+href="draft_02.html#X0-mind" >25</a>, <a 
+href="draft_02.html#X0-kerasjs" >9</a>] and many tools exist which aim to visualise
+the architecture of a model and show the training process[<a 
+href="draft_02.html#X0-broad_cnn_vis_2016" >6</a>, <a 
+href="draft_02.html#X0-tensorflow_playground" >35</a>, <a 
+href="draft_02.html#X0-1704.01942" >21</a>]. Such tools
+are invaluable as learning resources for those dedicated to learning about machine
+learning. However they are often tailored to that use-case expecting the user to
+have higher motivation for understanding the process, more than the average online
+&#8216;passer-by&#8217;.
+<!--l. 89--><p class="indent" >   There is an increasing number of tools available online which use an interactive machine
+learning approach allowing the user to retrain a model in real-time to create unique
+interactions of the users specification[<a 
+href="draft_02.html#X0-magenta" >14</a>, <a 
+href="draft_02.html#X0-mimic" >16</a>, <a 
+href="draft_02.html#X0-teachablemachines" >15</a>]. Again this is valuable work and useful to
+many, but often requires active engagement from the user and some knowledge of the
+process.
+<!--l. 91--><p class="indent" >   <span 
+class="cmti-10">Learning to See </span>provides an instinctive way for the user to interact with machine learning,
+avoiding technical terms or a prerequisite knowledge which is simply not seen online (at the
+time of writing). This is largely down to the issues described above, and these are
+especially applicable to image generative models which will be discussed further
+below.
+<!--l. 93--><p class="indent" >   <span 
+class="cmti-10">Learning to See </span>is an adaptation of the Pix2Pix model[<a 
+href="draft_02.html#X0-1611.07004" >20</a>] which is a Conditional
+Generative Adversarial Network (cGAN)[<a 
+href="draft_02.html#X0-1701.00160" >12</a>]. Unlike a conventional GAN[<a 
+href="draft_02.html#X0-1406.2661" >13</a>], a cGAN takes
+in two data samples as input, in the case of the Pix2Pix model it is a <span 
+class="cmti-10">target </span>image and an
+<span 
+class="cmti-10">input </span>image. Pix2Pix also learns a structured loss which means it is able to penalize any
+                                                                         
+
+                                                                         
+possible structure that differs between output and target[<a 
+href="draft_02.html#X0-1611.07004" >20</a>]. This model architecture is
+extremely flexible and has been shown to be useful for many use cases as detailed in the
+original paper. However neither the original Pix2Pix paper nor <span 
+class="cmti-10">Learning to See </span>had an
+incentive to create a small model; a good result is simply a sharp image with a predictable
+output from a given input. As stated by the Pix2Pix authors measuring the results of an
+image generating GAN is an open issue[<a 
+href="draft_02.html#X0-1606.03498" >33</a>, <a 
+href="draft_02.html#X0-1611.07004" >20</a>] and in an artistic context quantifiying the
+outcome is largely pointless &#8212; a good result is one which delivers the message of the
+artist.
+<!--l. 95--><p class="indent" >   It is worth noting that other generative models of similar architecture to Pix2Pix have
+been developed since, notably CycleGAN[<a 
+href="draft_02.html#X0-1703.10593" >48</a>] and GauGAN[<a 
+href="draft_02.html#X0-1903.07291" >28</a>]. However these models are also
+significantly more complex and did not seem conducive to a lightweight and performant
+system with the given requirements. Image generative models are notoriously unstable in
+training, intuition (and Jonathan Hui) notes that it is easier to recognise an image than it is
+to create one[<a 
+href="draft_02.html#X0-hard_to_train_gans" >18</a>]. Therefore traditional NN compression[<a 
+href="draft_02.html#X0-2006.03669" >27</a>] is often unsuited to GANs. There
+has been work in GAN compression which has yielded impressive results, but it is a quite
+esoteric, unconventional compression involving programmatically finding alternate model
+architectures with neural architecture search (NAS) and teacher&#8211;student model pairing to
+distill knowledge into a smaller architecture[<a 
+href="draft_02.html#X0-2003.08936" >24</a>]. Simplicity was the first port-of-call for this
+work thus methods shown in the aforementioned works remain untested in this context for
+now.
+<!--l. 97--><p class="indent" >   Designing and training a NN is of course not limited to the big name ML frameworks like
+Tensorflow[<a 
+href="draft_02.html#X0-tf" >38</a>] or PyTorch[<a 
+href="draft_02.html#X0-pytorch" >29</a>], but given the modular nature of a NN and the want in most
+cases to utilise the GPU for faster training and inference, it is no surprise that a limited
+number of ML frameworks have become the go-to to create and iterate on a novel ML model
+and to take care of interfacing with a highly optimized backend and the GPU at a lower level.
+Tensorflow offers a relatively full end-to-end pipeline from designing and training a model in
+Python, to saving and converting a model into something can be run in the browser using
+TensorflowJS[<a 
+href="draft_02.html#X0-tfjs" >40</a>]. A trained model is simply a collection of weights and biases and to use
+this model on a different device or context, these weights and biases need to be
+loaded into a model of the same architecture as was used to train the model. The
+pipeline from training-to-browser is largely about keeping data structures in order and
+consistent such that the next process knows how to work with it. As part of the process
+Tensorflow has developed the TensorflowJS Converter[<a 
+href="draft_02.html#X0-tfjs_converter" >41</a>] which converts a saved model
+into a a series of binary files which hold the weights and a <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">.json</span></span></span> file which is the
+blueprints of the model. When uploading a model TensorflowJS dynamically creates a
+succession of routines in the chosen backend (WebGL, WebAssembly, WebGPU, etc.)
+to take care of specific tasks such as 2D convolutions, batchnorm, max pooling
+etc.
+<!--l. 99--><p class="indent" >   There exists nothing even similar to <span 
+class="cmti-10">Learning to See </span>in the catalog of examples provided
+by TensrflowJS &#8212; i.e.&#x00A0;a model which takes video as input and produces video as output.
+Thus the uniqueness of this use case has yielded a number of hurdles to overcome to achieve
+something usable on the web for <span 
+class="cmti-10">most users </span>(users with a reasonably modern laptop,
+produced in the past 5 years).
+<!--l. 102--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-30003"></a>Method</h3>
+<!--l. 107--><p class="noindent" >TensorflowJS is currently the most developed framework for deploying models in the browser
+so working with the Tensorflow pipeline made the most sense. The model for this work
+was based on the Tensorflow implementation[<a 
+href="draft_02.html#X0-tf_p2p" >39</a>] and adjusted according to the
+<span 
+class="cmti-10">Learning to See </span>paper: the input and target images are the same, only the input goes
+                                                                         
+
+                                                                         
+through a series of augmentations, details of which can be found in the original
+paper[<a 
+href="draft_02.html#X0-2003.00902" >2</a>].
+<!--l. 109--><p class="indent" >   The data augmentation requires the generator to take a single channel input. Augmenting
+the dataset at runtime during training makes forming a dataset very easy as in reality a full
+dataset is simply a directory of many similar images. As stated earlier, evaluating the
+model quantitatively by some distance metric has been shown to be of little use, and
+particularly in this case the quality of the outcome can only really be measured by
+how well it performs when interacted with. Thus the common process of splitting a
+dataset into <span 
+class="cmti-10">training </span>and <span 
+class="cmti-10">testing </span>data at a 4:1 split was not as important; however
+approximately 5% of the dataset was reserved for testing after training for visual
+inspection.
+<!--l. 111--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 113--><p class="noindent" ><img 
+src="./images/250_epochs.png" alt="PIC"  
+width="380" height="380" > <a 
+ id="x1-3001r3"></a>
+<a 
+ id="x1-3002"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;3: : </span></span><span  
+class="content"><span 
+class="cmr-8">The output of a &#8216;large&#8217; model trained on the </span><span 
+class="cmti-8">102 Category Flower</span>
+            <span 
+class="cmti-8">Dataset</span><span 
+class="cmr-8">[</span><a 
+href="draft_02.html#X0-flowers_dataset" ><span 
+class="cmr-8">43</span></a><span 
+class="cmr-8">] for 250 epochs.</span>                                                                        &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-3001r3 -->
+                                                                         
+
+                                                                         
+<!--l. 115--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 117--><p class="indent" >   It was found that for a model that takes an input image size of 256<span 
+class="cmsy-10">&#x00D7;</span>256 pixels and
+produces an output of the same size, a dataset of 800&#8211;1000 images uniformly shuffled with a
+batch size of 4 was sufficient to produce <span 
+class="cmti-10">interesting </span>results &#8212; in this case <span 
+class="cmti-10">interesting </span>means:
+varied enough to provide unique experiences whilst producing a output which is representative
+of the input data. Differences between the model sizes can be seen in <a 
+href="#x1-40004">4<!--tex4ht:ref: table:model_details --></a>. The models were
+trained on a NVIDIA Quadro RTX 6000 with 24GB memory locally, or a Tesla P100-PCIE
+with 16GB memory using Google Colab. In either case a usable model will train in a few
+hours allowing for a relatively quick development cycle. More details on the training
+process and some tools developed to make the process easy and fast in appendix
+<a 
+href="#x1-9000A">A<!--tex4ht:ref: appendix:training --></a>.
+<!--l. 119--><p class="indent" >   The Pix2Pix generator is an Autoencoder similar to the &#8220;U-Net&#8221; architecture[<a 
+href="draft_02.html#X0-1505.04597" >32</a>] but
+differs in some key ways, and we offer some further changes to drastically reduce the size. The
+generator consists of 8 2D convolution layers downsampling the input data in width and
+height, and 7 transpose convolutions upsampling the data back to original size. Each layer is
+batchnormalized[<a 
+href="draft_02.html#X0-1502.03167" >19</a>] apart from the first, and layers 8&#8211;10 have dropout[<a 
+href="draft_02.html#X0-JMLR:v15:srivastava14a" >37</a>] applied at
+a rate of 50%. The Pix2Pix architecture includes no avg- or max-pooling as all
+filter kernels are 4<span 
+class="cmsy-10">&#x00D7;</span>4 and a stride of 2 is used. This has the effect of downsampling
+the layer input by half in width and height, thus circumventing the need for any
+kind of pooling, otherwise known as an <span 
+class="cmti-10">all convolutional net</span>[<a 
+href="draft_02.html#X0-1412.6806" >36</a>]. The difference
+proposed in this work is to greatly reduce the number of filters used in each layer.
+The majority of trainable parameters are found in the middle of the generator as a
+result of the structure described. By reducing the number of filters in each layer by
+up to a factor of 8, very usable results were obtained whilst drastically reducing
+the model size &#8212; more discussion on the impacts of a smaller model are found in
+Results.
+   <div class="table">
+                                                                         
+
+                                                                         
+<!--l. 123--><p class="indent" >   <hr class="float"><div class="float" 
+>
+                                                                         
+
+                                                                         
+<div class="center" 
+>
+<!--l. 123--><p class="noindent" >
+<div class="tabular">
+ <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"><col 
+id="TBL-2-2"><col 
+id="TBL-2-3"><col 
+id="TBL-2-4"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:normal; text-align:left;" id="TBL-2-1-1"  
+class="td11"> <!--l. 126--><p class="noindent" >Generator
+  Layer            </td><td  style="white-space:normal; text-align:left;" id="TBL-2-1-2"  
+class="td11"> <!--l. 126--><p class="noindent" >Pix2Pix        </td><td  style="white-space:normal; text-align:left;" id="TBL-2-1-3"  
+class="td11"> <!--l. 126--><p class="noindent" >Our Small     </td><td  style="white-space:normal; text-align:left;" id="TBL-2-1-4"  
+class="td11"> <!--l. 126--><p class="noindent" >Our Medium  </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:normal; text-align:left;" id="TBL-2-2-1"  
+class="td11"> <!--l. 128--><p class="noindent" >1                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-2-2"  
+class="td11"> <!--l. 128--><p class="noindent" >64                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-2-3"  
+class="td11"> <!--l. 128--><p class="noindent" >4                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-2-4"  
+class="td11"> <!--l. 128--><p class="noindent" >8                 </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:normal; text-align:left;" id="TBL-2-3-1"  
+class="td11"> <!--l. 129--><p class="noindent" >2 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-3-2"  
+class="td11"> <!--l. 129--><p class="noindent" >128 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-3-3"  
+class="td11"> <!--l. 129--><p class="noindent" >8 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-3-4"  
+class="td11"> <!--l. 129--><p class="noindent" >16</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:normal; text-align:left;" id="TBL-2-4-1"  
+class="td11"> <!--l. 130--><p class="noindent" >3                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-4-2"  
+class="td11"> <!--l. 130--><p class="noindent" >256              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-4-3"  
+class="td11"> <!--l. 130--><p class="noindent" >16                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-4-4"  
+class="td11"> <!--l. 130--><p class="noindent" >32                </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:normal; text-align:left;" id="TBL-2-5-1"  
+class="td11"> <!--l. 131--><p class="noindent" >4 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-5-2"  
+class="td11"> <!--l. 131--><p class="noindent" >512 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-5-3"  
+class="td11"> <!--l. 131--><p class="noindent" >32 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-5-4"  
+class="td11"> <!--l. 131--><p class="noindent" >64</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:normal; text-align:left;" id="TBL-2-6-1"  
+class="td11"> <!--l. 132--><p class="noindent" >5                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-6-2"  
+class="td11"> <!--l. 132--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-6-3"  
+class="td11"> <!--l. 132--><p class="noindent" >64                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-6-4"  
+class="td11"> <!--l. 132--><p class="noindent" >128              </td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:normal; text-align:left;" id="TBL-2-7-1"  
+class="td11"> <!--l. 133--><p class="noindent" >6 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-7-2"  
+class="td11"> <!--l. 133--><p class="noindent" >512 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-7-3"  
+class="td11"> <!--l. 133--><p class="noindent" >128 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-7-4"  
+class="td11"> <!--l. 133--><p class="noindent" >256</td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:normal; text-align:left;" id="TBL-2-8-1"  
+class="td11"> <!--l. 134--><p class="noindent" >7                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-8-2"  
+class="td11"> <!--l. 134--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-8-3"  
+class="td11"> <!--l. 134--><p class="noindent" >256              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-8-4"  
+class="td11"> <!--l. 134--><p class="noindent" >512              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:normal; text-align:left;" id="TBL-2-9-1"  
+class="td11"> <!--l. 135--><p class="noindent" >8                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-9-2"  
+class="td11"> <!--l. 135--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-9-3"  
+class="td11"> <!--l. 135--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-9-4"  
+class="td11"> <!--l. 135--><p class="noindent" >512              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:normal; text-align:left;" id="TBL-2-10-1"  
+class="td11"> <!--l. 136--><p class="noindent" >9                  </td><td  style="white-space:normal; text-align:left;" id="TBL-2-10-2"  
+class="td11"> <!--l. 136--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-10-3"  
+class="td11"> <!--l. 136--><p class="noindent" >256              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-10-4"  
+class="td11"> <!--l. 136--><p class="noindent" >512              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:normal; text-align:left;" id="TBL-2-11-1"  
+class="td11"> <!--l. 137--><p class="noindent" >10                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-11-2"  
+class="td11"> <!--l. 137--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-11-3"  
+class="td11"> <!--l. 137--><p class="noindent" >128              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-11-4"  
+class="td11"> <!--l. 137--><p class="noindent" >256              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:normal; text-align:left;" id="TBL-2-12-1"  
+class="td11"> <!--l. 138--><p class="noindent" >11                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-12-2"  
+class="td11"> <!--l. 138--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-12-3"  
+class="td11"> <!--l. 138--><p class="noindent" >64                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-12-4"  
+class="td11"> <!--l. 138--><p class="noindent" >128              </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-13-"><td  style="white-space:normal; text-align:left;" id="TBL-2-13-1"  
+class="td11"> <!--l. 139--><p class="noindent" >12                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-13-2"  
+class="td11"> <!--l. 139--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-13-3"  
+class="td11"> <!--l. 139--><p class="noindent" >32                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-13-4"  
+class="td11"> <!--l. 139--><p class="noindent" >64                </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-14-"><td  style="white-space:normal; text-align:left;" id="TBL-2-14-1"  
+class="td11"> <!--l. 140--><p class="noindent" >13                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-14-2"  
+class="td11"> <!--l. 140--><p class="noindent" >512              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-14-3"  
+class="td11"> <!--l. 140--><p class="noindent" >16                </td><td  style="white-space:normal; text-align:left;" id="TBL-2-14-4"  
+class="td11"> <!--l. 140--><p class="noindent" >32                </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-15-"><td  style="white-space:normal; text-align:left;" id="TBL-2-15-1"  
+class="td11"> <!--l. 141--><p class="noindent" >14                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-15-2"  
+class="td11"> <!--l. 141--><p class="noindent" >256              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-15-3"  
+class="td11"> <!--l. 141--><p class="noindent" >8                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-15-4"  
+class="td11"> <!--l. 141--><p class="noindent" >16                </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-16-"><td  style="white-space:normal; text-align:left;" id="TBL-2-16-1"  
+class="td11"> <!--l. 142--><p class="noindent" >15                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-16-2"  
+class="td11"> <!--l. 142--><p class="noindent" >128              </td><td  style="white-space:normal; text-align:left;" id="TBL-2-16-3"  
+class="td11"> <!--l. 142--><p class="noindent" >4                 </td><td  style="white-space:normal; text-align:left;" id="TBL-2-16-4"  
+class="td11"> <!--l. 142--><p class="noindent" >8                 </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-17-"><td  style="white-space:normal; text-align:left;" id="TBL-2-17-1"  
+class="td11">              </td></tr></table></div><a 
+ id="x1-3003r1"></a>
+<a 
+ id="x1-3004"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Table</span><span 
+class="cmbx-8">&#x00A0;1: : </span></span><span  
+class="content"><span 
+class="cmr-8">Number of filters per layer in the generator. TODO: Replace table with</span>
+             <span 
+class="cmr-8">graphic of model architecture, showing difference between model sizes.</span>               &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-3003r3 -->
+</div>
+                                                                         
+
+                                                                         
+   </div><hr class="endfloat" />
+   </div>
+<!--l. 150--><p class="indent" >   Once a model is trained, it is saved using the <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">HDF5</span></span></span> format (<span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">.h5</span></span></span>) and converted
+using the TensorflowJS Converter. The Converter provides options for compressing
+the model of varying levels of severity. It was found that the compression of the
+model:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-3006x1">Does a great deal to reduce the size (in memory) of the model.
+     </li>
+     <li 
+  class="enumerate" id="x1-3008x2">Does very little to improve performance in inference.
+     </li>
+     <li 
+  class="enumerate" id="x1-3010x3">Does very little to affect the output of the model.</li></ol>
+<!--l. 158--><p class="indent" >   Therefore the highest compression of <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">uint8_affine_quantize</span></span></span> can be used to reduce the
+size by 4<span 
+class="cmsy-10">&#x00D7;</span>, while maintaining only a very slightly compromised output.
+<!--l. 160--><p class="indent" >   Finally, a bespoke WebGL wrapper consisting of a number of shader programs was created
+to handle the input data (pre-augmentation to match that in training) and the output data to
+render the image to the screen as video. It was found that the image handling capabilities of
+TensorflowJS seem to be tailored to static images. In inference, the data is of the
+<span 
+class="cmti-10">tensor </span>data structure and is transformed and manipulated by the model, but at
+each iteration of the draw cycle a frame of video must be preprocessed and then
+converted into a format which can be digested by the model, and then the output of
+the model must be converted back into a data structure which the browser can
+handle to display as an image, or in our case, video. The internal computation at
+inference is handled by WebGL shader programs compiled by TensorflowJS, but
+the input/output was a rather slow process of converting the tensor data back to
+pixels value-by-value. The input shader programs receives data from the webcam as
+a 16<span 
+class="cmsy-10">&#x00D7;</span>16 image and scales it up to 256<span 
+class="cmsy-10">&#x00D7;</span>256 while applying three gaussian blurs
+&#8212; slightly different to the training process but the effect is the same. The data is
+extracted using <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">&#x003C;WebGL&#x003E;.readPixels()</span></span></span>, converted to a tensor object and passed
+to the model to process. The output of the model is a tensor object but already
+of the structure of a 3-channel image as a result of the architecture of the model
+itself. The data is easily extracted as a 32 bit float array and passed into a very
+simple shader program as an RGB texture to be rendered to a canvas element in the
+browser.
+   <h3 class="sectionHead"><span class="titlemark">4   </span> <a 
+ id="x1-40004"></a>Results</h3>
+<!--l. 170--><p class="noindent" ><hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 171--><p class="noindent" ><!--tex4ht:inline--><div class="tabular"><table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1"><col 
+id="TBL-3-2"><col 
+id="TBL-3-3"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-1"  
+class="td11"> <a 
+ id="x1-4001r1"></a> <img 
+src="./images/00.png" alt="PIC"  
+width="144" height="144" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-2"  
+class="td11"> <a 
+ id="x1-4002r2"></a><img 
+src="./images/01.png" alt="PIC"  
+width="144" height="144" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-1-3"  
+class="td11"> <a 
+ id="x1-4003r3"></a><img 
+src="./images/05.png" alt="PIC"  
+width="144" height="144" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-1"  
+class="td11"> <a 
+ id="x1-4004r4"></a> <img 
+src="./images/23.png" alt="PIC"  
+width="144" height="144" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-2"  
+class="td11"> <a 
+ id="x1-4005r5"></a><img 
+src="./images/26.png" alt="PIC"  
+width="144" height="144" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-3-2-3"  
+class="td11"> <a 
+ id="x1-4006r6"></a><img 
+src="./images/29.png" alt="PIC"  
+width="144" height="144" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-3-3-1"  
+class="td11"> </td></tr></table></div> <a 
+ id="x1-4007r4"></a>
+<a 
+ id="x1-4008"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;4: : </span></span><span  
+class="content"><span 
+class="cmr-8">The large model in use running on an NVIDIA RTX 2070.</span>             &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-4007r4 -->
+                                                                         
+
+                                                                         
+<!--l. 178--><p class="noindent" ></div><hr class="endfigure">
+<!--l. 180--><p class="indent" >   A test-bed was created with the aforementioned processes to test three sizes of model. The
+project is currently online at <a 
+href="https://learning-to-learn-to-see.netlify.app/" class="url" ><span 
+class="cmtt-10">https://learning-to-learn-to-see.netlify.app/</span></a>.
+<div class="center" 
+>
+<!--l. 183--><p class="noindent" >
+
+ <table id="TBL-6" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-6-1g"><col 
+id="TBL-6-1"><col 
+id="TBL-6-2"><col 
+id="TBL-6-3"><col 
+id="TBL-6-4"><col 
+id="TBL-6-5"><col 
+id="TBL-6-6"><col 
+id="TBL-6-7"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-6-1-"><td  style="white-space:normal; text-align:left;" id="TBL-6-1-1"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Model</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-2"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">HDF5</span>
+       <span 
+class="cmr-9">Size</span>
+      <span 
+class="cmr-9">(mb)</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-3"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Uint8</span>
+  <span 
+class="cmr-9">Compressed</span>
+       <span 
+class="cmr-9">Size</span>
+      <span 
+class="cmr-9">(mb)</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-4"  
+class="td11"> <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Compression</span> </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-5"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Total</span>
+  <span 
+class="cmr-9">Parameters</span> </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-6"  
+class="td11">  <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Epochs</span>
+  <span 
+class="cmr-9">Trained</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-1-7"  
+class="td11">  <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Upload</span>
+      <span 
+class="cmr-9">Time</span>
+         <span 
+class="cmr-9">(s)</span>  </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-2-"><td  style="white-space:normal; text-align:left;" id="TBL-6-2-1"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Small</span>   </td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-2"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">25.3</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-3"  
+class="td11">      <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">6.3</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-4"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">25.2%</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-5"  
+class="td11"> <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">6,297,491</span></td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-6"  
+class="td11">      <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">80</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-2-7"  
+class="td11">      <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">8.3</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-3-"><td  style="white-space:normal; text-align:left;" id="TBL-6-3-1"  
+class="td11"> <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Medium</span>   </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-2"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">67.3</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-3"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">16.9</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-4"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">25.0%</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-5"  
+class="td11"> <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">16,786,211</span> </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-6"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">120</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-3-7"  
+class="td11">      <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">9.9</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-4-"><td  style="white-space:normal; text-align:left;" id="TBL-6-4-1"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">Large</span>   </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-2"  
+class="td11">    <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">217.8</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-3"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">54.5</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-4"  
+class="td11">   <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">25.0%</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-5"  
+class="td11"> <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">54,423,811</span> </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-6"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">200</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-6-4-7"  
+class="td11">     <!--l. 193--><p class="noindent" ><span 
+class="cmr-9">27.5</span>  </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-6-5-"><td  style="white-space:normal; text-align:left;" id="TBL-6-5-1"  
+class="td11">        <!--l. 193--><p class="noindent" >  </td></tr></table></div>
+<!--l. 203--><p class="indent" >   As already stated, the focus was on finding a sufficiently responsive interaction for the
+user while maintaining enough variety in the output to maintain engagement. The
+target audience is someone with a relatively modern computer and not necessarily
+someone with a computer with a high specification GPU. For testing the user is able to
+download a model size at their choosing or upload their own, and different statistics are
+displayed.
+<!--l. 205--><p class="indent" >   In the table below <span 
+class="cmti-10">D-GPU </span>means <span 
+class="cmti-10">Discrete-GPU </span>and <span 
+class="cmti-10">I-GPU </span>means <span 
+class="cmti-10">Integrated-GPU</span>. <span 
+class="cmti-10">FPS</span>
+is rounded to the nearest number. All figures are taken from the online platform.
+<div class="center" 
+>
+<!--l. 208--><p class="noindent" >
+                                                                         
+
+                                                                         
+
+ <table id="TBL-11" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-11-1g"><col 
+id="TBL-11-1"><col 
+id="TBL-11-2"><col 
+id="TBL-11-3"><col 
+id="TBL-11-4"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-11-1-"><td colspan="3" style="white-space:normal; text-align:left;" id="TBL-11-1-1"  
+class="td11"></td>                  <div class="multicolumn"  style="white-space:nowrap; text-align:center;"><span 
+class="cmr-9">Performance (FPS) on Various Computers</span></div>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-2-"><td  style="white-space:normal; text-align:left;" id="TBL-11-2-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Machine</span>                                           </td><td  style="white-space:normal; text-align:left;" id="TBL-11-2-2"  
+class="td11">    <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Small</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-2-3"  
+class="td11">  <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Medium</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-2-4"  
+class="td11">    <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Large</span>  </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-3-"><td  style="white-space:normal; text-align:left;" id="TBL-11-3-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">System76</span>
+  <span 
+class="cmr-9">Laptop</span>
+  <span 
+class="cmr-9">2020,</span>
+  <span 
+class="cmr-9">D-GPU</span>                                            </td><td  style="white-space:normal; text-align:left;" id="TBL-11-3-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">50</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-3-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">41</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-3-4"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">10</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-4-"><td  style="white-space:normal; text-align:left;" id="TBL-11-4-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">System76</span>
+  <span 
+class="cmr-9">Laptop</span>
+  <span 
+class="cmr-9">2020,</span>
+  <span 
+class="cmr-9">I-GPU</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-11-4-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">26</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-4-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">12</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-4-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">0</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-5-"><td  style="white-space:normal; text-align:left;" id="TBL-11-5-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Macbook</span>
+  <span 
+class="cmr-9">Pro</span>
+  <span 
+class="cmr-9">2017,</span>
+  <span 
+class="cmr-9">D-GPU</span>                                            </td><td  style="white-space:normal; text-align:left;" id="TBL-11-5-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">40</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-5-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">27</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-5-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">0</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-6-"><td  style="white-space:normal; text-align:left;" id="TBL-11-6-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Macbook</span>
+  <span 
+class="cmr-9">Pro</span>
+  <span 
+class="cmr-9">2017,</span>
+  <span 
+class="cmr-9">I-GPU</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-11-6-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">26</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-6-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">14</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-6-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">0</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-7-"><td  style="white-space:normal; text-align:left;" id="TBL-11-7-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Macbook</span>
+  <span 
+class="cmr-9">Pro</span>
+  <span 
+class="cmr-9">2020,</span>
+  <span 
+class="cmr-9">I-GPU</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-11-7-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">25</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-7-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">15</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-7-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">1</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-8-"><td  style="white-space:normal; text-align:left;" id="TBL-11-8-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Macbook</span>
+  <span 
+class="cmr-9">Pro</span>
+  <span 
+class="cmr-9">2015,</span>
+  <span 
+class="cmr-9">I-GPU</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-11-8-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">30</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-8-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">18</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-8-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">0</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-9-"><td  style="white-space:normal; text-align:left;" id="TBL-11-9-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">MSI</span>
+  <span 
+class="cmr-9">Laptop</span>
+  <span 
+class="cmr-9">2016,</span>
+  <span 
+class="cmr-9">I-GPU</span>                                             </td><td  style="white-space:normal; text-align:left;" id="TBL-11-9-2"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">18</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-9-3"  
+class="td11">       <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">12</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-9-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">1</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-10-"><td  style="white-space:normal; text-align:left;" id="TBL-11-10-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Pixel</span>
+  <span 
+class="cmr-9">3A</span>
+  <span 
+class="cmr-9">Phone</span>                                              </td><td  style="white-space:normal; text-align:left;" id="TBL-11-10-2"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">3</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-10-3"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">-</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-10-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">-</span>  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-11-"><td  style="white-space:normal; text-align:left;" id="TBL-11-11-1"  
+class="td11"> <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">Samsung</span>
+  <span 
+class="cmr-9">Phone</span>                                              </td><td  style="white-space:normal; text-align:left;" id="TBL-11-11-2"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">4</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-11-3"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">-</span>  </td><td  style="white-space:normal; text-align:left;" id="TBL-11-11-4"  
+class="td11">        <!--l. 227--><p class="noindent" ><span 
+class="cmr-9">-</span>  </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-11-12-"><td  style="white-space:normal; text-align:left;" id="TBL-11-12-1"  
+class="td11"> <!--l. 227--><p class="noindent" >                                   </td></tr></table></div>
+<!--l. 231--><p class="indent" >   In general the results are very promising. The average frame rate on an integrated GPU is
+<span 
+class="cmsy-10">~</span>14FPS which suggests that the average &#8216;everyday&#8217; computer will be able to run the <span 
+class="cmti-10">medium</span>
+sized model at a useable speed while a gaming-laptop with a discrete GPU can observe good
+results even on the largest model.
+<!--l. 233--><p class="indent" >   It can be observed that models trained with fewer parameters struggle to generalise. The
+<span 
+class="cmti-10">102 Category Flower Dataset</span>[<a 
+href="draft_02.html#X0-flowers_dataset" >43</a>] has proven to be a useful dataset for testing as it is quite
+varied; the subject is not always centered in the image, the colours vary drastically and there
+is great variation in tone and texture throughout. A full sized <span 
+class="cmti-10">large </span>model is capable of
+capturing a lot of this texture, however with fewer filters in the smaller models,
+artefacts of the kernels themselves often appear in the output, as seen in Figure
+&#x00A0;<a 
+href="#x1-4009r5">5<!--tex4ht:ref: fig:kernelsInOutput --></a>.
+<!--l. 235--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 237--><p class="noindent" ><img 
+src="./images/artefacts.png" alt="PIC"  
+width="21" height="21" > <a 
+ id="x1-4009r5"></a>
+<a 
+ id="x1-4010"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;5: : </span></span><span  
+class="content"><span 
+class="cmr-8">A medium model trained for 200 epochs on the </span><span 
+class="cmti-8">102 Category Flower</span>
+            <span 
+class="cmti-8">Dataset</span><span 
+class="cmr-8">[</span><a 
+href="draft_02.html#X0-flowers_dataset" ><span 
+class="cmr-8">43</span></a><span 
+class="cmr-8">] showing artefacts of the inner filters, perhaps evidence of overfitting</span>
+             <span 
+class="cmr-8">given the smaller model size.</span>                                                                      &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-4009r4 -->
+                                                                         
+
+                                                                         
+<!--l. 240--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 243--><p class="indent" >   In training the model is attempting to learn a mapping from a blurry greyscale image
+to a well defined 3-channel image. As a user interacts using the online platform
+one can quickly see the effects of bright or dark areas of such an abstract input,
+the model appears to associate these bright spots with key areas of interest in the
+output.
+<!--l. 245--><p class="indent" >   With all this in mind one can train a model with a less varied dataset (such as daytime
+clouds) which still produces compelling results even in the smallest model as the model needs
+to generalise less. A dataset produced from a timelapse of the Aurora Borealis was used for
+the smallest model. The smallest model does not produce particularly exciting results, but
+still does a good job of illustrating the relationship between input and output, and has even
+been shown to work on mobile devices.
+<!--l. 247--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                         
+
+                                                                         
+                                                                         
+
+                                                                         
+<!--l. 248--><p class="noindent" ><!--tex4ht:inline--><div class="tabular"><table id="TBL-12" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-12-1g"><col 
+id="TBL-12-1"><col 
+id="TBL-12-2"><col 
+id="TBL-12-3"><col 
+id="TBL-12-4"></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-12-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-1"  
+class="td11"> <a 
+ id="x1-4011r1"></a> <img 
+src="./images/aurora1.png" alt="PIC"  
+width="108" height="108" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-2"  
+class="td11"> <a 
+ id="x1-4012r2"></a><img 
+src="./images/aurora2.png" alt="PIC"  
+width="108" height="108" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-3"  
+class="td11"> <a 
+ id="x1-4013r3"></a><img 
+src="./images/clouds1.png" alt="PIC"  
+width="108" height="108" >  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-12-1-4"  
+class="td11"> <a 
+ id="x1-4014r4"></a><img 
+src="./images/clouds2.png" alt="PIC"  
+width="108" height="108" >  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-12-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-12-2-1"  
+class="td11"> </td></tr></table>
+</div> <a 
+ id="x1-4015r6"></a>
+<a 
+ id="x1-4016"></a>
+<br /> <div class="caption" 
+><span class="id">&#x00A0;&#x00A0;&#x00A0;           <span 
+class="cmbx-8">Figure</span><span 
+class="cmbx-8">&#x00A0;6: : </span></span><span  
+class="content"><span 
+class="cmr-8">Small model trained on images of Aurora Boreals (left), medium</span>
+             <span 
+class="cmr-8">model trained on images of clouds (right).</span>                                                    &#x00A0;&#x00A0;&#x00A0;
+</span></div><!--tex4ht:label?: x1-4015r4 -->
+                                                                         
+
+                                                                         
+<!--l. 255--><p class="indent" >   </div><hr class="endfigure">
+   <h3 class="sectionHead"><span class="titlemark">5   </span> <a 
+ id="x1-50005"></a>Discussion</h3>
+<!--l. 266--><p class="noindent" >The adoption of ML research into the art world offers a reframing of the application of
+ML research, which in turn reframes the approach to research itself. The U-Net
+style, all convolutional network used for the generator in the Pix2Pix model is a
+particularly graceful NN which at its core is <span 
+class="cmti-10">only </span>a series 2D convolutions (omitting
+batchnormalisation and skip connections). This work shows that the network itself need not
+be complex or large to still produce results which are useable, visually interesting and
+accessible. As stated, if this work reaches and excites people who previously saw
+generative ML as off limits, then it is considered a success. Beyond that this work
+could lead to the development even more artistic tools in the same way that ML5[<a 
+href="draft_02.html#X0-ml5" >3</a>],
+RunwayML[<a 
+href="draft_02.html#X0-runway" >44</a>] and Wekinator[<a 
+href="draft_02.html#X0-wekinator" >11</a>] have become tools for experimentation among artists and
+creators.
+<!--l. 268--><p class="indent" >   Given the smaller scale model with this workflow, the development process becomes faster
+and less daunting, allowing one to engage with the entire process more fully. Neural networks
+as a <span 
+class="cmti-10">tool</span>, just like a paintbrush or a camera, is an exciting future in art. The iterative process
+involved in this work meant creating many datasets and training many models and assessing
+the outcome qualitatively, this helps develop a sense of <span 
+class="cmti-10">how the model will react</span>
+<span 
+class="cmti-10">to a certain dataset</span>, and equally an <span 
+class="cmti-10">intuition of the output</span>. The ability to iterate
+quickly is how, as a practitioner or an artist, one develops an intuition of ones tools
+and thus how one learns to control the medium &#8212; a painter is not born with the
+ability to accurately mix color and control a brush, but it is learnt and honed over
+time.
+<!--l. 270--><p class="indent" >   This work is not only about creating art, or tools for artists. Democratising the process
+from start-to-finish is important to making the process accessible to all. We currently live with
+machine learning and artificial intelligence; as there appears to be no limits to the possibilities
+there is no doubt that it will find its way into even more aspects of our lives. Therefore it is
+imperative that the field of machine learning becomes more accessible and transparent. The
+first automobile was met with distrust[<span 
+class="cmti-10">*find citation</span>] and seen as magic, the hope of
+this work is to dispel some myths of ML by giving the user their first ride in the
+car.
+<!--l. 277--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">6   </span> <a 
+ id="x1-60006"></a>Conclusion</h3>
+<!--l. 279--><p class="noindent" >The goal of this work is to inspire intrigue and excitement in users to take up ML as a new
+tool in their creative toolbox, as much as it is a fun interaction. The feedback from this work
+has been positive but there remains more that could be done. We are yet to find the right
+balance between dataset variety and size with the right size of model and training time. There
+are multiple approaches to this, but a semi-automated training process while qualitatively
+assessing the results seems the most exciting.
+<!--l. 281--><p class="indent" >   We are also yet to see the perfect means of NN deployment on the internet. TensorflowJS
+provides great flexibility, but at some performance cost. Tools are being developed to allow
+internet browsers the ability to utilise low level performance enhancements specific to ML
+such as XNNPACK[<a 
+href="draft_02.html#X0-XNNPACK" >47</a>] while SIMD operations are now available to WebAssembly[<a 
+href="draft_02.html#X0-SIMD" >34</a>] &#8212; both
+features being utilised to perform background blurring and substitution in-browser and on
+mobile[<a 
+href="draft_02.html#X0-google_background" >17</a>]. WebGPU[<a 
+href="draft_02.html#X0-webgpu" >45</a>] and WebNN[<a 
+href="draft_02.html#X0-webnn" >46</a>] also lie on the horizon showing great promise as web
+specific ML tools able to handle the data structures of ML. As it stands however
+WebGL remains the strongest web API to interface with the GPU and with simple
+                                                                         
+
+                                                                         
+models such as the <span 
+class="cmti-10">all convolutional net </span>it is simply a matter of rethinking tensor
+data structure into 2D textures to allow for efficient GLSL shader programs to
+operate on the data. A sample NN of similar structure to the Pix2Pix generator
+was created to test this hypothesis and shows potential. Early tests show that the
+running time of a full size Pix2Pix generator model on an integrated GPU is the
+same as the TensorflowJS model with the WebGL wrapper as used in this work.
+The advantages of keeping the data structures suited to WebGL means it is trivial
+to display the weights and biases and possibly create novel real-time interactions
+with even deeper aspects of the model &#8212; more details can be seen in appendix
+<a 
+href="#x1-10000B">B<!--tex4ht:ref: appendix:webgl_cnn --></a>.
+<!--l. 283--><p class="indent" >   ML on the web is growing rapidly and this work shows that seeking inspiration from
+unconventional research seen in the art world can lead to exciting findings.
+<!--l. 288--><p class="noindent" >
+   <h3 class="sectionHead"><a 
+ id="x1-70006"></a>References</h3>
+<!--l. 288--><p class="noindent" >
+     <dl class="thebibliography"><dt id="X0-lts_memo" class="thebibliography">
+ [1]  </dt><dd 
+id="bib-1" class="thebibliography">
+     <!--l. 288--><p class="noindent" ><a 
+href="draft_02.html" id="X0-" ></a>Memo          Akten.          <span 
+class="cmti-10">Learning         to         See</span>.          2017.          <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="http://www.memo.tv/works/learning-to-see/" class="url" ><span 
+class="cmtt-10">http://www.memo.tv/works/learning-to-see/</span></a>.
+     </dd><dt id="X0-2003.00902" class="thebibliography">
+ [2]  </dt><dd 
+id="bib-2" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Memo   Akten,   Rebecca   Fiebrink,   and   Mick   Grierson.   &#8220;Learning   to   See:
+     You  Are  What  You  See&#8221;.  In:  (2020).  <span 
+class="cmcsc-10"><span 
+class="small-caps">d</span><span 
+class="small-caps">o</span><span 
+class="small-caps">i</span></span>:  <a 
+href="https://doi.org/10.1145/3306211.3320143" >10.1145/3306211.3320143</a>.  eprint:
+     <a 
+href="arXiv:2003.00902" class="url" ><span 
+class="cmtt-10">arXiv:2003.00902</span></a>.
+     </dd><dt id="X0-ml5" class="thebibliography">
+ [3]  </dt><dd 
+id="bib-3" class="thebibliography">
+     <!--l. 288--><p class="noindent" >NYU Interactive Telecommunications/Interactive Media Arts. <span 
+class="cmti-10">ML5</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://ml5js.org/" class="url" ><span 
+class="cmtt-10">https://ml5js.org/</span></a>.
+     </dd><dt id="X0-brainjs" class="thebibliography">
+ [4]  </dt><dd 
+id="bib-4" class="thebibliography">
+     <!--l. 288--><p class="noindent" ><span 
+class="cmti-10">Brain JS</span>. 2018. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://brain.js.org/" class="url" ><span 
+class="cmtt-10">http://brain.js.org/</span></a>.
+     </dd><dt id="X0-terry_broad" class="thebibliography">
+ [5]  </dt><dd 
+id="bib-5" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Terence Broad. <span 
+class="cmti-10">Terence Broad</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://terencebroad.com/" class="url" ><span 
+class="cmtt-10">https://terencebroad.com/</span></a>.
+     </dd><dt id="X0-broad_cnn_vis_2016" class="thebibliography">
+ [6]  </dt><dd 
+id="bib-6" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Terence Broad. <span 
+class="cmti-10">Topological Visualisation of a Convolutional Neural Network</span>. 2016.
+     <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://blog.terencebroad.com/archive/convnetvis/vis.html" class="url" ><span 
+class="cmtt-10">https://blog.terencebroad.com/archive/convnetvis/vis.html</span></a>.
+     </dd><dt id="X0-2005.14165" class="thebibliography">
+ [7]  </dt><dd 
+id="bib-7" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Tom  B.  Brown  et  al.  <span 
+class="cmti-10">Language  Models  are  Few-Shot  Learners</span>.  2020.  eprint:
+     <a 
+href="arXiv:2005.14165" class="url" ><span 
+class="cmtt-10">arXiv:2005.14165</span></a>.
+     </dd><dt id="X0-synaptic" class="thebibliography">
+ [8]  </dt><dd 
+id="bib-8" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Juan Cazala. <span 
+class="cmti-10">Synaptic</span>. 2017. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://caza.la/synaptic/" class="url" ><span 
+class="cmtt-10">http://caza.la/synaptic/</span></a>.
+                                                                         
+
+                                                                         
+     </dd><dt id="X0-kerasjs" class="thebibliography">
+ [9]  </dt><dd 
+id="bib-9" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Leon              Chen.              <span 
+class="cmti-10">Keras            JS</span>.              2017.              <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://transcranial.github.io/keras-js/" class="url" ><span 
+class="cmtt-10">https://transcranial.github.io/keras-js/</span></a>.
+     </dd><dt id="X0-crawford_paglen_2019" class="thebibliography">
+[10]  </dt><dd 
+id="bib-10" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Kate  Crawford  and  Trevor  Paglen.  <span 
+class="cmti-10">Excavating AI: The Politics of Images in</span>
+     <span 
+class="cmti-10">Machine Learning Training Sets</span>. Sept. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://www.excavating.ai/" class="url" ><span 
+class="cmtt-10">https://www.excavating.ai/</span></a>.
+     </dd><dt id="X0-wekinator" class="thebibliography">
+[11]  </dt><dd 
+id="bib-11" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Rebecca Fiebrink. <span 
+class="cmti-10">Wekinator</span>. 2009. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://www.wekinator.org/" class="url" ><span 
+class="cmtt-10">http://www.wekinator.org/</span></a>.
+     </dd><dt id="X0-1701.00160" class="thebibliography">
+[12]  </dt><dd 
+id="bib-12" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Ian  Goodfellow.  <span 
+class="cmti-10">NIPS  2016  Tutorial:  Generative  Adversarial  Networks</span>.  2016.
+     eprint: <a 
+href="arXiv:1701.00160" class="url" ><span 
+class="cmtt-10">arXiv:1701.00160</span></a>.
+     </dd><dt id="X0-1406.2661" class="thebibliography">
+[13]  </dt><dd 
+id="bib-13" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Ian  J.  Goodfellow  et  al.  <span 
+class="cmti-10">Generative  Adversarial  Networks</span>.  2014.  eprint:
+     <a 
+href="arXiv:1406.2661" class="url" ><span 
+class="cmtt-10">arXiv:1406.2661</span></a>.
+     </dd><dt id="X0-magenta" class="thebibliography">
+[14]  </dt><dd 
+id="bib-14" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Google. <span 
+class="cmti-10">Magenta</span>. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://magenta.tensorflow.org/" class="url" ><span 
+class="cmtt-10">https://magenta.tensorflow.org/</span></a>.
+     </dd><dt id="X0-teachablemachines" class="thebibliography">
+[15]  </dt><dd 
+id="bib-15" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Google.               <span 
+class="cmti-10">Teachable             Machines</span>.               2019.               <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://teachablemachine.withgoogle.com/" class="url" ><span 
+class="cmtt-10">https://teachablemachine.withgoogle.com/</span></a>.
+     </dd><dt id="X0-mimic" class="thebibliography">
+[16]  </dt><dd 
+id="bib-16" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Mick Grierson. <span 
+class="cmti-10">Mimic</span>. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://mimicproject.com/" class="url" ><span 
+class="cmtt-10">https://mimicproject.com/</span></a>.
+     </dd><dt id="X0-google_background" class="thebibliography">
+[17]  </dt><dd 
+id="bib-17" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Tingbo Hou and Tyler Mullen. <span 
+class="cmti-10">Background Features in Google Meet, Powered by</span>
+     <span 
+class="cmti-10">Web ML</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://ai.googleblog.com/2020/10/background-features-in-google-meet.html" class="url" ><span 
+class="cmtt-10">https://ai.googleblog.com/2020/10/background-features-in-google-meet.html</span></a>.
+     </dd><dt id="X0-hard_to_train_gans" class="thebibliography">
+[18]  </dt><dd 
+id="bib-18" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Jonathan Hui. &#8220;GAN &#8212; Why it is so hard to train Generative Adversarial Networks!&#8221;
+     In: (2018). <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b" class="url" ><span 
+class="cmtt-10">https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b</span></a>.
+     </dd><dt id="X0-1502.03167" class="thebibliography">
+[19]  </dt><dd 
+id="bib-19" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Sergey   Ioffe   and   Christian   Szegedy.   <span 
+class="cmti-10">Batch   Normalization:   Accelerating</span>
+     <span 
+class="cmti-10">Deep  Network  Training  by  Reducing  Internal  Covariate  Shift</span>.  2015.  eprint:
+     <a 
+href="arXiv:1502.03167" class="url" ><span 
+class="cmtt-10">arXiv:1502.03167</span></a>.
+     </dd><dt id="X0-1611.07004" class="thebibliography">
+[20]  </dt><dd 
+id="bib-20" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Phillip  Isola  et  al.  &#8220;Image-to-Image  Translation  with  Conditional  Adversarial
+     Networks&#8221;. In: (2016). eprint: <a 
+href="arXiv:1611.07004" class="url" ><span 
+class="cmtt-10">arXiv:1611.07004</span></a>.
+     </dd><dt id="X0-1704.01942" class="thebibliography">
+[21]  </dt><dd 
+id="bib-21" class="thebibliography">
+                                                                         
+
+                                                                         
+     <!--l. 288--><p class="noindent" >Minsuk Kahng et al. <span 
+class="cmti-10">ActiVis: Visual Exploration of Industry-Scale Deep Neural</span>
+     <span 
+class="cmti-10">Network Models</span>. 2017. eprint: <a 
+href="arXiv:1704.01942" class="url" ><span 
+class="cmtt-10">arXiv:1704.01942</span></a>.
+     </dd><dt id="X0-karparthy_conjs_2016" class="thebibliography">
+[22]  </dt><dd 
+id="bib-22" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Andrej              Karpathy.              <span 
+class="cmti-10">ConvNetJS</span>.              2016.              <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://cs.stanford.edu/people/karpathy/convnetjs/" class="url" ><span 
+class="cmtt-10">https://cs.stanford.edu/people/karpathy/convnetjs/</span></a>.
+     </dd><dt id="X0-mario_klingemann" class="thebibliography">
+[23]  </dt><dd 
+id="bib-23" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Mario Klingemann. <span 
+class="cmti-10">Mario Klingemann</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://quasimondo.com/" class="url" ><span 
+class="cmtt-10">http://quasimondo.com/</span></a>.
+     </dd><dt id="X0-2003.08936" class="thebibliography">
+[24]  </dt><dd 
+id="bib-24" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Muyang  Li  et  al.  <span 
+class="cmti-10">GAN  Compression:  Efficient  Architectures  for  Interactive</span>
+     <span 
+class="cmti-10">Conditional GANs</span>. 2020. eprint: <a 
+href="arXiv:2003.08936" class="url" ><span 
+class="cmtt-10">arXiv:2003.08936</span></a>.
+     </dd><dt id="X0-mind" class="thebibliography">
+[25]  </dt><dd 
+id="bib-25" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Steven Miller. <span 
+class="cmti-10">Mind</span>. 2016. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://caza.la/synaptic/" class="url" ><span 
+class="cmtt-10">http://caza.la/synaptic/</span></a>.
+     </dd><dt id="X0-deep_dream_guy" class="thebibliography">
+[26]  </dt><dd 
+id="bib-26" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Alexander Mordvintsev. <span 
+class="cmti-10">Alexander Mordvintsev</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://znah.net/" class="url" ><span 
+class="cmtt-10">https://znah.net/</span></a>.
+     </dd><dt id="X0-2006.03669" class="thebibliography">
+[27]  </dt><dd 
+id="bib-27" class="thebibliography">
+     <!--l. 288--><p class="noindent" >James  O&#8217;  Neill.  <span 
+class="cmti-10">An  Overview  of  Neural  Network  Compression</span>.  2020.  eprint:
+     <a 
+href="arXiv:2006.03669" class="url" ><span 
+class="cmtt-10">arXiv:2006.03669</span></a>.
+     </dd><dt id="X0-1903.07291" class="thebibliography">
+[28]  </dt><dd 
+id="bib-28" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Taesung   Park   et   al.   &#8220;Semantic   Image   Synthesis   with   Spatially-Adaptive
+     Normalization&#8221;. In: (2019). eprint: <a 
+href="arXiv:1903.07291" class="url" ><span 
+class="cmtt-10">arXiv:1903.07291</span></a>.
+     </dd><dt id="X0-pytorch" class="thebibliography">
+[29]  </dt><dd 
+id="bib-29" class="thebibliography">
+     <!--l. 288--><p class="noindent" >PyTorch. <span 
+class="cmti-10">PyTorch</span>. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://pytorch.org/" class="url" ><span 
+class="cmtt-10">https://pytorch.org/</span></a>.
+     </dd><dt id="X0-anna_ridler" class="thebibliography">
+[30]  </dt><dd 
+id="bib-30" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Anna Ridler. <span 
+class="cmti-10">Anna Ridler</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://annaridler.com/" class="url" ><span 
+class="cmtt-10">http://annaridler.com/</span></a>.
+     </dd><dt id="X0-romano_2016" class="thebibliography">
+[31]  </dt><dd 
+id="bib-31" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Aja Romano. <span 
+class="cmti-10">A guy trained a machine to &#8221;watch&#8221; Blade Runner. Then things got</span>
+     <span 
+class="cmti-10">seriously sci-fi. </span>2016. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://www.vox.com/2016/6/1/11787262/blade-runner-neural-network-encoding" class="url" ><span 
+class="cmtt-10">https://www.vox.com/2016/6/1/11787262/blade-runner-neural-network-encoding</span></a>.
+     </dd><dt id="X0-1505.04597" class="thebibliography">
+[32]  </dt><dd 
+id="bib-32" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Olaf  Ronneberger,  Philipp  Fischer,  and  Thomas  Brox.  <span 
+class="cmti-10">U-Net:  Convolutional</span>
+     <span 
+class="cmti-10">Networks for Biomedical Image Segmentation</span>. 2015. eprint: <a 
+href="arXiv:1505.04597" class="url" ><span 
+class="cmtt-10">arXiv:1505.04597</span></a>.
+     </dd><dt id="X0-1606.03498" class="thebibliography">
+[33]  </dt><dd 
+id="bib-33" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Tim  Salimans  et  al.  <span 
+class="cmti-10">Improved  Techniques  for  Training  GANs</span>.  2016.  eprint:
+     <a 
+href="arXiv:1606.03498" class="url" ><span 
+class="cmtt-10">arXiv:1606.03498</span></a>.
+     </dd><dt id="X0-SIMD" class="thebibliography">
+[34]  </dt><dd 
+id="bib-34" class="thebibliography">
+     <!--l. 288--><p class="noindent" >WebAssembly        SIMD.        <span 
+class="cmti-10">WebAssembly       SIMD</span>.        2020.        <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://v8.dev/features/simd" class="url" ><span 
+class="cmtt-10">https://v8.dev/features/simd</span></a>.
+                                                                         
+
+                                                                         
+     </dd><dt id="X0-tensorflow_playground" class="thebibliography">
+[35]  </dt><dd 
+id="bib-35" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Daniel   Smilkov   and   Shan   Carter.   <span 
+class="cmti-10">Tensorflow   Playground</span>.   2016.   <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="http://playground.tensorflow.org/" class="url" ><span 
+class="cmtt-10">http://playground.tensorflow.org/</span></a>.
+     </dd><dt id="X0-1412.6806" class="thebibliography">
+[36]  </dt><dd 
+id="bib-36" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Jost Tobias Springenberg et al. <span 
+class="cmti-10">Striving for Simplicity: The All Convolutional Net</span>.
+     2014. eprint: <a 
+href="arXiv:1412.6806" class="url" ><span 
+class="cmtt-10">arXiv:1412.6806</span></a>.
+     </dd><dt id="X0-JMLR:v15:srivastava14a" class="thebibliography">
+[37]  </dt><dd 
+id="bib-37" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Nitish Srivastava et al. &#8220;Dropout: A Simple Way to Prevent Neural Networks
+     from  Overfitting&#8221;.  In:  <span 
+class="cmti-10">Journal  of  Machine  Learning  Research  </span>15.56  (2014),
+     pp. 1929&#8211;1958. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="http://jmlr.org/papers/v15/srivastava14a.html" class="url" ><span 
+class="cmtt-10">http://jmlr.org/papers/v15/srivastava14a.html</span></a>.
+     </dd><dt id="X0-tf" class="thebibliography">
+[38]  </dt><dd 
+id="bib-38" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Tensorflow. <span 
+class="cmti-10">Tensorflow</span>. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://www.tensorflow.org/" class="url" ><span 
+class="cmtt-10">https://www.tensorflow.org/</span></a>.
+     </dd><dt id="X0-tf_p2p" class="thebibliography">
+[39]  </dt><dd 
+id="bib-39" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Tensorflow.              <span 
+class="cmti-10">Tensorflow            Pix2Pix</span>.              2019.              <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://www.tensorflow.org/tutorials/generative/pix2pix" class="url" ><span 
+class="cmtt-10">https://www.tensorflow.org/tutorials/generative/pix2pix</span></a>.
+     </dd><dt id="X0-tfjs" class="thebibliography">
+[40]  </dt><dd 
+id="bib-40" class="thebibliography">
+     <!--l. 288--><p class="noindent" >TensorflowJS. <span 
+class="cmti-10">TensorflowJS</span>. 2019. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://www.tensorflow.org/js" class="url" ><span 
+class="cmtt-10">https://www.tensorflow.org/js</span></a>.
+     </dd><dt id="X0-tfjs_converter" class="thebibliography">
+[41]  </dt><dd 
+id="bib-41" class="thebibliography">
+     <!--l. 288--><p class="noindent" >TensorflowJS.           <span 
+class="cmti-10">TensorflowJS          Converter</span>.           2019.           <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://github.com/tensorflow/tfjs/tree/master/tfjs-converter" class="url" ><span 
+class="cmtt-10">https://github.com/tensorflow/tfjs/tree/master/tfjs-converter</span></a>.
+     </dd><dt id="X0-toffler_1972" class="thebibliography">
+[42]  </dt><dd 
+id="bib-42" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Alvin comp. Toffler. <span 
+class="cmti-10">The futurists. Edited with an introd. by Alvin Toffler</span>. Random
+     House, 1972.
+     </dd><dt id="X0-flowers_dataset" class="thebibliography">
+[43]  </dt><dd 
+id="bib-43" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Oxford     University.     <span 
+class="cmti-10">102    Category    Flower    Dataset</span>.     2008.     <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html" class="url" ><span 
+class="cmtt-10">https://www.robots.ox.ac.uk/</span><span 
+class="cmtt-10">~</span><span 
+class="cmtt-10">vgg/data/flowers/102/index.html</span></a>.
+     </dd><dt id="X0-runway" class="thebibliography">
+[44]  </dt><dd 
+id="bib-44" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Cristóbal Valenzuela. <span 
+class="cmti-10">RunwayML</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://runwayml.com/" class="url" ><span 
+class="cmtt-10">https://runwayml.com/</span></a>.
+     </dd><dt id="X0-webgpu" class="thebibliography">
+[45]  </dt><dd 
+id="bib-45" class="thebibliography">
+     <!--l. 288--><p class="noindent" >GPU    for    the    Web    Community    Group.    <span 
+class="cmti-10">WebGPU</span>.    2020.    <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>:
+     <a 
+href="https://gpuweb.github.io/gpuweb/" class="url" ><span 
+class="cmtt-10">https://gpuweb.github.io/gpuweb/</span></a>.
+     </dd><dt id="X0-webnn" class="thebibliography">
+[46]  </dt><dd 
+id="bib-46" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Machine Learning for the Web Community Group. <span 
+class="cmti-10">Web Neural Network API</span>.
+     2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://webmachinelearning.github.io/webnn/" class="url" ><span 
+class="cmtt-10">https://webmachinelearning.github.io/webnn/</span></a>.
+     </dd><dt id="X0-XNNPACK" class="thebibliography">
+[47]  </dt><dd 
+id="bib-47" class="thebibliography">
+     <!--l. 288--><p class="noindent" >XNNPACK. <span 
+class="cmti-10">XNNPACK</span>. 2020. <span 
+class="cmcsc-10"><span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">l</span></span>: <a 
+href="https://github.com/google/XNNPACK" class="url" ><span 
+class="cmtt-10">https://github.com/google/XNNPACK</span></a>.
+                                                                         
+
+                                                                         
+     </dd><dt id="X0-1703.10593" class="thebibliography">
+[48]  </dt><dd 
+id="bib-48" class="thebibliography">
+     <!--l. 288--><p class="noindent" >Jun-Yan Zhu et al. <span 
+class="cmti-10">Unpaired Image-to-Image Translation using Cycle-Consistent</span>
+     <span 
+class="cmti-10">Adversarial Networks</span>. 2017. eprint: <a 
+href="arXiv:1703.10593" class="url" ><span 
+class="cmtt-10">arXiv:1703.10593</span></a>.</dd></dl>
+   ¡div class=&#8221;appendices&#8221;¿
+<!--l. 289--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-80006"></a>Appendices</h3>
+   <h3 class="sectionHead"><span class="titlemark">A   </span> <a 
+ id="x1-9000A"></a>Training Process</h3>
+<!--l. 292--><p class="noindent" >Some text that will be the appendix.
+<!--l. 294--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">B   </span> <a 
+ id="x1-10000B"></a>WebGL CNN</h3>
+<!--l. 296--><p class="noindent" >Some text that will be the appendix.
+   ¡/div¿
+    
+</body></html> 
+
+                                                                         
+
+

@@ -445,31 +445,6 @@
       \verb https://www.excavating.ai/
       \endverb
     \endentry
-    \entry{optimizing_webgl}{manual}{}
-      \name{author}{1}{}{%
-        {{hash=680890ec84706d822adabcc4f3ea2376}{%
-           family={Emscripten},
-           familyi={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{680890ec84706d822adabcc4f3ea2376}
-      \strng{fullhash}{680890ec84706d822adabcc4f3ea2376}
-      \strng{bibnamehash}{680890ec84706d822adabcc4f3ea2376}
-      \strng{authorbibnamehash}{680890ec84706d822adabcc4f3ea2376}
-      \strng{authornamehash}{680890ec84706d822adabcc4f3ea2376}
-      \strng{authorfullhash}{680890ec84706d822adabcc4f3ea2376}
-      \field{sortinit}{E}
-      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Optimizing Web{GL}}
-      \field{year}{2015}
-      \verb{urlraw}
-      \verb https://emscripten.org/docs/optimizing/Optimizing-WebGL.html#avoid-redundant-calls
-      \endverb
-      \verb{url}
-      \verb https://emscripten.org/docs/optimizing/Optimizing-WebGL.html#avoid-redundant-calls
-      \endverb
-    \endentry
     \entry{wekinator}{manual}{}
       \name{author}{1}{}{%
         {{hash=bcbc028add0ae7608dd4bb2fb8f5147d}{%
