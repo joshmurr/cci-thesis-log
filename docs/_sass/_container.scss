@@ -81,10 +81,16 @@ max-width: 100%;
              }
 
              img{
-                 width: 100%;
+								 width: 100%;
                  display: block;
                  margin: auto;
              }
+
+						 .emoji {
+                 width: auto;
+                 display: inline-block;
+						 }
+
 
 						 .full-width {
 								grid-column: 1 / -1;
