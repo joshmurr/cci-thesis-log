@@ -10,7 +10,15 @@ title: Josh Murr
    {% else %}
        {% assign image_files = site.static_files | where: "thumbnail", true %}
    {% endif %}
-
+	 <div class="entry">
+     <div class="info">
+			 <h1>Josh Murr &mdash; Thesis Project Log</h1>
+			 <h2>MSc Creative Computing 2019&ndash;2020</h2>
+			 <br>
+			 <p>This website serves as a catalog of all work produced for the thesis.</p>
+			 <p>There are individual projects shown below each of which are written about it more detial in the <a href="{{ site.baseurl}}/project_log.html">Project Log</a> with the <u>final outcome</u> being <i><a href="https://learning-to-learn-to-see.netlify.app/">Learning to Learn to See</a></i>.</p>
+		 </div>
+	 </div>
    {% for item in site.gallery %}
 	 <div class="entry">
 			<div class="thumbnail"
@@ -27,7 +35,7 @@ title: Josh Murr
 					 <a href="{{ item.code }}"><button class="code">Code</button></a>
 					 {% endif %}
 					 {% if item.sticker %}
-					 <span class="sticker">&#{{ item.sticker }};</span>
+					 <a href="{{ item.link }}"><span class="sticker">&#{{ item.sticker }};</span></a>
 					 {% endif %}
 				 </div>
 			</div>

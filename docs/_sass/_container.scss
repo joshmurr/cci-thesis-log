@@ -57,7 +57,7 @@
 
     .post {
 				min-width: 0;
-max-width: 100%;
+				max-width: 100%;
         display: grid;
         grid-template-columns: minmax(3rem, 1fr) 4fr minmax(3rem, 1fr);
         gap: 1.8rem 0;
@@ -74,10 +74,10 @@ max-width: 100%;
 
              a{
                  background: #ffeeee;
-             }
 
-             a:hover{
-                 background: #ffcccc;
+								 &:hover{
+									 background: #ffcccc;
+								 }
              }
 
              img{
