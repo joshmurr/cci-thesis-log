@@ -1,0 +1,60 @@
+<style>
+  :root {
+		--w: 160px;
+		--h: 120px;
+	}
+	.cropping-example {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.copping-example > * {
+	}
+	.cropping-example > .image-to-crop{
+		width: var(--w);
+		height: var(--h);
+		background-image: url({{ site.baseurl }}/assets/images/clouds.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin: 0 1rem;
+		box-sizing: content-box;
+
+	}
+
+	.cropping-example > .image-to-crop > .inner {
+		width: var(--h);
+		height: var(--h);
+		box-sizing: border-box;
+		display: inline-block;
+
+		border: 2px dashed tomato;
+	}
+
+	.image-to-crop > .left {
+		float: left;
+	}
+
+	.image-to-crop > .right {
+		float: right;
+	}
+
+  .spacer {
+		display: inline-block;
+		width: calc(var(--w) - var(--h));
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+</style>
+<div class="cropping-example">
+	<div class="image-to-crop">
+		<div class="inner left"></div>
+    <div class="spacer"></div>
+	</div>
+
+	<div class="image-to-crop">
+    <div class="spacer"></div>
+		<div class="inner right"></div>
+	</div>
+</div>
