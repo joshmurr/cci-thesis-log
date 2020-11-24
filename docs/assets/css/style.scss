@@ -9,6 +9,12 @@
     $dev: false;
 {% endif %}
 
+{% if jekyll.environment == "printing" %}
+    $print: true;
+{% else %}
+    $print: false;
+{% endif %}
+
 // Inconsolate VARIABLE
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 // Roboto Light 300 Italic, Regular 400, Bold 700

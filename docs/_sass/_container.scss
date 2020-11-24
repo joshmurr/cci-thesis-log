@@ -1,132 +1,152 @@
 .container {
-    @if $dev{
-        background: lightyellow;
-    }
-    font-family: $roboto, sans-serif;
-    grid-area: content;
+	@if $dev{
+			background: lightyellow;
+	}
+	font-family: $roboto, sans-serif;
+	grid-area: content;
 
-		* {
-				max-width: $bigscreen;
-		}
+	* {
+			max-width: $bigscreen;
+	}
 
-    .post-list li{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+	.post-list li{
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
 
-        h3 {
-            width: 60%;
-        }
+			h3 {
+					width: 60%;
+			}
 
-        a {
-            font-weight: 460;
-        }
+			a {
+					font-weight: 460;
+			}
 
-        a:hover{
-            background: #ccffcc;
-            border-radius: 8px;
-        }
+			a:hover{
+					background: #ccffcc;
+					border-radius: 8px;
+			}
 
-        .meta{
-            display: none;
-        }
-        /* HIDE TAGS AND DATE */
-        @media only screen and (min-width: $bigscreen) {
-            .meta{
-                width: 40%;
-                display: flex;
-                justify-content: space-between;
-                .tags{
-                    color: gray;
-                    .post-tag{
-                        @if $dev{
-                            background: lightgreen;
-                        }
-                        margin-right:5px;
-                    }
-                }
+			.meta{
+					display: none;
+			}
+			/* HIDE TAGS AND DATE */
+			@media only screen and (min-width: $bigscreen) {
+					.meta{
+							width: 40%;
+							display: flex;
+							justify-content: space-between;
+							.tags{
+									color: gray;
+									.post-tag{
+											@if $dev{
+													background: lightgreen;
+											}
+											margin-right:5px;
+									}
+							}
 
-                .post-date{
-                    @if $dev{
-                        background: lightblue;
-                    }
-                }
-            }
-        }
-    }
+							.post-date{
+									@if $dev{
+											background: lightblue;
+									}
+							}
+					}
+			}
+	}
 
-    .post {
-				min-width: 0;
-				max-width: 100%;
-        display: grid;
-        grid-template-columns: minmax(3rem, 1fr) 4fr minmax(3rem, 1fr);
-        gap: 1.8rem 0;
+	.post {
+			min-width: 0;
+			max-width: 100%;
+			display: grid;
+			grid-template-columns: minmax(3rem, 1fr) 4fr minmax(3rem, 1fr);
+			gap: 1.8rem 0;
 
-             > * {
-                 grid-column: 2;
-             }
+			> * {
+			 	 grid-column: 2;
+			 	 @if $print{
+			 		 &::after, &::before{
+			 			 content: "\00000a";
+			 			 white-space: pre;
+			 		 }
+			 	 }
+			}
 
-             ul {
-                 list-style: '—';
-                 list-style-position: outside !important;
-                 margin-left: 3rem;
-             }
+			ul {
+			 	 list-style: '—';
+			 	 list-style-position: outside !important;
+			 	 margin-left: 3rem;
+			}
 
-             a{
-                 background: #ffeeee;
+			a{
+			 	 background: #ffeeee;
 
-								 &:hover{
-									 background: #ffcccc;
-								 }
-             }
+			 	 &:hover{
+			 		 background: #ffcccc;
+			 	 }
+			}
 
-             img{
-								 width: 100%;
-                 display: block;
-                 margin: auto;
-             }
+			img{
+			 	 width: 100%;
+			 	 display: block;
+			 	 margin: auto;
+			}
 
-						 .emoji {
-                 width: auto;
-                 display: inline-block;
-						 }
+			.emoji {
+			 	 width: auto;
+			 	 display: inline-block;
+			}
 
 
-						 .full-width {
-								grid-column: 1 / -1;
-						 }
+			.full-width {
+			 	grid-column: 1 / -1;
+			}
 
-             iframe{
-                 justify-self: center;
-             }
+			iframe{
+			 	 justify-self: center;
+			}
 
-						p > code {
-								width: 100%;
-								padding-left: 0.25em;
-								padding-right: 0.25em;
-								background: #efefef;
-								border-radius: 8px;
-						}
+			p > code {
+					width: 100%;
+					padding-left: 0.25em;
+					padding-right: 0.25em;
+					background: #efefef;
+					border-radius: 8px;
+			}
 
-						pre {
-								margin-left: 3rem;
-								margin-right: 3rem;
-								background: #efefef;
-								border-radius: 8px;
-								padding: 1em;
-								overflow-x: auto;
-								max-width: $smallscreen;
-						}
-						blockquote {
-								font-size: small;
-								margin: auto;
-								padding: 1em;
-								background: #eee;
-								border-radius: 8px;
-						}
-            tensor-graph {
-              grid-column: 1 / -1;
-							margin: 2rem auto;
-            }
-         }
-     }
+			pre {
+					margin-left: 3rem;
+					margin-right: 3rem;
+					background: #efefef;
+					border-radius: 8px;
+					padding: 1em;
+					overflow-x: auto;
+					max-width: $smallscreen;
+			}
+			blockquote {
+					font-size: small;
+					margin: auto;
+					padding: 1em;
+					background: #eee;
+					border-radius: 8px;
+			}
+
+			table {
+				width: 100%;
+				grid-column: 1 / -1;
+
+				th {
+				  font-family: $apl, $inconsolata, monospace;
+					font-size: large;
+				}
+
+				td {
+					width: 50%;
+				}
+			}
+			tensor-graph {
+				grid-column: 1 / -1;
+				margin: 2rem auto;
+			}
+	 }
+}
