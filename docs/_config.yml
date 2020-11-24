@@ -17,7 +17,7 @@ title: CCI MSc Creative Computing Thesis Project Log
 shorttile: Josh Murr | MSc
 email: joshuadavidmurr@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A more general project log documenting the progress of my thesis project.
+  Project log documenting the progress, development and tangents of my thesis project.
 baseurl: "/cci-thesis-log" # the subpath of your site, e.g. /blog
 url: "https://github.com/joshmurr/cci-thesis-log" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: joshmurr

@@ -1,7 +1,14 @@
 ---
-layout: page
+layout: post
 title: About
-permalink: /about/
 ---
 
-[Josh Murr](https://www.joshmurr.com/)
+```
+Joshua Murr, 19038515
+MSc Creative Computing
+Creative Computing Institute
+University of the Arts London
+2019---2020
+```
+
+[JM](https://www.joshmurr.com/)

@@ -21,6 +21,12 @@ I've gone for a slightly unconventional flattened-[TIE-Fighter](https://en.wikip
 
 > Turns out that much 3D CSS is a bit too much to handle and the browser starts to struggle. Ironic really, given the nature of the project. I'm not gonna stress about it right now, but I'm sure it'll bug me enough to eventually make it more performant.. Any way, these are just screenshots for now!
 
+{% include big_graph.html %}
+
+{% include medium_graph.html %}
+
+{% include small_graph.html %}
+
 ![Large and Medium Graphs]({{ site.baseurl }}/assets/images/css_graphs/graphs_1.png)
 {: .full-width}
 ![Small Graph]({{ site.baseurl }}/assets/images/css_graphs/graphs_2.png)
@@ -28,3 +34,5 @@ I've gone for a slightly unconventional flattened-[TIE-Fighter](https://en.wikip
 
 [lts]: https://learning-to-learn-to-see.netlify.app/
 [webglcnn]: https://github.com/joshmurr/cci-webgl-cnn
+
+<script src="{{ site.baseurl }}/assets/js/comp_graph.js"></script>
