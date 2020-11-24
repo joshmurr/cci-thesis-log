@@ -19,18 +19,27 @@ Below is the original Pix2Pix model, to scale, and then the two other sizes whic
 
 I've gone for a slightly unconventional flattened-[TIE-Fighter](https://en.wikipedia.org/wiki/TIE_fighter) layout (the convention being the image above), but to keep things to scale, in perspective _and_ all on screen at once this was the best solution. With the layout above, the middle layers would be really wide and make the overall graph too big.
 
-> Turns out that much 3D CSS is a bit too much to handle and the browser starts to struggle. Ironic really, given the nature of the project. I'm not gonna stress about it right now, but I'm sure it'll bug me enough to eventually make it more performant.. Any way, these are just screenshots for now!
+> Turns out that much 3D CSS can be quite a lot for the browser to handle! I've removed the back and bottom faces as you don't actually see them, and turned off animations if there are more than one on the page, but don't be surprised if this page is a bit slow. I'll worry about it a bit more another time.
 
+{% if jekyll.environment == "printing" %}
+![Large Graph]({{ site.baseurl }}/assets/images/css_graphs/big_graph.png)
+{: .full-width}
+> If you're reading the PDF, you'll see screenshots rather than rendered CSS.
+
+![Medium Graph]({{ site.baseurl }}/assets/images/css_graphs/med_graph.png)
+{: .full-width}
+
+![Small Graph]({{ site.baseurl }}/assets/images/css_graphs/small_graph.png)
+{: .full-width}
+{% else %}
 {% include big_graph.html %}
 
 {% include medium_graph.html %}
 
 {% include small_graph.html %}
+{% endif %}
 
-![Large and Medium Graphs]({{ site.baseurl }}/assets/images/css_graphs/graphs_1.png)
-{: .full-width}
-![Small Graph]({{ site.baseurl }}/assets/images/css_graphs/graphs_2.png)
-{: .full-width}
+
 
 [lts]: https://learning-to-learn-to-see.netlify.app/
 [webglcnn]: https://github.com/joshmurr/cci-webgl-cnn

@@ -8,7 +8,17 @@ categories: tensorflow pix2pix python
 
 _Learning to See_ by Memo Akten has always been one of my favourite pieces of artworks from the world of machine learning. It shows the inner workings of a generative model in a simple and responsive way. It was definitely the highlight for me seeing it at the AI exhibition at the Barbican a few years ago. Mick floated the idea that it would be pretty cool to get a recreation or an equivalent of _Learning to See_ working in the browser so it could exist online.. so I couldn't resist giving it ago!
 
+{% if jekyll.environment == "printing" %}
+
+[![Screenshot of Vimeo Video]({{ site.baseurl }}/assets/images/lts/lts_still.png)](https://vimeo.com/{{ page.lts_vimeoID }})
+
+> To watch the video above: https://vimeo.com/{{ page.lts_vimeoID }}
+
+{% else %}
+
 {% include vimeoPlayer.html id=page.lts_vimeoID %}
+
+{% endif %}
 
 _Learning to See_ is based the the [pix2pix][p2p] model which is an image-to-image translation model which trains on pairs of images, learning to translate one input image into a desired output. It has proven itself to be very flexible and has been used in many applications:
 

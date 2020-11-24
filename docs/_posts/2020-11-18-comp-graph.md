@@ -20,7 +20,18 @@ As with all things web-related there many ways to declare a custom HTML element,
 
 Here's my version of the AlexNet graph (the bottom half of it anyway):
 
+{% if jekyll.environment == "printing" %}
+
 {% include demo_graph.html %}
+
+{% else %}
+
+![AlexNet Graph]({{ site.baseurl }}/assets/images/css_graphs/alexnet.png)
+{: .full-width}
+
+> If viewing this in the PDF you'll see a screenshot which has been cropped a little bit.
+
+{% endif %}
 
 As you can see there are some pros and cons of drawing everything to scale, but I quite like to see it drawn like that, it gives you a good sense of the literal size of the model.. The last fully connected layers are actually half as long as they should be, at full length they make the page massive and make the scrollbars go all weird.
 
@@ -105,7 +116,18 @@ I won't go into it in any detail, but you get the idea. I've omitted a lot of st
 
  This is how the images are passed into the element and then used as backgrounds for the top face `<div>`s. The `<slot>` in where the `TensorBox`'s go when placed inside the parent `TensorGraph`. As it's all CSS you can apply CSS animations which is how they're endlessly oscillating.
 
+{% if jekyll.environment == "printing" %}
+
+![Sample Graph]({{ site.baseurl }}/assets/images/css_graphs/big_sample.png)
+{: .full-width}
+
+> If viewing this in the PDF you'll see a screenshot.
+
+{% else %}
+
 {% include img_graph.html %}
+
+{% endif %}
 
 They're not particularly performant, if you put too many on a page it struggles.. This page is certainly feeling it, but a fun experiment in CSS non-the-less!
 

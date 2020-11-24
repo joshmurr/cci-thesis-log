@@ -33,7 +33,18 @@ All the filters are just randomly initialised and nothing about the model is tra
 
 The model above is equivalent to the diagram below, when visualised as 3D volumes:
 
+
+{% if jekyll.environment == "printing" %}
+
+![WebGL Graph Screenshot]({{ site.baseurl }}/assets/images/css_graphs/webgl_graph.png)
+
+> If you're reading the PDF you'll see a screenshot rather than rendered CSS.
+
+{% else %}
+
 {% include webgl_graph.html %}
+
+{% endif %}
 
 ## API
 

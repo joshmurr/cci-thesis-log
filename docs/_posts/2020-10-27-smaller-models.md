@@ -26,35 +26,71 @@ The flowers model below is trained on the [102 Category Flower Dataset](https://
 
 <u>Flowers on RTX2070 Graphics Card in Chromium ↓</u>
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.flowers_256_8_RTX2070_firefox }}/0.jpg)](http://www.youtube.com/watch?v={{ page.flowers_256_8_RTX2070_firefox }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.flowers_256_8_RTX2070_firefox }}
+{% else %}
 {% include youtubePlayer.html id=page.flowers_256_8_RTX2070_firefox %}
+{% endif %}
 
 <u>Flowers on Integrated Graphics Card in Firefox ↓</u>
 
 What is quite cool here is that the model _actually runs_ on an integrated graphics card, pretty much to the same performance of the full model and in older demos. Output via WebGL almost double the framerate from approx __10fps__ to upto __20fps__.
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.flowers_256_8_integrated_firefox }}/0.jpg)](http://www.youtube.com/watch?v={{ page.flowers_256_8_integrated_firefox }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.flowers_256_8_integrated_firefox }}
+{% else %}
 {% include youtubePlayer.html id=page.flowers_256_8_integrated_firefox %}
+{% endif %}
 
 <u>Flowers on Integrated Graphics Card in Chromium ↓</u>
 
 Running the same thing in Chromium does not yield the same results, in fact shows little difference when switching to WebGL output.. Not sure why yet because Chromium was much fast that Firefox in the first demo above.
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.flowers_256_8_integrated_chromium }}/0.jpg)](http://www.youtube.com/watch?v={{ page.flowers_256_8_integrated_chromium }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.flowers_256_8_integrated_chromium }}
+{% else %}
 {% include youtubePlayer.html id=page.flowers_256_8_integrated_chromium %}
+{% endif %}
 
 <u>Clouds on RTX2070 Graphics Card in Firefox ↓</u>
 
 This model was trained on stills from [this timelapse video](https://www.youtube.com/watch?v=232LFz) using the `frame_extractor` sript from my [Auto-Pix2Pix](https://github.com/joshmurr/cci-auto-pix2pix/) tool. This is trained on around 600 very similar images. The result is still decent, but naturally lacks variety.
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.clouds_256_8 }}/0.jpg)](http://www.youtube.com/watch?v={{ page.clouds_256_8 }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.clouds_256_8 }}
+{% else %}
 {% include youtubePlayer.html id=page.clouds_256_8 %}
+{% endif %}
 
 And this model below is even smaller again. The first `conv2D` layer has 4 filters and then follows the same pattern as above. This results in __<u>6,297,491</u> total parameters__, so a much smaller model again but this does not result in another performance boost and does show a much weaker model.
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.clouds_256_4 }}/0.jpg)](http://www.youtube.com/watch?v={{ page.clouds_256_4 }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.clouds_256_4 }}
+{% else %}
 {% include youtubePlayer.html id=page.clouds_256_4 %}
+{% endif %}
 
 As a first guess, I imagine this reaches the bottleneck of just running the model using TensorflowJS. The things taking the most time in this instance may well be all the WebGL API calls and just moving data around, rather than the computation itself - but that's just a guess for now.
 
 <u>And here is a video of the model upload process on Chromium ↓</u>
 
+{% if jekyll.environment == "printing" %}
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.upload_model_chromium }}/0.jpg)](http://www.youtube.com/watch?v={{ page.upload_model_chromium }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.upload_model_chromium }}
+{% else %}
 {% include youtubePlayer.html id=page.upload_model_chromium %}
+{% endif %}
 
 ## What Next
 

@@ -14,7 +14,8 @@ class TensorBox extends HTMLElement {
     const animate = this.parentElement.getAttribute('animate') === 'true';
     const translation = `translate3d(0px, ${offset}px, -${(256-depth)/2}px)`;
 
-    const colour = Math.floor(1/width + 1/height + 1/depth * 360 * scale);
+    const MAX = 256*256*256;
+    const colour = Math.floor((width*height*depth)/MAX * 360*10);
 
     const template = document.createElement('template');
     template.innerHTML = `
@@ -70,10 +71,10 @@ class TensorBox extends HTMLElement {
           height: ${depth}px;
           top: ${(height - depth) / 2}px;
         }
-        .front  { background: hsla(${colour}, 100%, 50%, 0.7); }
-        .right  { background: hsla(${colour}, 100%, 50%, 0.7); }
-        .left   { background: hsla(${colour}, 100%, 50%, 0.7); }
-        .top    { background: hsla(${colour}, 100%, 50%, 0.7); }
+        .front  { background: hsla(${colour}, 100%, 40%, 0.9); }
+        .right  { background: hsla(${colour}, 100%, 30%, 0.7); }
+        .left   { background: hsla(${colour}, 100%, 30%, 0.7); }
+        .top    { background: hsla(${colour}, 100%, 50%, 0.8); }
 
         .front  { transform: rotateY(  0deg) translateZ(${depth/2}px); }
         .right  { transform: rotateY( 90deg) translateZ(${width/2}px); }
