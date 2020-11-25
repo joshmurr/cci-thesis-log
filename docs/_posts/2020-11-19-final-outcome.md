@@ -3,6 +3,7 @@ layout: post
 title:  "[Final Outcome] Learning to Learn to See"
 date:   2020-11-22 18:08:36 +0000
 categories: tensorflow webgl
+demoID: tpzKGfRcboM 
 ---
 
 ![Big Model Output]({{ site.baseurl }}/assets/images/ltlts/smiles.png)
@@ -16,7 +17,18 @@ in the name of the tribute, like the tribute band [Kaiser Monkey Killers](https:
 
 This is naturally written in much more detail in the paper so this is mostly just a technical write-up.
 
-![In Use]({{ site.baseurl }}/assets/images/ltlts/1.png)
+{% if jekyll.environment == "printing" %}
+
+[![Screenshot of YouTube Video](http://img.youtube.com/vi/{{ page.demoID }}/0.jpg)](http://www.youtube.com/watch?v={{ page.demoID }})
+
+> To watch the video above: https://www.youtube.com/watch?v={{ page.demoID }}
+
+{% else %}
+
+{% include youtubePlayer.html id=page.demoID %}
+
+{% endif %}
+
 
 ## Functionality
 
@@ -142,6 +154,7 @@ There is a lot more that could be done to potentially improve it further but tha
 
 I would also like to make a version which could be fullscreened and become more of a standalone piece. As it stands it still looks like, and _is_, and testing framework/proof of concept.
 
+![In Use]({{ site.baseurl }}/assets/images/ltlts/1.png)
 
 
 [ltlts]: https://learning-to-learn-to-see.netlify.app/
