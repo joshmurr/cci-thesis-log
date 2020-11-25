@@ -22,14 +22,14 @@ Here's my version of the AlexNet graph (the bottom half of it anyway):
 
 {% if jekyll.environment == "printing" %}
 
-{% include demo_graph.html %}
-
-{% else %}
-
 ![AlexNet Graph]({{ site.baseurl }}/assets/images/css_graphs/alexnet.png)
 {: .full-width}
 
 > If viewing this in the PDF you'll see a screenshot which has been cropped a little bit.
+
+{% else %}
+
+{% include demo_graph.html %}
 
 {% endif %}
 
