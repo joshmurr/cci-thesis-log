@@ -18,7 +18,8 @@ title: Josh Murr
 			 <p>There are individual projects shown below each of which are written about it more detial in the <a href="{{ site.baseurl}}/project_log.html">Project Log</a> with the <u>final outcome</u> being <i><a href="https://learning-to-learn-to-see.netlify.app/">Learning to Learn to See</a></i>.</p>
 		 </div>
 	 </div>
-   {% for item in site.gallery %}
+   {% assign items = site.gallery | sort: 'z' %}
+   {% for item in items %}
 	 <div class="entry">
 			<div class="thumbnail"
 				style="background-image: url({{ site.baseurl }}/assets/images/thumbnails/{{ item.img }});"
