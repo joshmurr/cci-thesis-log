@@ -115,36 +115,45 @@ The data augmentation requires the generator to take a single channel input. Aug
 
 It was found that for a model that takes an input image size of 256$\times$256 pixels and produces an output of the same size, a dataset of 800--1000 images uniformly shuffled with a batch size of 4 was sufficient to produce \textit{interesting} results --- in this case \textit{interesting} means: varied enough to provide unique experiences whilst producing a output which is representative of the input data. Differences between the model sizes can be seen in \ref{table:model_details}. The models were trained on a NVIDIA Quadro RTX 6000 with 24GB memory locally, or a Tesla P100-PCIE with 16GB memory using Google Colab. In either case a usable model will train in a few hours allowing for a relatively quick development cycle. %More details on the training process and some tools developed to make the process easy and fast in appendix \ref{appendix:training}.
 
-The Pix2Pix generator is an Autoencoder similar to the ``U-Net'' architecture\cite{1505.04597} but differs in some key ways, and we offer some further changes to drastically reduce the size. The generator consists of 8 2D convolution layers downsampling the input data in width and height, and 7 transpose convolutions upsampling the data back to original size. Each layer is batchnormalized\cite{1502.03167} apart from the first, and layers 8--10 have dropout\cite{JMLR:v15:srivastava14a} applied at a rate of 50\%. The Pix2Pix architecture includes no avg- or max-pooling as all filter kernels are 4$\times$4 and a stride of 2 is used. This has the effect of downsampling the layer input by half in width and height, thus circumventing the need for any kind of pooling, otherwise known as an \textit{all convolutional net}\cite{1412.6806}. The difference proposed in this work is to greatly reduce the number of filters used in each layer. The majority of trainable parameters are found in the middle of the generator as a result of the structure described. By reducing the number of filters in each layer by up to a factor of 8, very usable results were obtained whilst drastically reducing the model size --- more discussion on the impacts of a smaller model are found in Results.
+The Pix2Pix generator is an Autoencoder similar to the ``U-Net'' architecture\cite{1505.04597} but differs in some key ways, and we offer some further changes to drastically reduce the size. The generator consists of 8 2D convolution layers downsampling the input data in width and height, and 7 transpose convolutions upsampling the data back to original size. Each layer is batchnormalized\cite{1502.03167} apart from the first, and layers 8--10 have dropout\cite{JMLR:v15:srivastava14a} applied at a rate of 50\%. The Pix2Pix architecture includes no avg- or max-pooling as all filter kernels are 4$\times$4 and a stride of 2 is used. This has the effect of downsampling the layer input by half in width and height, thus circumventing the need for any kind of pooling, otherwise known as an \textit{all convolutional net}\cite{1412.6806}. The difference proposed in this work is to greatly reduce the number of filters used in each layer. The majority of trainable parameters are found in the middle of the generator as a result of the structure described. By reducing the number of filters in each layer by up to a factor of 8, very usable results were obtained whilst drastically reducing the model size --- more discussion on the impacts of a smaller model are found in ~\ref{section:results}.
 
 \begin{small}
 	\begin{table}
 		\begin{center}
 			\begin{tabular}{p{2cm}p{2cm}p{2cm}p{2cm}}
 				\toprule
-				Generator Layer & Pix2Pix & Our Small & Our Medium \\
+				Generator Layer & Pix2Pix & Our Medium & Our Small \\
 				\midrule
-				1               & 64      & 4         & 8          \\
-				2               & 128     & 8         & 16         \\
-				3               & 256     & 16        & 32         \\
-				4               & 512     & 32        & 64         \\
-				5               & 512     & 64        & 128        \\
-				6               & 512     & 128       & 256        \\
-				7               & 512     & 256       & 512        \\
-				8               & 512     & 512       & 512        \\
-				9               & 512     & 256       & 512        \\
-				10              & 512     & 128       & 256        \\
-				11              & 512     & 64        & 128        \\
-				12              & 512     & 32        & 64         \\
-				13              & 512     & 16        & 32         \\
-				14              & 256     & 8         & 16         \\
-				15              & 128     & 4         & 8          \\
+				1               & 64      & 8          & 4         \\
+				2               & 128     & 16         & 8         \\
+				3               & 256     & 32         & 16        \\
+				4               & 512     & 64         & 32        \\
+				5               & 512     & 128        & 64        \\
+				6               & 512     & 256        & 128       \\
+				7               & 512     & 512        & 256       \\
+				8               & 512     & 512        & 512       \\
+				9               & 512     & 512        & 256       \\
+				10              & 512     & 256        & 128       \\
+				11              & 512     & 128        & 64        \\
+				12              & 512     & 64         & 32        \\
+				13              & 256     & 32         & 16        \\
+				14              & 128     & 16         & 8         \\
+				15              & 64      & 8          & 4         \\
 				\bottomrule
 			\end{tabular}
 			\caption{Number of filters per layer in the generator. TODO: Replace table with graphic of model architecture, showing difference between model sizes.}
 		\end{center}
 	\end{table}
 \end{small}
+
+\begin{figure}[h]
+	\hspace*{-0.725in}
+	\centering
+	\begin{tabular}{cc}
+		\subfloat{\includegraphics[width=3.2in]{medium_on_big}} & \subfloat{\includegraphics[width=3.2in]{small_on_medium}} \\
+	\end{tabular}
+	\caption{A visual comparison of our medium sized generator with the original Pix2Pix (left) and our small and medium generators (right).}
+\end{figure}
 
 Once a model is trained, it is saved using the \verb|HDF5| format (\verb|.h5|) and converted using the TensorflowJS Converter. The Converter provides options for compressing the model of varying levels of severity. It was found that the compression of the model:
 
@@ -158,11 +167,8 @@ Therefore the highest compression of \verb|uint8_affine_quantize| can be used to
 
 Finally, a bespoke WebGL wrapper consisting of a number of shader programs was created to handle the input data (pre-augmentation to match that in training) and the output data to render the image to the screen as video. It was found that the image handling capabilities of TensorflowJS seem to be tailored to static images. In inference, the data is of the \textit{tensor} data structure and is transformed and manipulated by the model, but at each iteration of the draw cycle a frame of video must be preprocessed and then converted into a format which can be digested by the model, and then the output of the model must be converted back into a data structure which the browser can handle to display as an image, or in our case, video. The internal computation at inference is handled by WebGL shader programs compiled by TensorflowJS, but the input/output was a rather slow process of converting the tensor data back to pixels value-by-value. The input shader programs receives data from the webcam as a 16$\times$16 image and scales it up to 256$\times$256 while applying three gaussian blurs --- slightly different to the training process but the effect is the same. The data is extracted using \verb|<WebGL>.readPixels()|, converted to a tensor object and passed to the model to process. The output of the model is a tensor object but already of the structure of a 3-channel image as a result of the architecture of the model itself. The data is easily extracted as a 32 bit float array and passed into a very simple shader program as an RGB texture to be rendered to a canvas element in the browser.
 
-\begin{comment}
-It can be observed in the stack trace (using the developer tools of most modern browsers, in this case Firefox and Chrome were used) that TensorflowJS is still having to do a lot of the working moving data around and reshaping data in Javascript, while the heavy computation is deferred to shader programs. This moving data around comes at a great cost which is felt particualrly in the case of video based interaction. As a slight aside, a `pure' WebGL Autoencoder of the same stucture as the Pix2Pix generator was created simply to perform the same number of calculations in the same fashion to compare performance, and to give a glimpse into a novel approach to machine learning online which is perhaps more streamlined.
-\end{comment}
-
 \section{Results}
+\label{section:results}
 % 500-750 words
 % -- 389 WORDS ---
 
@@ -239,7 +245,6 @@ It can be observed that models trained with fewer parameters struggle to general
 	\label{fig:kernelsInOutput}
 \end{figure}
 
-
 In training the model is attempting to learn a mapping from a blurry greyscale image to a well defined 3-channel image. As a user interacts using the online platform one can quickly see the effects of bright or dark areas of such an abstract input, the model appears to associate these bright spots with key areas of interest in the output.
 
 With all this in mind one can train a model with a less varied dataset (such as daytime clouds) which still produces compelling results even in the smallest model as the model needs to generalise less. A dataset produced from a timelapse of the Aurora Borealis was used for the smallest model. The smallest model does not produce particularly exciting results, but still does a good job of illustrating the relationship between input and output, and has even been shown to work on mobile devices.
@@ -254,25 +259,13 @@ With all this in mind one can train a model with a less varied dataset (such as 
 	\caption{Small model trained on images of Aurora Boreals (left), medium model trained on images of clouds (right).}
 \end{figure}
 
-
-
-\begin{comment}
-The aforementioned `pure' WebGL Autoencoder is a scalable CNN framework which holds the core functionality to perform the forward pass of an \textit{all convolutional} network, such as that of the Pix2Pix generator.
-\end{comment}
-
-
 \section{Discussion}
 % As long as you can cope with
 The adoption of ML research into the art world offers a reframing of the application of ML research, which in turn reframes the approach to research itself. The U-Net style, all convolutional network used for the generator in the Pix2Pix model is a particularly graceful NN which at its core is \textit{only} a series 2D convolutions (omitting batchnormalisation and skip connections). This work shows that the network itself need not be complex or large to still produce results which are useable, visually interesting and accessible. As stated, if this work reaches and excites people who previously saw generative ML as off limits, then it is considered a success. Beyond that this work could lead to the development even more artistic tools in the same way that ML5\cite{ml5}, RunwayML\cite{runway} and Wekinator\cite{wekinator} have become tools for experimentation among artists and creators.
 
-Given the smaller scale model with this workflow, the development process becomes faster and less daunting, allowing one to engage with the entire process more fully. Neural networks as a \textit{tool}, just like a paintbrush or a camera, is an exciting future in art. The iterative process involved in this work meant creating many datasets and training many models and assessing the outcome qualitatively, this helps develop a sense of \textit{how the model will react to a certain dataset}, and equally an \textit{intuition of the output}. The ability to iterate quickly is how, as a practitioner or an artist, one develops an intuition of ones tools and thus how one learns to control the medium --- a painter is not born with the ability to accurately mix color and control a brush, but it is learnt and honed over time.
+Given the smaller scale model with this workflow, the development process becomes faster and less daunting, allowing one to engage with the entire process more fully. Neural networks as a \textit{tool}, just like a paintbrush or a camera, is an exciting future in art. The iterative process involved in this work meant creating many datasets, training many models and assessing the outcome qualitatively, this helps develop a sense of \textit{how the model will react to a certain dataset}, and equally an \textit{intuition of the output}. The ability to iterate quickly is how, as a practitioner or an artist, one develops an intuition of ones tools and thus how one learns to control the medium --- a painter is not born with the ability to accurately mix color and control a brush, but it is learnt and honed over time.
 
-This work is not only about creating art, or tools for artists. Democratising the process from start-to-finish is important to making the process accessible to all. We currently live with machine learning and artificial intelligence; as there appears to be no limits to the possibilities there is no doubt that it will find its way into even more aspects of our lives. Therefore it is imperative that the field of machine learning becomes more accessible and transparent. The first automobile was met with distrust[\emph{*find citation}] and seen as magic, the hope of this work is to dispel some myths of ML by giving the user their first ride in the car.
-
-\begin{comment}
-Given the remit of simplicity, an \textit{all \underline{WebGL} convolutional network} was created to mimic the structure of the Pix2Pix generator which shows a possible future of NN deployment on the web, specifically with video interaction in mind. All data is stored and processed in data structures suited to 2D textures which are quickly read and written to by GLSL shader programs.
-\end{comment}
-
+This work is not only about creating art, or tools for artists. Democratising the process from start-to-finish is important to making the process accessible to all. We currently live with machine learning and artificial intelligence; as there appears to be no limits to the possibilities there is no doubt that it will find its way into even more aspects of our lives. Therefore it is imperative that the field of machine learning becomes more accessible and transparent to dispell any myths of magic.
 
 \section{Conclusion}
 % Sum up what you have learned and where we should go next
@@ -285,18 +278,5 @@ ML on the web is growing rapidly and this work shows that seeking inspiration fr
 
 \medskip
 \printbibliography
-
-\begin{comment}
-\begin{appendices}
-	\section{Training Process}
-	\label{appendix:training}
-	Some text that will be the appendix.
-
-	\section{WebGL CNN}
-	\label{appendix:webgl_cnn}
-	Some text that will be the appendix.
-
-\end{appendices}
-\end{comment}
 
 \end{document}
