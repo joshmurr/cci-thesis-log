@@ -1,0 +1,1168 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2020.10.29)  24 NOV 2020 23:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**draft_03.tex
+(./draft_03.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-07-17>
+(/home/joshmurr/texmf/tex/latex/asme2ej/asme2ej.cls
+
+LaTeX Warning: You have requested document class `asme2ej',
+               but the document class provides `asme2e'.
+
+Document Class: asme2e 2001/2/14 v2.0 Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/mathptm.sty
+Package: mathptm 2020/03/25 PSNFSS-v9.3 Times w/ Math (SPQR, WaS) 
+
+
+Package mathptm Warning: This package is to be regarded as obsolete.
+(mathptm)                See the PSNFSS documentation.
+
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 31.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 32.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 33.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 33.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 33.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 34.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 34.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 34.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 37.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 38.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 38.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 38.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+Ten Point
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 3
+01.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+)
+\c@part=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\tempbox=\box45
+\c@figure=\count174
+\c@table=\count175
+\@authcnt=\count176
+\@tmpcnt=\count177
+\bibindent=\dimen134
+\tempbox=\box46
+\minute=\count178
+\hour=\count179
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count180
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count181
+
+(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count182
+\c@listtotal=\count183
+\c@listcount=\count184
+\c@liststart=\count185
+\c@liststop=\count186
+\c@citecount=\count187
+\c@citetotal=\count188
+\c@multicitecount=\count189
+\c@multicitetotal=\count190
+\c@instcount=\count191
+\c@maxnames=\count192
+\c@minnames=\count193
+\c@maxitems=\count194
+\c@minitems=\count195
+\c@citecounter=\count196
+\c@maxcitecounter=\count197
+\c@savedcitecounter=\count198
+\c@uniquelist=\count199
+\c@uniquename=\count266
+\c@refsection=\count267
+\c@refsegment=\count268
+\c@maxextratitle=\count269
+\c@maxextratitleyear=\count270
+\c@maxextraname=\count271
+\c@maxextradate=\count272
+\c@maxextraalpha=\count273
+\c@abbrvpenalty=\count274
+\c@highnamepenalty=\count275
+\c@lownamepenalty=\count276
+\c@maxparens=\count277
+\c@parenlevel=\count278
+\blx@tempcnta=\count279
+\blx@tempcntb=\count280
+\blx@tempcntc=\count281
+\blx@maxsection=\count282
+\blx@maxsegment@0=\count283
+\blx@notetype=\count284
+\blx@parenlevel@text=\count285
+\blx@parenlevel@foot=\count286
+\blx@sectionciteorder@0=\count287
+\blx@entrysetcounter=\count288
+\labelnumberwidth=\skip47
+\labelalphawidth=\skip48
+\biblabelsep=\skip49
+\bibitemsep=\skip50
+\bibnamesep=\skip51
+\bibinitsep=\skip52
+\bibparsep=\skip53
+\bibhang=\skip54
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language86
+\c@mincomprange=\count289
+\c@maxcomprange=\count290
+\c@mincompwidth=\count291
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count292
+\c@savedafterword=\count293
+\c@annotator=\count294
+\c@savedannotator=\count295
+\c@author=\count296
+\c@savedauthor=\count297
+\c@bookauthor=\count298
+\c@savedbookauthor=\count299
+\c@commentator=\count300
+\c@savedcommentator=\count301
+\c@editor=\count302
+\c@savededitor=\count303
+\c@editora=\count304
+\c@savededitora=\count305
+\c@editorb=\count306
+\c@savededitorb=\count307
+\c@editorc=\count308
+\c@savededitorc=\count309
+\c@foreword=\count310
+\c@savedforeword=\count311
+\c@holder=\count312
+\c@savedholder=\count313
+\c@introduction=\count314
+\c@savedintroduction=\count315
+\c@namea=\count316
+\c@savednamea=\count317
+\c@nameb=\count318
+\c@savednameb=\count319
+\c@namec=\count320
+\c@savednamec=\count321
+\c@translator=\count322
+\c@savedtranslator=\count323
+\c@shortauthor=\count324
+\c@savedshortauthor=\count325
+\c@shorteditor=\count326
+\c@savedshorteditor=\count327
+\c@labelname=\count328
+\c@savedlabelname=\count329
+\c@institution=\count330
+\c@savedinstitution=\count331
+\c@lista=\count332
+\c@savedlista=\count333
+\c@listb=\count334
+\c@savedlistb=\count335
+\c@listc=\count336
+\c@savedlistc=\count337
+\c@listd=\count338
+\c@savedlistd=\count339
+\c@liste=\count340
+\c@savedliste=\count341
+\c@listf=\count342
+\c@savedlistf=\count343
+\c@location=\count344
+\c@savedlocation=\count345
+\c@organization=\count346
+\c@savedorganization=\count347
+\c@origlocation=\count348
+\c@savedoriglocation=\count349
+\c@origpublisher=\count350
+\c@savedorigpublisher=\count351
+\c@publisher=\count352
+\c@savedpublisher=\count353
+\c@language=\count354
+\c@savedlanguage=\count355
+\c@origlanguage=\count356
+\c@savedoriglanguage=\count357
+\c@pageref=\count358
+\c@savedpageref=\count359
+\shorthandwidth=\skip55
+\shortjournalwidth=\skip56
+\shortserieswidth=\skip57
+\shorttitlewidth=\skip58
+\shortauthorwidth=\skip59
+\shorteditorwidth=\skip60
+\locallabelnumberwidth=\skip61
+\locallabelalphawidth=\skip62
+\localshorthandwidth=\skip63
+\localshortjournalwidth=\skip64
+\localshortserieswidth=\skip65
+\localshorttitlewidth=\skip66
+\localshortauthorwidth=\skip67
+\localshorteditorwidth=\skip68
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count360
+\c@textcitetotal=\count361
+\c@textcitemaxnames=\count362
+\c@biburlbigbreakpenalty=\count363
+\c@biburlbreakpenalty=\count364
+\c@biburlnumpenalty=\count365
+\c@biburlucpenalty=\count366
+\c@biburllcpenalty=\count367
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count368
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count369
+\c@bbx:relatedtotal=\count370
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+\csq@reset=\count371
+\csq@gtype=\count372
+\csq@glevel=\count373
+\csq@qlevel=\count374
+\csq@maxlvl=\count375
+\csq@tshold=\count376
+\csq@ltx@everypar=\toks18
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen137
+\lightrulewidth=\dimen138
+\cmidrulewidth=\dimen139
+\belowrulesep=\dimen140
+\belowbottomsep=\dimen141
+\aboverulesep=\dimen142
+\abovetopsep=\dimen143
+\cmidrulesep=\dimen144
+\cmidrulekern=\dimen145
+\defaultaddspace=\dimen146
+\@cmidla=\count377
+\@cmidlb=\count378
+\@aboverulesep=\dimen147
+\@belowrulesep=\dimen148
+\@thisruleclass=\count379
+\@lastruleclass=\count380
+\@thisrulewidth=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count381
+\Hy@pagecounter=\count382
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count383
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count384
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen151
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count385
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(/usr/share/texlive/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count386
+\c@Item=\count387
+\c@Hfootnote=\count388
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count389
+\c@bookmark@seq@number=\count390
+
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip69
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 20.
+
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+
+Excluding comment 'comment')
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+\epsfxsize=\dimen154
+\epsfysize=\dimen155
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... none found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count391
+\l__pdf_internal_box=\box47
+)
+(./draft_03.aux)
+\openout1 = `draft_03.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
+8.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+\big@size=\dimen156
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `draft_03.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'draft_03.bbl' found.
+
+(./draft_03.bbl)
+Package biblatex Info: Reference section=0 on input line 28.
+Package biblatex Info: Reference segment=0 on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count392
+\scratchdimen=\dimen157
+\scratchbox=\box48
+\nofMPsegments=\count393
+\nofMParguments=\count394
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count395
+\MPscratchDim=\dimen158
+\MPnumerator=\count396
+\makeMPintoPDFobject=\count397
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box49
+Package hyperref Info: Link coloring ON on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count398
+)
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
+
+(./draft_03.out) (./draft_03.out)
+\@outlinefile=\write5
+\openout5 = `draft_03.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
+ 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
+
+Underfull \hbox (badness 10000) detected at line 36
+[]
+ []
+
+
+Overfull \hbox (39.74762pt too wide) in paragraph at lines 36--36
+ [] 
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+9.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<../images/ltlts_online2.png, id=35, 1065.9825pt x 846.16125pt>
+File: ../images/ltlts_online2.png Graphic file (type png)
+<use ../images/ltlts_online2.png>
+Package pdftex.def Info: ../images/ltlts_online2.png  used on input line 44.
+(pdftex.def)             Requested size: 241.38208pt x 191.60464pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../images/lts_still.png, id=44, 769.87625pt x 382.42876pt>
+File: ../images/lts_still.png Graphic file (type png)
+<use ../images/lts_still.png>
+Package pdftex.def Info: ../images/lts_still.png  used on input line 58.
+(pdftex.def)             Requested size: 241.38208pt x 119.90549pt.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
+9.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <../images/ltlts_online2.png>]
+Underfull \hbox (badness 2469) in paragraph at lines 79--80
+[]\OT1/ptm/m/it/10 Learning to See \OT1/ptm/m/n/10 is an adap-ta-tion of the Pi
+x2Pix
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.84 
+      [2 <../images/lts_still.png>]
+<../images/250_epochs.png, id=130, 919.435pt x 346.29375pt>
+File: ../images/250_epochs.png Graphic file (type png)
+<use ../images/250_epochs.png>
+Package pdftex.def Info: ../images/250_epochs.png  used on input line 99.
+(pdftex.def)             Requested size: 241.38208pt x 90.91139pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[]\OT1/ptm/m/n/10 Generator
+ []
+
+
+Overfull \hbox (34.23993pt too wide) in paragraph at lines 110--131
+ [] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.137 
+       [3 <../images/250_epochs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+[]\OT1/ptm/m/n/10 Therefore the high-est com-pres-sion of
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 144--145
+[][]\OT1/pcr/m/n/10 uint8_affine_quantize []\OT1/ptm/m/n/10 can be used to re-d
+uce
+ []
+
+Excluding 'comment' comment.
+<../images/00.png, id=152, 1027.84pt x 513.92pt>
+File: ../images/00.png Graphic file (type png)
+<use ../images/00.png>
+Package pdftex.def Info: ../images/00.png  used on input line 158.
+(pdftex.def)             Requested size: 241.38208pt x 120.68495pt.
+
+Overfull \hbox (11.54568pt too wide) in paragraph at lines 166--176
+ [] 
+ []
+
+! Undefined control sequence.
+l.190 		\newcolumntype
+                      {b}{>{\raggedright\arraybackslash\hsize=0.65\hsize}X}
+? 
+! Undefined control sequence.
+l.190 ...lumntype{b}{>{\raggedright\arraybackslash
+                                                  \hsize=0.65\hsize}X}
+? 
+! Undefined control sequence.
+l.191 		\newcolumntype
+                      {s}{>{\raggedleft\arraybackslash\hsize=0.15\hsize}X}
+? 
+! Undefined control sequence.
+l.191 ...olumntype{s}{>{\raggedleft\arraybackslash
+                                                  \hsize=0.15\hsize}X}
+? 
+
+! LaTeX Error: Environment tabularx undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 		\begin{tabularx}
+                        {0.8\textwidth}{bsss}
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   }
+l.192 		\begin{tabularx}{0.8\textwidth}
+                                       {bsss}
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.192 		\begin{tabularx}{0.8\textwidth}
+                                       {bsss}
+? 
+! Misplaced \noalign.
+\toprule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
+l.193 			\toprule
+                 
+? 
+! Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Undefined control sequence.
+<argument> ...nextchar \ifcase \@chclass \@classz 
+                                                  \or \@classi \or \@classii...
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Undefined control sequence.
+\@mkpream ...hclass }\ifcase \@lastchclass \@acol 
+                                                  \or \or \@preamerr \@ne \o...
+l.194 ...}{Performance (FPS) on Various Computers}
+                                                   \\
+? 
+! Misplaced \noalign.
+\toprule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
+l.195 			\toprule
+                 
+? 
+! Misplaced alignment tab character &.
+l.196 			Machine                     &
+                                       Small & Medium & Large       \\
+? 
+! Misplaced alignment tab character &.
+l.196 			Machine                     & Small &
+                                               Medium & Large       \\
+? 
+! Misplaced alignment tab character &.
+l.196 ...ne                     & Small & Medium &
+                                                   Large       \\
+? 
+! Misplaced \noalign.
+\midrule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
+l.197 			\midrule
+                 
+? 
+! Misplaced alignment tab character &.
+l.198 			System76 Laptop 2020, D-GPU &
+                                       50    & 41     & 10          \\
+? 
+! Misplaced alignment tab character &.
+l.198 			System76 Laptop 2020, D-GPU & 50    &
+                                               41     & 10          \\
+? 
+! Misplaced alignment tab character &.
+l.198 ...m76 Laptop 2020, D-GPU & 50    & 41     &
+                                                   10          \\
+? 
+! Misplaced alignment tab character &.
+l.199 			System76 Laptop 2020, I-GPU &
+                                       26    & 12     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.199 			System76 Laptop 2020, I-GPU & 26    &
+                                               12     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.199 ...m76 Laptop 2020, I-GPU & 26    & 12     &
+                                                   0           \\
+? 
+! Misplaced alignment tab character &.
+l.200 			Macbook Pro 2020, I-GPU     &
+                                       25    & 15     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.200 			Macbook Pro 2020, I-GPU     & 25    &
+                                               15     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.200 ...ok Pro 2020, I-GPU     & 25    & 15     &
+                                                   1           \\
+? 
+! Misplaced alignment tab character &.
+l.201 			Macbook Pro 2017, D-GPU     &
+                                       40    & 27     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.201 			Macbook Pro 2017, D-GPU     & 40    &
+                                               27     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.201 ...ok Pro 2017, D-GPU     & 40    & 27     &
+                                                   0           \\
+? 
+! Misplaced alignment tab character &.
+l.202 			Macbook Pro 2017, I-GPU     &
+                                       26    & 14     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.202 			Macbook Pro 2017, I-GPU     & 26    &
+                                               14     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.202 ...ok Pro 2017, I-GPU     & 26    & 14     &
+                                                   0           \\
+? 
+! Misplaced alignment tab character &.
+l.203 			Macbook Pro 2015, I-GPU     &
+                                       30    & 18     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.203 			Macbook Pro 2015, I-GPU     & 30    &
+                                               18     & 0           \\
+? 
+! Misplaced alignment tab character &.
+l.203 ...ok Pro 2015, I-GPU     & 30    & 18     &
+                                                   0           \\
+? 
+! Misplaced alignment tab character &.
+l.204 			Macbook Pro 2015, D-GPU     &
+                                       27    & 18     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.204 			Macbook Pro 2015, D-GPU     & 27    &
+                                               18     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.204 ...ok Pro 2015, D-GPU     & 27    & 18     &
+                                                   1           \\
+? 
+! Misplaced alignment tab character &.
+l.205 			MSI Laptop 2016, I-GPU      &
+                                       18    & 12     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.205 			MSI Laptop 2016, I-GPU      & 18    &
+                                               12     & 1           \\
+? 
+! Misplaced alignment tab character &.
+l.205 ...aptop 2016, I-GPU      & 18    & 12     &
+                                                   1           \\
+? 
+! Misplaced alignment tab character &.
+l.206 			Pixel 3A Phone              &
+                                       3     & -      & -           \\
+? 
+! Misplaced alignment tab character &.
+l.206 			Pixel 3A Phone              & 3     &
+                                               -      & -           \\
+? 
+! Misplaced alignment tab character &.
+l.206 ... 3A Phone              & 3     & -      &
+                                                   -           \\
+? 
+! Misplaced alignment tab character &.
+l.207 			Samsung Galaxy A20e Phone   &
+                                       4     & -      & -           \\
+? 
+! Misplaced alignment tab character &.
+l.207 			Samsung Galaxy A20e Phone   & 4     &
+                                               -      & -           \\
+? 
+! Misplaced alignment tab character &.
+l.207 ...ng Galaxy A20e Phone   & 4     & -      &
+                                                   -           \\
+? 
+! Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.208 			\bottomrule
+                    
+? 
+
+! LaTeX Error: \begin{center} on input line 189 ended by \end{tabularx}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.209 		\end{tabularx}
+                      
+? 
+<../images/artefacts.png, id=156, 861.2175pt x 284.06125pt>
+File: ../images/artefacts.png Graphic file (type png)
+<use ../images/artefacts.png>
+Package pdftex.def Info: ../images/artefacts.png  used on input line 219.
+(pdftex.def)             Requested size: 258.36723pt x 85.21902pt.
+
+Overfull \hbox (16.98515pt too wide) in paragraph at lines 219--220
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.228 
+       [4 <../images/00.png>]
+! Undefined control sequence.
+l.233 		\subfloat
+                 {\includegraphics[width=1.5in]{aurora1}} & \subfloat{\inclu...
+
+? 
+<../images/aurora1.png, id=168, 1027.84pt x 514.92375pt>
+File: ../images/aurora1.png Graphic file (type png)
+<use ../images/aurora1.png>
+Package pdftex.def Info: ../images/aurora1.png  used on input line 233.
+(pdftex.def)             Requested size: 108.405pt x 54.30823pt.
+! Undefined control sequence.
+l.233 ...aphics[width=1.5in]{aurora1}} & \subfloat
+                                                  {\includegraphics[width=1....
+
+? 
+<../images/aurora2.png, id=169, 1028.84375pt x 514.92375pt>
+File: ../images/aurora2.png Graphic file (type png)
+<use ../images/aurora2.png>
+Package pdftex.def Info: ../images/aurora2.png  used on input line 233.
+(pdftex.def)             Requested size: 108.405pt x 54.25322pt.
+! Undefined control sequence.
+l.234 		\subfloat
+                 {\includegraphics[width=1.5in]{clouds1}} & \subfloat{\inclu...
+
+? 
+<../images/clouds1.png, id=170, 1027.84pt x 514.92375pt>
+File: ../images/clouds1.png Graphic file (type png)
+<use ../images/clouds1.png>
+Package pdftex.def Info: ../images/clouds1.png  used on input line 234.
+(pdftex.def)             Requested size: 108.405pt x 54.30823pt.
+! Undefined control sequence.
+l.234 ...aphics[width=1.5in]{clouds1}} & \subfloat
+                                                  {\includegraphics[width=1....
+
+? 
+<../images/clouds2.png, id=171, 1029.8475pt x 515.9275pt>
+File: ../images/clouds2.png Graphic file (type png)
+<use ../images/clouds2.png>
+Package pdftex.def Info: ../images/clouds2.png  used on input line 234.
+(pdftex.def)             Requested size: 108.405pt x 54.30388pt.
+
+Overfull \hbox (189.74182pt too wide) in paragraph at lines 230--236
+ []|  [] 
+ []
+
+Excluding 'comment' comment. Excluding 'comment' comment.pdfTeX warning (ext4):
+ destination with the same identifier (name{page.}) has been already used, dupl
+icate ignored
+<to be read again> 
+                   \relax 
+l.270 
+       [5 <../images/artefacts.png> <../images/aurora1.png> <../images/aurora2.
+png> <../images/clouds1.png> <../images/clouds2.png>]
+Underfull \hbox (badness 6396) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 Google. \OT1/ptm/m/it/10 Ma-genta\OT1/ptm/m/n/10 . 2019. \OT1
+/ptm/m/sc/10 url\OT1/ptm/m/n/10 : [][]$\OT1/pcr/m/n/10 https : / /
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 Jonathan Hui. \  GAN | Why it is so hard to
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 Phillip Isola et al. \  Image-to-Image Trans-la-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 Alexander Mord-v-int-sev. \OT1/ptm/m/it/10 Alexan-der Mord-v-
+int-sev\OT1/ptm/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 PyTorch. \OT1/ptm/m/it/10 Py-Torch\OT1/ptm/m/n/10 . 2019. \OT
+1/ptm/m/sc/10 url\OT1/ptm/m/n/10 : [][]$\OT1/pcr/m/n/10 https : / /
+ []
+
+
+Underfull \hbox (badness 1755) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 WebAssembly SIMD. \OT1/ptm/m/it/10 We-bAssem-bly SIMD\OT1/ptm
+/m/n/10 . 2020.
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.270 
+       [6]
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 Crist[]obal Valen-zuela. \OT1/ptm/m/it/10 Run-wayML\OT1/ptm/m
+/n/10 . 2020. \OT1/ptm/m/sc/10 url\OT1/ptm/m/n/10 :
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 270--270
+[]\OT1/ptm/m/n/10 GPU for the Web Com-mu-nity Group. \OT1/ptm/m/it/10 We-bGPU\O
+T1/ptm/m/n/10 .
+ []
+
+Excluding 'comment' comment.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284 \end{document}
+                     [7
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+ (./draft_03.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package rerunfilecheck Info: File `draft_03.out' has not changed.
+(rerunfilecheck)             Checksum: 6CECDE50071CE6D8D5C9352AA64F8115;273.
+Package logreq Info: Writing requests to 'draft_03.run.xml'.
+\openout1 = `draft_03.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13792 strings out of 480906
+ 241464 string characters out of 5910771
+ 912195 words of memory out of 5000000
+ 29129 multiletter control sequences out of 15000+600000
+ 561728 words of font info for 74 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 43i,12n,45p,1961b,1342s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/he
+lvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on draft_03.pdf (7 pages, 4090465 bytes).
+PDF statistics:
+ 335 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+

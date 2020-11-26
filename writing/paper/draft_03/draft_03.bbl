@@ -1,0 +1,1648 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{lts_memo}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8f96c74f5c4fdf75292f8baf7ccdbe96}{%
+           family={Akten},
+           familyi={A\bibinitperiod},
+           given={Memo},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{fullhash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{bibnamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authorbibnamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authornamehash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \strng{authorfullhash}{8f96c74f5c4fdf75292f8baf7ccdbe96}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learning to See}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://www.memo.tv/works/learning-to-see/
+      \endverb
+      \verb{url}
+      \verb http://www.memo.tv/works/learning-to-see/
+      \endverb
+    \endentry
+    \entry{2003.00902}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8f96c74f5c4fdf75292f8baf7ccdbe96}{%
+           family={Akten},
+           familyi={A\bibinitperiod},
+           given={Memo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bcbc028add0ae7608dd4bb2fb8f5147d}{%
+           family={Fiebrink},
+           familyi={F\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=06c888c001f4227576125fcb62182a65}{%
+           family={Grierson},
+           familyi={G\bibinitperiod},
+           given={Mick},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \strng{fullhash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \strng{bibnamehash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \strng{authorbibnamehash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \strng{authornamehash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \strng{authorfullhash}{f29c44afb2ee0f5728faf52cde39e7aa}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{ACM SIGGRAPH 2019 Art Gallery July 2019 Article No 13 Pages 1 to 6}
+      \field{title}{Learning to See: You Are What You See}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1145/3306211.3320143
+      \endverb
+      \verb{eprint}
+      \verb arXiv:2003.00902
+      \endverb
+    \endentry
+    \entry{ml5}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=b26c09c27646adbbeefd03a5f1158052}{%
+           family={Arts},
+           familyi={A\bibinitperiod},
+           given={NYU\bibnamedelimb Interactive\bibnamedelimb Telecommunications/Interactive\bibnamedelima Media},
+           giveni={N\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{fullhash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{bibnamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authorbibnamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authornamehash}{b26c09c27646adbbeefd03a5f1158052}
+      \strng{authorfullhash}{b26c09c27646adbbeefd03a5f1158052}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ML5}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://ml5js.org/
+      \endverb
+      \verb{url}
+      \verb https://ml5js.org/
+      \endverb
+    \endentry
+    \entry{brainjs}{manual}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labeltitlesource}{title}
+      \field{title}{Brain {JS}}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb http://brain.js.org/
+      \endverb
+      \verb{url}
+      \verb http://brain.js.org/
+      \endverb
+    \endentry
+    \entry{terry_broad}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ccabce0ef1aa0404cb9d924b81c5609a}{%
+           family={Broad},
+           familyi={B\bibinitperiod},
+           given={Terence},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{fullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{bibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorbibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authornamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorfullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Terence Broad}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://terencebroad.com/
+      \endverb
+      \verb{url}
+      \verb https://terencebroad.com/
+      \endverb
+    \endentry
+    \entry{broad_cnn_vis_2016}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ccabce0ef1aa0404cb9d924b81c5609a}{%
+           family={Broad},
+           familyi={B\bibinitperiod},
+           given={Terence},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{fullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{bibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorbibnamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authornamehash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \strng{authorfullhash}{ccabce0ef1aa0404cb9d924b81c5609a}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Topological Visualisation of a Convolutional Neural Network}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://blog.terencebroad.com/archive/convnetvis/vis.html
+      \endverb
+      \verb{url}
+      \verb https://blog.terencebroad.com/archive/convnetvis/vis.html
+      \endverb
+    \endentry
+    \entry{2005.14165}{misc}{}
+      \name{author}{31}{}{%
+        {{hash=7c16e8d36475e58d4f2d161e6ecb7704}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Tom\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=d4543c3bcd6aaf414da4296b349603e5}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9ac58bd43db2434e8e1ffd6182c3fcda}{%
+           family={Ryder},
+           familyi={R\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9ed243177743da3e650f1cff6376bb3c}{%
+           family={Subbiah},
+           familyi={S\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9e85370e215d552f72c95a2b63a37802}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Jared},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4164e43d8cf919f5e3f8d80f5ea23f36}{%
+           family={Dhariwal},
+           familyi={D\bibinitperiod},
+           given={Prafulla},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4ca421ceeb5b516dd8fc64bea5a23f2a}{%
+           family={Neelakantan},
+           familyi={N\bibinitperiod},
+           given={Arvind},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ab5d7d7b9cfeaad635c4a60e8950d7dd}{%
+           family={Shyam},
+           familyi={S\bibinitperiod},
+           given={Pranav},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3c1d9a663596faaf544c1a65aac581be}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={Girish},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1e84eff933be9f4887bf369cf181bf12}{%
+           family={Askell},
+           familyi={A\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod}}}%
+        {{hash=abe4801e322e893b23785fd6d0800b5c}{%
+           family={Agarwal},
+           familyi={A\bibinitperiod},
+           given={Sandhini},
+           giveni={S\bibinitperiod}}}%
+        {{hash=787b9715a98ea66a8d5e6bae042ae0b9}{%
+           family={Herbert-Voss},
+           familyi={H\bibinithyphendelim V\bibinitperiod},
+           given={Ariel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c3a5cc5e520e0d1a9f8bbf377c74cd27}{%
+           family={Krueger},
+           familyi={K\bibinitperiod},
+           given={Gretchen},
+           giveni={G\bibinitperiod}}}%
+        {{hash=eb1d3044b466619459c76843f0e98bb9}{%
+           family={Henighan},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5c2f5c2e6d4a9ec8681377f8a8e5e6af}{%
+           family={Child},
+           familyi={C\bibinitperiod},
+           given={Rewon},
+           giveni={R\bibinitperiod}}}%
+        {{hash=82063a12702e7b2c026ae0ff03b8f102}{%
+           family={Ramesh},
+           familyi={R\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=18becbb5ea500211a8219e94dd0a975c}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=495187f3a2c93ddb8083bd18a5702527}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fdaff50f84c08440dcb5fad75b559780}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod}}}%
+        {{hash=68a04c5006dbbf98f7719709540c6b56}{%
+           family={Hesse},
+           familyi={H\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fb15a691583ec94aafe0be6e7da4878f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2a5f009f12a0567430729b5ace41435d}{%
+           family={Sigler},
+           familyi={S\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e5aa3a709cbe706efba113bec9789364}{%
+           family={Litwin},
+           familyi={L\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7006ca8c1ce969019b89de50fece60dd}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=01f70651539bbd7dccc01e86ed9c78c3}{%
+           family={Chess},
+           familyi={C\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1480c861b1a73e1d1de1b227e985b179}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ca86811e7a0582a9e7cb8d33e7ab445d}{%
+           family={Berner},
+           familyi={B\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b51e7c5fe92844f39ce52b8a5fa5675f}{%
+           family={McCandlish},
+           familyi={M\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1e6adbf36ab730cd5fdadb838b4d2667}{%
+           family={Amodei},
+           familyi={A\bibinitperiod},
+           given={Dario},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0884233a667161739ddd01569813457f}
+      \strng{fullhash}{b108601e4cbc36ef53b96ac01974e069}
+      \strng{bibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorbibnamehash}{0884233a667161739ddd01569813457f}
+      \strng{authornamehash}{0884233a667161739ddd01569813457f}
+      \strng{authorfullhash}{b108601e4cbc36ef53b96ac01974e069}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Language Models are Few-Shot Learners}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2005.14165
+      \endverb
+    \endentry
+    \entry{synaptic}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=d39b8e4c1e51116a951f95e28eeed575}{%
+           family={Cazala},
+           familyi={C\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d39b8e4c1e51116a951f95e28eeed575}
+      \strng{fullhash}{d39b8e4c1e51116a951f95e28eeed575}
+      \strng{bibnamehash}{d39b8e4c1e51116a951f95e28eeed575}
+      \strng{authorbibnamehash}{d39b8e4c1e51116a951f95e28eeed575}
+      \strng{authornamehash}{d39b8e4c1e51116a951f95e28eeed575}
+      \strng{authorfullhash}{d39b8e4c1e51116a951f95e28eeed575}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Synaptic}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://caza.la/synaptic/
+      \endverb
+      \verb{url}
+      \verb http://caza.la/synaptic/
+      \endverb
+    \endentry
+    \entry{kerasjs}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=b12981bf6e99b7a01464b384d5f74695}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b12981bf6e99b7a01464b384d5f74695}
+      \strng{fullhash}{b12981bf6e99b7a01464b384d5f74695}
+      \strng{bibnamehash}{b12981bf6e99b7a01464b384d5f74695}
+      \strng{authorbibnamehash}{b12981bf6e99b7a01464b384d5f74695}
+      \strng{authornamehash}{b12981bf6e99b7a01464b384d5f74695}
+      \strng{authorfullhash}{b12981bf6e99b7a01464b384d5f74695}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Keras {JS}}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://transcranial.github.io/keras-js/
+      \endverb
+      \verb{url}
+      \verb https://transcranial.github.io/keras-js/
+      \endverb
+    \endentry
+    \entry{crawford_paglen_2019}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=04ddd15bdbd9d7c4572af614218b9b79}{%
+           family={Crawford},
+           familyi={C\bibinitperiod},
+           given={Kate},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8a1821ed901aa17533dfa6c18856e087}{%
+           family={Paglen},
+           familyi={P\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The AI Now Institute, NYU}%
+      }
+      \strng{namehash}{5bfc30ec6dda60741717ed27c80af542}
+      \strng{fullhash}{5bfc30ec6dda60741717ed27c80af542}
+      \strng{bibnamehash}{5bfc30ec6dda60741717ed27c80af542}
+      \strng{authorbibnamehash}{5bfc30ec6dda60741717ed27c80af542}
+      \strng{authornamehash}{5bfc30ec6dda60741717ed27c80af542}
+      \strng{authorfullhash}{5bfc30ec6dda60741717ed27c80af542}
+      \field{sortinit}{C}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{https://www.excavating.ai/}
+      \field{month}{9}
+      \field{title}{Excavating {AI}: The Politics of Images in Machine Learning Training Sets}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.excavating.ai/
+      \endverb
+      \verb{url}
+      \verb https://www.excavating.ai/
+      \endverb
+    \endentry
+    \entry{wekinator}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=bcbc028add0ae7608dd4bb2fb8f5147d}{%
+           family={Fiebrink},
+           familyi={F\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{fullhash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{bibnamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authorbibnamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authornamehash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \strng{authorfullhash}{bcbc028add0ae7608dd4bb2fb8f5147d}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Wekinator}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.wekinator.org/
+      \endverb
+      \verb{url}
+      \verb http://www.wekinator.org/
+      \endverb
+    \endentry
+    \entry{1701.00160}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{fullhash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{bibnamehash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{authorbibnamehash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{authornamehash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{authorfullhash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NIPS} 2016 Tutorial: Generative Adversarial Networks}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb arXiv:1701.00160
+      \endverb
+    \endentry
+    \entry{1406.2661}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=d4f74ef4c79f3bb1e51e378184d8850e}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian\bibnamedelima J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a341d25f80a8118cdbb90b272adc8b4f}{%
+           family={Pouget-Abadie},
+           familyi={P\bibinithyphendelim A\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e8151f1b8f85a048cacb34f374ec922b}{%
+           family={Warde-Farley},
+           familyi={W\bibinithyphendelim F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9ca00ffd7cc35f7cfb8f698aa9239c76}{%
+           family={Ozair},
+           familyi={O\bibinitperiod},
+           given={Sherjil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{fullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \strng{bibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Generative Adversarial Networks}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb arXiv:1406.2661
+      \endverb
+    \endentry
+    \entry{magenta}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Magenta}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://magenta.tensorflow.org/
+      \endverb
+      \verb{url}
+      \verb https://magenta.tensorflow.org/
+      \endverb
+    \endentry
+    \entry{teachablemachines}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teachable Machines}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://teachablemachine.withgoogle.com/
+      \endverb
+      \verb{url}
+      \verb https://teachablemachine.withgoogle.com/
+      \endverb
+    \endentry
+    \entry{mimic}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=06c888c001f4227576125fcb62182a65}{%
+           family={Grierson},
+           familyi={G\bibinitperiod},
+           given={Mick},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{06c888c001f4227576125fcb62182a65}
+      \strng{fullhash}{06c888c001f4227576125fcb62182a65}
+      \strng{bibnamehash}{06c888c001f4227576125fcb62182a65}
+      \strng{authorbibnamehash}{06c888c001f4227576125fcb62182a65}
+      \strng{authornamehash}{06c888c001f4227576125fcb62182a65}
+      \strng{authorfullhash}{06c888c001f4227576125fcb62182a65}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mimic}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://mimicproject.com/
+      \endverb
+      \verb{url}
+      \verb https://mimicproject.com/
+      \endverb
+    \endentry
+    \entry{google_background}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=e87504e52a90e259211d236115dbdfe9}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={Tingbo},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dd0f0e74f20b656b39eeeb77680df0f7}{%
+           family={Mullen},
+           familyi={M\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{fullhash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{bibnamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authorbibnamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authornamehash}{288434459b9ca1116d867c4b5c80bea6}
+      \strng{authorfullhash}{288434459b9ca1116d867c4b5c80bea6}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Background Features in Google Meet, Powered by Web {ML}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://ai.googleblog.com/2020/10/background-features-in-google-meet.html
+      \endverb
+      \verb{url}
+      \verb https://ai.googleblog.com/2020/10/background-features-in-google-meet.html
+      \endverb
+    \endentry
+    \entry{hard_to_train_gans}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6cfb5d2608616bce21708f853f01106e}{%
+           family={Hui},
+           familyi={H\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{fullhash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{bibnamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authorbibnamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authornamehash}{6cfb5d2608616bce21708f853f01106e}
+      \strng{authorfullhash}{6cfb5d2608616bce21708f853f01106e}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GAN} — Why it is so hard to train Generative Adversarial Networks!}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
+      \endverb
+      \verb{url}
+      \verb https://jonathan-hui.medium.com/gan-why-it-is-so-hard-to-train-generative-advisory-networks-819a86b3750b
+      \endverb
+    \endentry
+    \entry{1502.03167}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           familyi={I\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{fullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{bibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorbibnamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authornamehash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \strng{authorfullhash}{7e8dee717d54c2984b1c6bd3f3c0561f}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb arXiv:1502.03167
+      \endverb
+    \endentry
+    \entry{1611.07004}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cae9f806bc99a5f19fadea538fc2db04}{%
+           family={Isola},
+           familyi={I\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=fbb5fac74ecd20c0f90a3884d6a93cdf}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tinghui},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd9b478c7b76d20d978868251cf3ad35}
+      \strng{fullhash}{18664a8c078ce7dff4c499de4e40bf2f}
+      \strng{bibnamehash}{dd9b478c7b76d20d978868251cf3ad35}
+      \strng{authorbibnamehash}{dd9b478c7b76d20d978868251cf3ad35}
+      \strng{authornamehash}{dd9b478c7b76d20d978868251cf3ad35}
+      \strng{authorfullhash}{18664a8c078ce7dff4c499de4e40bf2f}
+      \field{sortinit}{I}
+      \field{sortinithash}{9417e9a1288a9371e2691d999083ed39}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Image-to-Image Translation with Conditional Adversarial Networks}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb arXiv:1611.07004
+      \endverb
+    \endentry
+    \entry{1704.01942}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=f67f75b5caf1e1a7b326649b8de49fd1}{%
+           family={Kahng},
+           familyi={K\bibinitperiod},
+           given={Minsuk},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9fe569b324b77285381aebd7860243a2}{%
+           family={Andrews},
+           familyi={A\bibinitperiod},
+           given={Pierre\bibnamedelima Y.},
+           giveni={P\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=669516dda03231585c597e5c67811377}{%
+           family={Kalro},
+           familyi={K\bibinitperiod},
+           given={Aditya},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f4c4b4c06aa7b1d5c9f6c1fc6c256fa1}{%
+           family={Chau},
+           familyi={C\bibinitperiod},
+           given={Duen\bibnamedelima Horng},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1cf19138306241e18d8e8afabbdb9038}
+      \strng{fullhash}{f112f468c24644b19d4be6d0a82ebf1e}
+      \strng{bibnamehash}{1cf19138306241e18d8e8afabbdb9038}
+      \strng{authorbibnamehash}{1cf19138306241e18d8e8afabbdb9038}
+      \strng{authornamehash}{1cf19138306241e18d8e8afabbdb9038}
+      \strng{authorfullhash}{f112f468c24644b19d4be6d0a82ebf1e}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ActiVis: Visual Exploration of Industry-Scale Deep Neural Network Models}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb arXiv:1704.01942
+      \endverb
+    \endentry
+    \entry{karparthy_conjs_2016}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=e91a4c2044bccdbef249eabc886ff988}{%
+           family={Karpathy},
+           familyi={K\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{fullhash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{bibnamehash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{authorbibnamehash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{authornamehash}{e91a4c2044bccdbef249eabc886ff988}
+      \strng{authorfullhash}{e91a4c2044bccdbef249eabc886ff988}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ConvNet{JS}}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://cs.stanford.edu/people/karpathy/convnetjs/
+      \endverb
+      \verb{url}
+      \verb https://cs.stanford.edu/people/karpathy/convnetjs/
+      \endverb
+    \endentry
+    \entry{mario_klingemann}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=dba80ca97a3f5e6ca20696e102e6848e}{%
+           family={Klingemann},
+           familyi={K\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{fullhash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{bibnamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authorbibnamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authornamehash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \strng{authorfullhash}{dba80ca97a3f5e6ca20696e102e6848e}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mario Klingemann}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://quasimondo.com/
+      \endverb
+      \verb{url}
+      \verb http://quasimondo.com/
+      \endverb
+    \endentry
+    \entry{2003.08936}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=384021c9310f488c02816bb11a8522dd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Muyang},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f7dc0ae05140014a83b76c5ea171577c}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Ji},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8deaaf1a973f005a1536f00449308597}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Yaoyao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d3b6120be0f5f02f4f4951d71bc09eca}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Zhijian},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=873e4e07ff73d563d2651d20ffaf99e0}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Song},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{fullhash}{994d8706108e0e90710616d967a10e12}
+      \strng{bibnamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authorbibnamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authornamehash}{8c64f3ba833fcc34c51f8e8ce8d72f95}
+      \strng{authorfullhash}{994d8706108e0e90710616d967a10e12}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GAN} Compression: Efficient Architectures for Interactive Conditional {GAN}s}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2003.08936
+      \endverb
+    \endentry
+    \entry{mind}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ec9380f40652005b58c5be53c31720e7}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec9380f40652005b58c5be53c31720e7}
+      \strng{fullhash}{ec9380f40652005b58c5be53c31720e7}
+      \strng{bibnamehash}{ec9380f40652005b58c5be53c31720e7}
+      \strng{authorbibnamehash}{ec9380f40652005b58c5be53c31720e7}
+      \strng{authornamehash}{ec9380f40652005b58c5be53c31720e7}
+      \strng{authorfullhash}{ec9380f40652005b58c5be53c31720e7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mind}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://caza.la/synaptic/
+      \endverb
+      \verb{url}
+      \verb http://caza.la/synaptic/
+      \endverb
+    \endentry
+    \entry{deep_dream_guy}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=227f3a2edcf8a761ddd01d28ab6f2302}{%
+           family={Mordvintsev},
+           familyi={M\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{fullhash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{bibnamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authorbibnamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authornamehash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \strng{authorfullhash}{227f3a2edcf8a761ddd01d28ab6f2302}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Alexander Mordvintsev}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://znah.net/
+      \endverb
+      \verb{url}
+      \verb https://znah.net/
+      \endverb
+    \endentry
+    \entry{2006.03669}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=852ec700c9c73e35cab742f747f93fd4}{%
+           family={Neill},
+           familyi={N\bibinitperiod},
+           given={James\bibnamedelima O'},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{fullhash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{bibnamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authorbibnamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authornamehash}{852ec700c9c73e35cab742f747f93fd4}
+      \strng{authorfullhash}{852ec700c9c73e35cab742f747f93fd4}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Overview of Neural Network Compression}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb arXiv:2006.03669
+      \endverb
+    \endentry
+    \entry{1903.07291}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b036e0ed5c21929ab46890b9a1033163}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taesung},
+           giveni={T\bibinitperiod}}}%
+        {{hash=0c3c4604957af5f2ce5f1537fdbaa510}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ming-Yu},
+           giveni={M\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=214421d9f392d2112d38ea78fbe1bc0b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Ting-Chun},
+           giveni={T\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c13077243208eadfd876137367c2645}
+      \strng{fullhash}{f5d07733d4316e2e64ed71c8eba02c5e}
+      \strng{bibnamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authorbibnamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authornamehash}{9c13077243208eadfd876137367c2645}
+      \strng{authorfullhash}{f5d07733d4316e2e64ed71c8eba02c5e}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{CVPR 2019}
+      \field{title}{Semantic Image Synthesis with Spatially-Adaptive Normalization}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb arXiv:1903.07291
+      \endverb
+    \endentry
+    \entry{pytorch}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=95b88f180e9eb5678e0f9ebac2cbe643}{%
+           family={PyTorch},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{fullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{bibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorbibnamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authornamehash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \strng{authorfullhash}{95b88f180e9eb5678e0f9ebac2cbe643}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PyTorch}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://pytorch.org/
+      \endverb
+      \verb{url}
+      \verb https://pytorch.org/
+      \endverb
+    \endentry
+    \entry{anna_ridler}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=6d22bd390960e3e74aa17746a7d807e0}{%
+           family={Ridler},
+           familyi={R\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{fullhash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{bibnamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authorbibnamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authornamehash}{6d22bd390960e3e74aa17746a7d807e0}
+      \strng{authorfullhash}{6d22bd390960e3e74aa17746a7d807e0}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Anna Ridler}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://annaridler.com/
+      \endverb
+      \verb{url}
+      \verb http://annaridler.com/
+      \endverb
+    \endentry
+    \entry{romano_2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bb63033e5cc262ed0a73a55e2a6e6ab3}{%
+           family={Romano},
+           familyi={R\bibinitperiod},
+           given={Aja},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \strng{fullhash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \strng{bibnamehash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \strng{authorbibnamehash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \strng{authornamehash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \strng{authorfullhash}{bb63033e5cc262ed0a73a55e2a6e6ab3}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Vox}
+      \field{title}{A guy trained a machine to {"}watch{"} Blade Runner. Then things got seriously sci-fi.}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.vox.com/2016/6/1/11787262/blade-runner-neural-network-encoding
+      \endverb
+      \verb{url}
+      \verb https://www.vox.com/2016/6/1/11787262/blade-runner-neural-network-encoding
+      \endverb
+    \endentry
+    \entry{1505.04597}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           familyi={R\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{bibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authornamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{U}-Net: Convolutional Networks for Biomedical Image Segmentation}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb arXiv:1505.04597
+      \endverb
+    \endentry
+    \entry{1606.03498}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=e6f76e1a4d058df028530916774ad3a7}{%
+           family={Salimans},
+           familyi={S\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=e9fec85bbce1b087a6ebefe26e73f7bf}{%
+           family={Zaremba},
+           familyi={Z\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ece7baf9b320c51ead8e24c1c6386dbf}{%
+           family={Cheung},
+           familyi={C\bibinitperiod},
+           given={Vicki},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a812c46caad94fc8701be37871f303ba}{%
+           family={Radford},
+           familyi={R\bibinitperiod},
+           given={Alec},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c6649d02b24225ca4c9012cee6c790de}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e17054b06affd744a3a07dd8e481751}
+      \strng{fullhash}{94aa80cb8b940c824d67773890ce0a03}
+      \strng{bibnamehash}{6e17054b06affd744a3a07dd8e481751}
+      \strng{authorbibnamehash}{6e17054b06affd744a3a07dd8e481751}
+      \strng{authornamehash}{6e17054b06affd744a3a07dd8e481751}
+      \strng{authorfullhash}{94aa80cb8b940c824d67773890ce0a03}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Improved Techniques for Training {GAN}s}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb arXiv:1606.03498
+      \endverb
+    \endentry
+    \entry{SIMD}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=69c442ebfaa4593fa18af4d52c54802a}{%
+           family={SIMD},
+           familyi={S\bibinitperiod},
+           given={WebAssembly},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{fullhash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{bibnamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authorbibnamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authornamehash}{69c442ebfaa4593fa18af4d52c54802a}
+      \strng{authorfullhash}{69c442ebfaa4593fa18af4d52c54802a}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{WebAssembly {SIMD}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://v8.dev/features/simd
+      \endverb
+      \verb{url}
+      \verb https://v8.dev/features/simd
+      \endverb
+    \endentry
+    \entry{tensorflow_playground}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=bb2e0dfdbba1fad9c1db3218456c7bd8}{%
+           family={Smilkov},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=21e186e707ee8b7df883fdc389699ca1}{%
+           family={Carter},
+           familyi={C\bibinitperiod},
+           given={Shan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{253af2d1507a121d4d332c1e2cc65e78}
+      \strng{fullhash}{253af2d1507a121d4d332c1e2cc65e78}
+      \strng{bibnamehash}{253af2d1507a121d4d332c1e2cc65e78}
+      \strng{authorbibnamehash}{253af2d1507a121d4d332c1e2cc65e78}
+      \strng{authornamehash}{253af2d1507a121d4d332c1e2cc65e78}
+      \strng{authorfullhash}{253af2d1507a121d4d332c1e2cc65e78}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tensorflow Playground}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb http://playground.tensorflow.org/
+      \endverb
+      \verb{url}
+      \verb http://playground.tensorflow.org/
+      \endverb
+    \endentry
+    \entry{1412.6806}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=d52162d1c5497f647e12128f74d58da4}{%
+           family={Springenberg},
+           familyi={S\bibinitperiod},
+           given={Jost\bibnamedelima Tobias},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=72308762399d6ab62bbd9391c64c7bfd}{%
+           family={Dosovitskiy},
+           familyi={D\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9449802bcb467309c0ebced658096818}{%
+           family={Riedmiller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e774f5cb5e44357cb13922f43399da5}
+      \strng{fullhash}{d2993abc70637a519fc98ab098853067}
+      \strng{bibnamehash}{8e774f5cb5e44357cb13922f43399da5}
+      \strng{authorbibnamehash}{8e774f5cb5e44357cb13922f43399da5}
+      \strng{authornamehash}{8e774f5cb5e44357cb13922f43399da5}
+      \strng{authorfullhash}{d2993abc70637a519fc98ab098853067}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Striving for Simplicity: The All Convolutional Net}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb arXiv:1412.6806
+      \endverb
+    \endentry
+    \entry{JMLR:v15:srivastava14a}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6a147afa4569ce6cf23c0436e65d8486}{%
+           family={Srivastava},
+           familyi={S\bibinitperiod},
+           given={Nitish},
+           giveni={N\bibinitperiod}}}%
+        {{hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=bd2be300d445e9f6db7808f9533e66cb}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={Ruslan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d6dba595c04c09619c7c1c0038d5b6b}
+      \strng{fullhash}{2850768171a28ccacd146c300f66f57d}
+      \strng{bibnamehash}{4d6dba595c04c09619c7c1c0038d5b6b}
+      \strng{authorbibnamehash}{4d6dba595c04c09619c7c1c0038d5b6b}
+      \strng{authornamehash}{4d6dba595c04c09619c7c1c0038d5b6b}
+      \strng{authorfullhash}{2850768171a28ccacd146c300f66f57d}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{number}{56}
+      \field{title}{Dropout: {A} Simple Way to Prevent Neural Networks from Overfitting}
+      \field{volume}{15}
+      \field{year}{2014}
+      \field{pages}{1929\bibrangedash 1958}
+      \range{pages}{30}
+      \verb{urlraw}
+      \verb http://jmlr.org/papers/v15/srivastava14a.html
+      \endverb
+      \verb{url}
+      \verb http://jmlr.org/papers/v15/srivastava14a.html
+      \endverb
+    \endentry
+    \entry{tf}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=cb20b802a3f0255e054e4fb8821c5ed2}{%
+           family={Tensorflow},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{fullhash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{bibnamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authorbibnamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authornamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authorfullhash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tensorflow}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/
+      \endverb
+    \endentry
+    \entry{tf_p2p}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=cb20b802a3f0255e054e4fb8821c5ed2}{%
+           family={Tensorflow},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{fullhash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{bibnamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authorbibnamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authornamehash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \strng{authorfullhash}{cb20b802a3f0255e054e4fb8821c5ed2}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tensorflow Pix2Pix}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/tutorials/generative/pix2pix
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/tutorials/generative/pix2pix
+      \endverb
+    \endentry
+    \entry{tfjs}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=473a8cb12eca7dee372073e41d66ea1e}{%
+           family={TensorflowJS},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{fullhash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{bibnamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authorbibnamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authornamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authorfullhash}{473a8cb12eca7dee372073e41d66ea1e}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tensorflow{JS}}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/js
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/js
+      \endverb
+    \endentry
+    \entry{tfjs_converter}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=473a8cb12eca7dee372073e41d66ea1e}{%
+           family={TensorflowJS},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{fullhash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{bibnamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authorbibnamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authornamehash}{473a8cb12eca7dee372073e41d66ea1e}
+      \strng{authorfullhash}{473a8cb12eca7dee372073e41d66ea1e}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tensorflow{JS} Converter}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
+      \endverb
+      \verb{url}
+      \verb https://github.com/tensorflow/tfjs/tree/master/tfjs-converter
+      \endverb
+    \endentry
+    \entry{toffler_1972}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7a8e89df41bf9812ed30ad71f9b22e2c}{%
+           family={Toffler},
+           familyi={T\bibinitperiod},
+           given={Alvin},
+           giveni={A\bibinitperiod},
+           prefix={comp.},
+           prefixi={c\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Random House}%
+      }
+      \strng{namehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{fullhash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{bibnamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authorbibnamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authornamehash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \strng{authorfullhash}{7a8e89df41bf9812ed30ad71f9b22e2c}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The futurists. Edited with an introd. by Alvin Toffler}
+      \field{year}{1972}
+    \endentry
+    \entry{flowers_dataset}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=5d5dae68564304aab725451fcc30dc42}{%
+           family={University},
+           familyi={U\bibinitperiod},
+           given={Oxford},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d5dae68564304aab725451fcc30dc42}
+      \strng{fullhash}{5d5dae68564304aab725451fcc30dc42}
+      \strng{bibnamehash}{5d5dae68564304aab725451fcc30dc42}
+      \strng{authorbibnamehash}{5d5dae68564304aab725451fcc30dc42}
+      \strng{authornamehash}{5d5dae68564304aab725451fcc30dc42}
+      \strng{authorfullhash}{5d5dae68564304aab725451fcc30dc42}
+      \field{sortinit}{U}
+      \field{sortinithash}{77a6935510e008adcf5b555e7b4f0711}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{102 Category Flower Dataset}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html
+      \endverb
+      \verb{url}
+      \verb https://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html
+      \endverb
+    \endentry
+    \entry{runway}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=28c8bc7e58d3904e53f026a0fc9f67b3}{%
+           family={Valenzuela},
+           familyi={V\bibinitperiod},
+           given={Cristóbal},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{fullhash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{bibnamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authorbibnamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authornamehash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \strng{authorfullhash}{28c8bc7e58d3904e53f026a0fc9f67b3}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Runway{ML}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://runwayml.com/
+      \endverb
+      \verb{url}
+      \verb https://runwayml.com/
+      \endverb
+    \endentry
+    \entry{webgpu}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=423b4d2bb624efeccdf9d81f359b548f}{%
+           family={Web\bibnamedelimb Community\bibnamedelima Group},
+           familyi={W\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={GPU},
+           giveni={G\bibinitperiod},
+           prefix={for\bibnamedelima the},
+           prefixi={f\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{fullhash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{bibnamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authorbibnamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authornamehash}{423b4d2bb624efeccdf9d81f359b548f}
+      \strng{authorfullhash}{423b4d2bb624efeccdf9d81f359b548f}
+      \field{extraname}{1}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web{GPU}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://gpuweb.github.io/gpuweb/
+      \endverb
+      \verb{url}
+      \verb https://gpuweb.github.io/gpuweb/
+      \endverb
+    \endentry
+    \entry{webnn}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=16138db6058be48b703e46cd744fdf5b}{%
+           family={Web\bibnamedelimb Community\bibnamedelima Group},
+           familyi={W\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Machine\bibnamedelima Learning},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           prefix={for\bibnamedelima the},
+           prefixi={f\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{fullhash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{bibnamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authorbibnamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authornamehash}{16138db6058be48b703e46cd744fdf5b}
+      \strng{authorfullhash}{16138db6058be48b703e46cd744fdf5b}
+      \field{extraname}{2}
+      \field{sortinit}{W}
+      \field{sortinithash}{1af34bd8c148ffb32de1494636b49713}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web Neural Network {API}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://webmachinelearning.github.io/webnn/
+      \endverb
+      \verb{url}
+      \verb https://webmachinelearning.github.io/webnn/
+      \endverb
+    \endentry
+    \entry{XNNPACK}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=c04ebed52a50c18f049f433784d5c5f9}{%
+           family={XNNPACK},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{fullhash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{bibnamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authorbibnamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authornamehash}{c04ebed52a50c18f049f433784d5c5f9}
+      \strng{authorfullhash}{c04ebed52a50c18f049f433784d5c5f9}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{XNNPACK}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://github.com/google/XNNPACK
+      \endverb
+      \verb{url}
+      \verb https://github.com/google/XNNPACK
+      \endverb
+    \endentry
+    \entry{1703.10593}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jun-Yan},
+           giveni={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=b036e0ed5c21929ab46890b9a1033163}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Taesung},
+           giveni={T\bibinitperiod}}}%
+        {{hash=cae9f806bc99a5f19fadea538fc2db04}{%
+           family={Isola},
+           familyi={I\bibinitperiod},
+           given={Phillip},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5a663b27298722834a8cf09bb93d8c94}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{fullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
+      \strng{bibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authorbibnamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authornamehash}{6bbc73cad9d67ffe67a198aaeed8ce61}
+      \strng{authorfullhash}{69bc0b2da0c2e1bc9b8395c1d38556bb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb arXiv:1703.10593
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
